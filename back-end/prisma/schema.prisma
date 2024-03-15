@@ -1,0 +1,60 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "./src/@prisma/client"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model author {
+  id                                                           Int               @id @unique(map: "id_UNIQUE") @default(autoincrement())
+  name                                                         String            @db.VarChar(150)
+  last_name                                                    String?           @db.VarChar(100)
+  description                                                  String?           @db.Text
+  created_at                                                   DateTime?         @default(now())
+  updated_at                                                   DateTime?         @updatedAt
+  author_relation_author_relation_author_idToauthor            author_relation[] @relation("author_relation_author_idToauthor")
+  author_relation_author_relation_author_relationed_idToauthor author_relation[] @relation("author_relation_author_relationed_idToauthor")
+  phrase                                                       phrase[]
+}
+
+model author_relation {
+  id                                                  Int          @id @unique(map: "id_UNIQUE") @default(autoincrement())
+  name_relation                                       String       @db.VarChar(200)
+  type_relation                                       String       @db.VarChar(45)
+  created_at                                          DateTime?    @default(now())
+  updated_at                                          DateTime?    @updatedAt
+  author_id                                           Int
+  author_relationed_id                                Int
+  history_type_id                                     Int
+  author_author_relation_author_idToauthor            author       @relation("author_relation_author_idToauthor", fields: [author_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "author_id_foreign")
+  author_author_relation_author_relationed_idToauthor author       @relation("author_relation_author_relationed_idToauthor", fields: [author_relationed_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "author_relationed_id_foreign")
+  history_type                                        history_type @relation(fields: [history_type_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "history_type_id_foreign")
+
+  @@index([author_id], map: "author_id_foreign_idx")
+  @@index([author_relationed_id], map: "author_relationed_id_foreign_idx")
+  @@index([history_type_id], map: "history_type_id_foreign_idx")
+}
+
+model history_type {
+  id              Int               @id @unique(map: "id_UNIQUE") @default(autoincrement())
+  name            String            @db.VarChar(100)
+  description     String?           @db.VarChar(200)
+  created_at      DateTime?         @default(now())
+  updated_at      DateTime?         @updatedAt
+  author_relation author_relation[]
+}
+
+model phrase {
+  id         Int       @id @unique(map: "id_UNIQUE") @default(autoincrement())
+  phrase     String    @db.Text
+  date       DateTime? @db.Date
+  created_at DateTime? @default(now())
+  updated_at DateTime? @updatedAt
+  author_id  Int
+  author     author    @relation(fields: [author_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "author_id_foreign_key")
+
+  @@index([author_id], map: "author_id_foreign_idx")
+}
