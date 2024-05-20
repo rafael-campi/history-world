@@ -17,11 +17,11 @@ exports.$Enums = {}
 
 /**
  * Prisma Client JS version: 5.11.0
- * Query Engine version: efd2449663b3d73d637ea1fd226bafbcf45b3102
+ * Query Engine version: aebc046ce8b88ebbcb45efe31cbe7d06fd6abc0a
  */
 Prisma.prismaVersion = {
   client: "5.11.0",
-  engine: "efd2449663b3d73d637ea1fd226bafbcf45b3102"
+  engine: "aebc046ce8b88ebbcb45efe31cbe7d06fd6abc0a"
 }
 
 Prisma.PrismaClientKnownRequestError = () => {
@@ -128,7 +128,7 @@ exports.Prisma.AuthorScalarFieldEnum = {
   updated_at: 'updated_at'
 };
 
-exports.Prisma.Author_relationScalarFieldEnum = {
+exports.Prisma.AuthorRelationScalarFieldEnum = {
   id: 'id',
   name_relation: 'name_relation',
   type_relation: 'type_relation',
@@ -139,7 +139,7 @@ exports.Prisma.Author_relationScalarFieldEnum = {
   history_type_id: 'history_type_id'
 };
 
-exports.Prisma.History_typeScalarFieldEnum = {
+exports.Prisma.HistoryTypeScalarFieldEnum = {
   id: 'id',
   name: 'name',
   description: 'description',
@@ -168,10 +168,10 @@ exports.Prisma.NullsOrder = {
 
 
 exports.Prisma.ModelName = {
-  author: 'author',
-  author_relation: 'author_relation',
-  history_type: 'history_type',
-  phrase: 'phrase'
+  Author: 'Author',
+  AuthorRelation: 'AuthorRelation',
+  HistoryType: 'HistoryType',
+  Phrase: 'Phrase'
 };
 
 /**

@@ -14,25 +14,25 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model author
+ * Model Author
  * 
  */
-export type author = $Result.DefaultSelection<Prisma.$authorPayload>
+export type Author = $Result.DefaultSelection<Prisma.$AuthorPayload>
 /**
- * Model author_relation
+ * Model AuthorRelation
  * 
  */
-export type author_relation = $Result.DefaultSelection<Prisma.$author_relationPayload>
+export type AuthorRelation = $Result.DefaultSelection<Prisma.$AuthorRelationPayload>
 /**
- * Model history_type
+ * Model HistoryType
  * 
  */
-export type history_type = $Result.DefaultSelection<Prisma.$history_typePayload>
+export type HistoryType = $Result.DefaultSelection<Prisma.$HistoryTypePayload>
 /**
- * Model phrase
+ * Model Phrase
  * 
  */
-export type phrase = $Result.DefaultSelection<Prisma.$phrasePayload>
+export type Phrase = $Result.DefaultSelection<Prisma.$PhrasePayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -157,44 +157,44 @@ export class PrismaClient<
   $extends: $Extensions.ExtendsHook<'extends', Prisma.TypeMapCb, ExtArgs>
 
       /**
-   * `prisma.author`: Exposes CRUD operations for the **author** model.
+   * `prisma.author`: Exposes CRUD operations for the **Author** model.
     * Example usage:
     * ```ts
     * // Fetch zero or more Authors
     * const authors = await prisma.author.findMany()
     * ```
     */
-  get author(): Prisma.authorDelegate<ExtArgs>;
+  get author(): Prisma.AuthorDelegate<ExtArgs>;
 
   /**
-   * `prisma.author_relation`: Exposes CRUD operations for the **author_relation** model.
+   * `prisma.authorRelation`: Exposes CRUD operations for the **AuthorRelation** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Author_relations
-    * const author_relations = await prisma.author_relation.findMany()
+    * // Fetch zero or more AuthorRelations
+    * const authorRelations = await prisma.authorRelation.findMany()
     * ```
     */
-  get author_relation(): Prisma.author_relationDelegate<ExtArgs>;
+  get authorRelation(): Prisma.AuthorRelationDelegate<ExtArgs>;
 
   /**
-   * `prisma.history_type`: Exposes CRUD operations for the **history_type** model.
+   * `prisma.historyType`: Exposes CRUD operations for the **HistoryType** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more History_types
-    * const history_types = await prisma.history_type.findMany()
+    * // Fetch zero or more HistoryTypes
+    * const historyTypes = await prisma.historyType.findMany()
     * ```
     */
-  get history_type(): Prisma.history_typeDelegate<ExtArgs>;
+  get historyType(): Prisma.HistoryTypeDelegate<ExtArgs>;
 
   /**
-   * `prisma.phrase`: Exposes CRUD operations for the **phrase** model.
+   * `prisma.phrase`: Exposes CRUD operations for the **Phrase** model.
     * Example usage:
     * ```ts
     * // Fetch zero or more Phrases
     * const phrases = await prisma.phrase.findMany()
     * ```
     */
-  get phrase(): Prisma.phraseDelegate<ExtArgs>;
+  get phrase(): Prisma.PhraseDelegate<ExtArgs>;
 }
 
 export namespace Prisma {
@@ -253,7 +253,7 @@ export namespace Prisma {
 
   /**
    * Prisma Client JS version: 5.11.0
-   * Query Engine version: efd2449663b3d73d637ea1fd226bafbcf45b3102
+   * Query Engine version: aebc046ce8b88ebbcb45efe31cbe7d06fd6abc0a
    */
   export type PrismaVersion = {
     client: string
@@ -665,10 +665,10 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    author: 'author',
-    author_relation: 'author_relation',
-    history_type: 'history_type',
-    phrase: 'phrase'
+    Author: 'Author',
+    AuthorRelation: 'AuthorRelation',
+    HistoryType: 'HistoryType',
+    Phrase: 'Phrase'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -685,270 +685,270 @@ export namespace Prisma {
 
   export type TypeMap<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     meta: {
-      modelProps: 'author' | 'author_relation' | 'history_type' | 'phrase'
+      modelProps: 'author' | 'authorRelation' | 'historyType' | 'phrase'
       txIsolationLevel: Prisma.TransactionIsolationLevel
     },
     model: {
-      author: {
-        payload: Prisma.$authorPayload<ExtArgs>
-        fields: Prisma.authorFieldRefs
+      Author: {
+        payload: Prisma.$AuthorPayload<ExtArgs>
+        fields: Prisma.AuthorFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.authorFindUniqueArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$authorPayload> | null
+            args: Prisma.AuthorFindUniqueArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$AuthorPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.authorFindUniqueOrThrowArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$authorPayload>
+            args: Prisma.AuthorFindUniqueOrThrowArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$AuthorPayload>
           }
           findFirst: {
-            args: Prisma.authorFindFirstArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$authorPayload> | null
+            args: Prisma.AuthorFindFirstArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$AuthorPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.authorFindFirstOrThrowArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$authorPayload>
+            args: Prisma.AuthorFindFirstOrThrowArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$AuthorPayload>
           }
           findMany: {
-            args: Prisma.authorFindManyArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$authorPayload>[]
+            args: Prisma.AuthorFindManyArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$AuthorPayload>[]
           }
           create: {
-            args: Prisma.authorCreateArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$authorPayload>
+            args: Prisma.AuthorCreateArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$AuthorPayload>
           }
           createMany: {
-            args: Prisma.authorCreateManyArgs<ExtArgs>,
+            args: Prisma.AuthorCreateManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           delete: {
-            args: Prisma.authorDeleteArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$authorPayload>
+            args: Prisma.AuthorDeleteArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$AuthorPayload>
           }
           update: {
-            args: Prisma.authorUpdateArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$authorPayload>
+            args: Prisma.AuthorUpdateArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$AuthorPayload>
           }
           deleteMany: {
-            args: Prisma.authorDeleteManyArgs<ExtArgs>,
+            args: Prisma.AuthorDeleteManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           updateMany: {
-            args: Prisma.authorUpdateManyArgs<ExtArgs>,
+            args: Prisma.AuthorUpdateManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           upsert: {
-            args: Prisma.authorUpsertArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$authorPayload>
+            args: Prisma.AuthorUpsertArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$AuthorPayload>
           }
           aggregate: {
             args: Prisma.AuthorAggregateArgs<ExtArgs>,
             result: $Utils.Optional<AggregateAuthor>
           }
           groupBy: {
-            args: Prisma.authorGroupByArgs<ExtArgs>,
+            args: Prisma.AuthorGroupByArgs<ExtArgs>,
             result: $Utils.Optional<AuthorGroupByOutputType>[]
           }
           count: {
-            args: Prisma.authorCountArgs<ExtArgs>,
+            args: Prisma.AuthorCountArgs<ExtArgs>,
             result: $Utils.Optional<AuthorCountAggregateOutputType> | number
           }
         }
       }
-      author_relation: {
-        payload: Prisma.$author_relationPayload<ExtArgs>
-        fields: Prisma.author_relationFieldRefs
+      AuthorRelation: {
+        payload: Prisma.$AuthorRelationPayload<ExtArgs>
+        fields: Prisma.AuthorRelationFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.author_relationFindUniqueArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$author_relationPayload> | null
+            args: Prisma.AuthorRelationFindUniqueArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$AuthorRelationPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.author_relationFindUniqueOrThrowArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$author_relationPayload>
+            args: Prisma.AuthorRelationFindUniqueOrThrowArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$AuthorRelationPayload>
           }
           findFirst: {
-            args: Prisma.author_relationFindFirstArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$author_relationPayload> | null
+            args: Prisma.AuthorRelationFindFirstArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$AuthorRelationPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.author_relationFindFirstOrThrowArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$author_relationPayload>
+            args: Prisma.AuthorRelationFindFirstOrThrowArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$AuthorRelationPayload>
           }
           findMany: {
-            args: Prisma.author_relationFindManyArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$author_relationPayload>[]
+            args: Prisma.AuthorRelationFindManyArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$AuthorRelationPayload>[]
           }
           create: {
-            args: Prisma.author_relationCreateArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$author_relationPayload>
+            args: Prisma.AuthorRelationCreateArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$AuthorRelationPayload>
           }
           createMany: {
-            args: Prisma.author_relationCreateManyArgs<ExtArgs>,
+            args: Prisma.AuthorRelationCreateManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           delete: {
-            args: Prisma.author_relationDeleteArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$author_relationPayload>
+            args: Prisma.AuthorRelationDeleteArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$AuthorRelationPayload>
           }
           update: {
-            args: Prisma.author_relationUpdateArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$author_relationPayload>
+            args: Prisma.AuthorRelationUpdateArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$AuthorRelationPayload>
           }
           deleteMany: {
-            args: Prisma.author_relationDeleteManyArgs<ExtArgs>,
+            args: Prisma.AuthorRelationDeleteManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           updateMany: {
-            args: Prisma.author_relationUpdateManyArgs<ExtArgs>,
+            args: Prisma.AuthorRelationUpdateManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           upsert: {
-            args: Prisma.author_relationUpsertArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$author_relationPayload>
+            args: Prisma.AuthorRelationUpsertArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$AuthorRelationPayload>
           }
           aggregate: {
-            args: Prisma.Author_relationAggregateArgs<ExtArgs>,
-            result: $Utils.Optional<AggregateAuthor_relation>
+            args: Prisma.AuthorRelationAggregateArgs<ExtArgs>,
+            result: $Utils.Optional<AggregateAuthorRelation>
           }
           groupBy: {
-            args: Prisma.author_relationGroupByArgs<ExtArgs>,
-            result: $Utils.Optional<Author_relationGroupByOutputType>[]
+            args: Prisma.AuthorRelationGroupByArgs<ExtArgs>,
+            result: $Utils.Optional<AuthorRelationGroupByOutputType>[]
           }
           count: {
-            args: Prisma.author_relationCountArgs<ExtArgs>,
-            result: $Utils.Optional<Author_relationCountAggregateOutputType> | number
+            args: Prisma.AuthorRelationCountArgs<ExtArgs>,
+            result: $Utils.Optional<AuthorRelationCountAggregateOutputType> | number
           }
         }
       }
-      history_type: {
-        payload: Prisma.$history_typePayload<ExtArgs>
-        fields: Prisma.history_typeFieldRefs
+      HistoryType: {
+        payload: Prisma.$HistoryTypePayload<ExtArgs>
+        fields: Prisma.HistoryTypeFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.history_typeFindUniqueArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$history_typePayload> | null
+            args: Prisma.HistoryTypeFindUniqueArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$HistoryTypePayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.history_typeFindUniqueOrThrowArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$history_typePayload>
+            args: Prisma.HistoryTypeFindUniqueOrThrowArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$HistoryTypePayload>
           }
           findFirst: {
-            args: Prisma.history_typeFindFirstArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$history_typePayload> | null
+            args: Prisma.HistoryTypeFindFirstArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$HistoryTypePayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.history_typeFindFirstOrThrowArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$history_typePayload>
+            args: Prisma.HistoryTypeFindFirstOrThrowArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$HistoryTypePayload>
           }
           findMany: {
-            args: Prisma.history_typeFindManyArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$history_typePayload>[]
+            args: Prisma.HistoryTypeFindManyArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$HistoryTypePayload>[]
           }
           create: {
-            args: Prisma.history_typeCreateArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$history_typePayload>
+            args: Prisma.HistoryTypeCreateArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$HistoryTypePayload>
           }
           createMany: {
-            args: Prisma.history_typeCreateManyArgs<ExtArgs>,
+            args: Prisma.HistoryTypeCreateManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           delete: {
-            args: Prisma.history_typeDeleteArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$history_typePayload>
+            args: Prisma.HistoryTypeDeleteArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$HistoryTypePayload>
           }
           update: {
-            args: Prisma.history_typeUpdateArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$history_typePayload>
+            args: Prisma.HistoryTypeUpdateArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$HistoryTypePayload>
           }
           deleteMany: {
-            args: Prisma.history_typeDeleteManyArgs<ExtArgs>,
+            args: Prisma.HistoryTypeDeleteManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           updateMany: {
-            args: Prisma.history_typeUpdateManyArgs<ExtArgs>,
+            args: Prisma.HistoryTypeUpdateManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           upsert: {
-            args: Prisma.history_typeUpsertArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$history_typePayload>
+            args: Prisma.HistoryTypeUpsertArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$HistoryTypePayload>
           }
           aggregate: {
-            args: Prisma.History_typeAggregateArgs<ExtArgs>,
-            result: $Utils.Optional<AggregateHistory_type>
+            args: Prisma.HistoryTypeAggregateArgs<ExtArgs>,
+            result: $Utils.Optional<AggregateHistoryType>
           }
           groupBy: {
-            args: Prisma.history_typeGroupByArgs<ExtArgs>,
-            result: $Utils.Optional<History_typeGroupByOutputType>[]
+            args: Prisma.HistoryTypeGroupByArgs<ExtArgs>,
+            result: $Utils.Optional<HistoryTypeGroupByOutputType>[]
           }
           count: {
-            args: Prisma.history_typeCountArgs<ExtArgs>,
-            result: $Utils.Optional<History_typeCountAggregateOutputType> | number
+            args: Prisma.HistoryTypeCountArgs<ExtArgs>,
+            result: $Utils.Optional<HistoryTypeCountAggregateOutputType> | number
           }
         }
       }
-      phrase: {
-        payload: Prisma.$phrasePayload<ExtArgs>
-        fields: Prisma.phraseFieldRefs
+      Phrase: {
+        payload: Prisma.$PhrasePayload<ExtArgs>
+        fields: Prisma.PhraseFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.phraseFindUniqueArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$phrasePayload> | null
+            args: Prisma.PhraseFindUniqueArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$PhrasePayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.phraseFindUniqueOrThrowArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$phrasePayload>
+            args: Prisma.PhraseFindUniqueOrThrowArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$PhrasePayload>
           }
           findFirst: {
-            args: Prisma.phraseFindFirstArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$phrasePayload> | null
+            args: Prisma.PhraseFindFirstArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$PhrasePayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.phraseFindFirstOrThrowArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$phrasePayload>
+            args: Prisma.PhraseFindFirstOrThrowArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$PhrasePayload>
           }
           findMany: {
-            args: Prisma.phraseFindManyArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$phrasePayload>[]
+            args: Prisma.PhraseFindManyArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$PhrasePayload>[]
           }
           create: {
-            args: Prisma.phraseCreateArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$phrasePayload>
+            args: Prisma.PhraseCreateArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$PhrasePayload>
           }
           createMany: {
-            args: Prisma.phraseCreateManyArgs<ExtArgs>,
+            args: Prisma.PhraseCreateManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           delete: {
-            args: Prisma.phraseDeleteArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$phrasePayload>
+            args: Prisma.PhraseDeleteArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$PhrasePayload>
           }
           update: {
-            args: Prisma.phraseUpdateArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$phrasePayload>
+            args: Prisma.PhraseUpdateArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$PhrasePayload>
           }
           deleteMany: {
-            args: Prisma.phraseDeleteManyArgs<ExtArgs>,
+            args: Prisma.PhraseDeleteManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           updateMany: {
-            args: Prisma.phraseUpdateManyArgs<ExtArgs>,
+            args: Prisma.PhraseUpdateManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           upsert: {
-            args: Prisma.phraseUpsertArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$phrasePayload>
+            args: Prisma.PhraseUpsertArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$PhrasePayload>
           }
           aggregate: {
             args: Prisma.PhraseAggregateArgs<ExtArgs>,
             result: $Utils.Optional<AggregatePhrase>
           }
           groupBy: {
-            args: Prisma.phraseGroupByArgs<ExtArgs>,
+            args: Prisma.PhraseGroupByArgs<ExtArgs>,
             result: $Utils.Optional<PhraseGroupByOutputType>[]
           }
           count: {
-            args: Prisma.phraseCountArgs<ExtArgs>,
+            args: Prisma.PhraseCountArgs<ExtArgs>,
             result: $Utils.Optional<PhraseCountAggregateOutputType> | number
           }
         }
@@ -1140,7 +1140,7 @@ export namespace Prisma {
    * AuthorCountOutputType without action
    */
   export type AuthorCountOutputTypeCountAuthor_relation_author_relation_author_idToauthorArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: author_relationWhereInput
+    where?: AuthorRelationWhereInput
   }
 
 
@@ -1148,7 +1148,7 @@ export namespace Prisma {
    * AuthorCountOutputType without action
    */
   export type AuthorCountOutputTypeCountAuthor_relation_author_relation_author_relationed_idToauthorArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: author_relationWhereInput
+    where?: AuthorRelationWhereInput
   }
 
 
@@ -1156,41 +1156,41 @@ export namespace Prisma {
    * AuthorCountOutputType without action
    */
   export type AuthorCountOutputTypeCountPhraseArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: phraseWhereInput
+    where?: PhraseWhereInput
   }
 
 
 
   /**
-   * Count Type History_typeCountOutputType
+   * Count Type HistoryTypeCountOutputType
    */
 
-  export type History_typeCountOutputType = {
+  export type HistoryTypeCountOutputType = {
     author_relation: number
   }
 
-  export type History_typeCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    author_relation?: boolean | History_typeCountOutputTypeCountAuthor_relationArgs
+  export type HistoryTypeCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    author_relation?: boolean | HistoryTypeCountOutputTypeCountAuthor_relationArgs
   }
 
   // Custom InputTypes
 
   /**
-   * History_typeCountOutputType without action
+   * HistoryTypeCountOutputType without action
    */
-  export type History_typeCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type HistoryTypeCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the History_typeCountOutputType
+     * Select specific fields to fetch from the HistoryTypeCountOutputType
      */
-    select?: History_typeCountOutputTypeSelect<ExtArgs> | null
+    select?: HistoryTypeCountOutputTypeSelect<ExtArgs> | null
   }
 
 
   /**
-   * History_typeCountOutputType without action
+   * HistoryTypeCountOutputType without action
    */
-  export type History_typeCountOutputTypeCountAuthor_relationArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: author_relationWhereInput
+  export type HistoryTypeCountOutputTypeCountAuthor_relationArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: AuthorRelationWhereInput
   }
 
 
@@ -1200,7 +1200,7 @@ export namespace Prisma {
    */
 
   /**
-   * Model author
+   * Model Author
    */
 
   export type AggregateAuthor = {
@@ -1286,37 +1286,37 @@ export namespace Prisma {
 
   export type AuthorAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which author to aggregate.
+     * Filter which Author to aggregate.
      */
-    where?: authorWhereInput
+    where?: AuthorWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of authors to fetch.
+     * Determine the order of Authors to fetch.
      */
-    orderBy?: authorOrderByWithRelationInput | authorOrderByWithRelationInput[]
+    orderBy?: AuthorOrderByWithRelationInput | AuthorOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: authorWhereUniqueInput
+    cursor?: AuthorWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` authors from the position of the cursor.
+     * Take `±n` Authors from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` authors.
+     * Skip the first `n` Authors.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned authors
+     * Count returned Authors
     **/
     _count?: true | AuthorCountAggregateInputType
     /**
@@ -1356,11 +1356,11 @@ export namespace Prisma {
 
 
 
-  export type authorGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: authorWhereInput
-    orderBy?: authorOrderByWithAggregationInput | authorOrderByWithAggregationInput[]
+  export type AuthorGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: AuthorWhereInput
+    orderBy?: AuthorOrderByWithAggregationInput | AuthorOrderByWithAggregationInput[]
     by: AuthorScalarFieldEnum[] | AuthorScalarFieldEnum
-    having?: authorScalarWhereWithAggregatesInput
+    having?: AuthorScalarWhereWithAggregatesInput
     take?: number
     skip?: number
     _count?: AuthorCountAggregateInputType | true
@@ -1384,7 +1384,7 @@ export namespace Prisma {
     _max: AuthorMaxAggregateOutputType | null
   }
 
-  type GetAuthorGroupByPayload<T extends authorGroupByArgs> = Prisma.PrismaPromise<
+  type GetAuthorGroupByPayload<T extends AuthorGroupByArgs> = Prisma.PrismaPromise<
     Array<
       PickEnumerable<AuthorGroupByOutputType, T['by']> &
         {
@@ -1398,20 +1398,20 @@ export namespace Prisma {
     >
 
 
-  export type authorSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type AuthorSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
     last_name?: boolean
     description?: boolean
     created_at?: boolean
     updated_at?: boolean
-    author_relation_author_relation_author_idToauthor?: boolean | author$author_relation_author_relation_author_idToauthorArgs<ExtArgs>
-    author_relation_author_relation_author_relationed_idToauthor?: boolean | author$author_relation_author_relation_author_relationed_idToauthorArgs<ExtArgs>
-    phrase?: boolean | author$phraseArgs<ExtArgs>
+    author_relation_author_relation_author_idToauthor?: boolean | Author$author_relation_author_relation_author_idToauthorArgs<ExtArgs>
+    author_relation_author_relation_author_relationed_idToauthor?: boolean | Author$author_relation_author_relation_author_relationed_idToauthorArgs<ExtArgs>
+    phrase?: boolean | Author$phraseArgs<ExtArgs>
     _count?: boolean | AuthorCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["author"]>
 
-  export type authorSelectScalar = {
+  export type AuthorSelectScalar = {
     id?: boolean
     name?: boolean
     last_name?: boolean
@@ -1420,20 +1420,20 @@ export namespace Prisma {
     updated_at?: boolean
   }
 
-  export type authorInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    author_relation_author_relation_author_idToauthor?: boolean | author$author_relation_author_relation_author_idToauthorArgs<ExtArgs>
-    author_relation_author_relation_author_relationed_idToauthor?: boolean | author$author_relation_author_relation_author_relationed_idToauthorArgs<ExtArgs>
-    phrase?: boolean | author$phraseArgs<ExtArgs>
+  export type AuthorInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    author_relation_author_relation_author_idToauthor?: boolean | Author$author_relation_author_relation_author_idToauthorArgs<ExtArgs>
+    author_relation_author_relation_author_relationed_idToauthor?: boolean | Author$author_relation_author_relation_author_relationed_idToauthorArgs<ExtArgs>
+    phrase?: boolean | Author$phraseArgs<ExtArgs>
     _count?: boolean | AuthorCountOutputTypeDefaultArgs<ExtArgs>
   }
 
 
-  export type $authorPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "author"
+  export type $AuthorPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Author"
     objects: {
-      author_relation_author_relation_author_idToauthor: Prisma.$author_relationPayload<ExtArgs>[]
-      author_relation_author_relation_author_relationed_idToauthor: Prisma.$author_relationPayload<ExtArgs>[]
-      phrase: Prisma.$phrasePayload<ExtArgs>[]
+      author_relation_author_relation_author_idToauthor: Prisma.$AuthorRelationPayload<ExtArgs>[]
+      author_relation_author_relation_author_relationed_idToauthor: Prisma.$AuthorRelationPayload<ExtArgs>[]
+      phrase: Prisma.$PhrasePayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
@@ -1447,18 +1447,18 @@ export namespace Prisma {
   }
 
 
-  type authorGetPayload<S extends boolean | null | undefined | authorDefaultArgs> = $Result.GetResult<Prisma.$authorPayload, S>
+  type AuthorGetPayload<S extends boolean | null | undefined | AuthorDefaultArgs> = $Result.GetResult<Prisma.$AuthorPayload, S>
 
-  type authorCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<authorFindManyArgs, 'select' | 'include' | 'distinct'> & {
+  type AuthorCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
+    Omit<AuthorFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: AuthorCountAggregateInputType | true
     }
 
-  export interface authorDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['author'], meta: { name: 'author' } }
+  export interface AuthorDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Author'], meta: { name: 'Author' } }
     /**
      * Find zero or one Author that matches the filter.
-     * @param {authorFindUniqueArgs} args - Arguments to find a Author
+     * @param {AuthorFindUniqueArgs} args - Arguments to find a Author
      * @example
      * // Get one Author
      * const author = await prisma.author.findUnique({
@@ -1467,14 +1467,14 @@ export namespace Prisma {
      *   }
      * })
     **/
-    findUnique<T extends authorFindUniqueArgs<ExtArgs>>(
-      args: SelectSubset<T, authorFindUniqueArgs<ExtArgs>>
-    ): Prisma__authorClient<$Result.GetResult<Prisma.$authorPayload<ExtArgs>, T, 'findUnique'> | null, null, ExtArgs>
+    findUnique<T extends AuthorFindUniqueArgs<ExtArgs>>(
+      args: SelectSubset<T, AuthorFindUniqueArgs<ExtArgs>>
+    ): Prisma__AuthorClient<$Result.GetResult<Prisma.$AuthorPayload<ExtArgs>, T, 'findUnique'> | null, null, ExtArgs>
 
     /**
      * Find one Author that matches the filter or throw an error  with `error.code='P2025'` 
      *     if no matches were found.
-     * @param {authorFindUniqueOrThrowArgs} args - Arguments to find a Author
+     * @param {AuthorFindUniqueOrThrowArgs} args - Arguments to find a Author
      * @example
      * // Get one Author
      * const author = await prisma.author.findUniqueOrThrow({
@@ -1483,15 +1483,15 @@ export namespace Prisma {
      *   }
      * })
     **/
-    findUniqueOrThrow<T extends authorFindUniqueOrThrowArgs<ExtArgs>>(
-      args?: SelectSubset<T, authorFindUniqueOrThrowArgs<ExtArgs>>
-    ): Prisma__authorClient<$Result.GetResult<Prisma.$authorPayload<ExtArgs>, T, 'findUniqueOrThrow'>, never, ExtArgs>
+    findUniqueOrThrow<T extends AuthorFindUniqueOrThrowArgs<ExtArgs>>(
+      args?: SelectSubset<T, AuthorFindUniqueOrThrowArgs<ExtArgs>>
+    ): Prisma__AuthorClient<$Result.GetResult<Prisma.$AuthorPayload<ExtArgs>, T, 'findUniqueOrThrow'>, never, ExtArgs>
 
     /**
      * Find the first Author that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {authorFindFirstArgs} args - Arguments to find a Author
+     * @param {AuthorFindFirstArgs} args - Arguments to find a Author
      * @example
      * // Get one Author
      * const author = await prisma.author.findFirst({
@@ -1500,16 +1500,16 @@ export namespace Prisma {
      *   }
      * })
     **/
-    findFirst<T extends authorFindFirstArgs<ExtArgs>>(
-      args?: SelectSubset<T, authorFindFirstArgs<ExtArgs>>
-    ): Prisma__authorClient<$Result.GetResult<Prisma.$authorPayload<ExtArgs>, T, 'findFirst'> | null, null, ExtArgs>
+    findFirst<T extends AuthorFindFirstArgs<ExtArgs>>(
+      args?: SelectSubset<T, AuthorFindFirstArgs<ExtArgs>>
+    ): Prisma__AuthorClient<$Result.GetResult<Prisma.$AuthorPayload<ExtArgs>, T, 'findFirst'> | null, null, ExtArgs>
 
     /**
      * Find the first Author that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {authorFindFirstOrThrowArgs} args - Arguments to find a Author
+     * @param {AuthorFindFirstOrThrowArgs} args - Arguments to find a Author
      * @example
      * // Get one Author
      * const author = await prisma.author.findFirstOrThrow({
@@ -1518,15 +1518,15 @@ export namespace Prisma {
      *   }
      * })
     **/
-    findFirstOrThrow<T extends authorFindFirstOrThrowArgs<ExtArgs>>(
-      args?: SelectSubset<T, authorFindFirstOrThrowArgs<ExtArgs>>
-    ): Prisma__authorClient<$Result.GetResult<Prisma.$authorPayload<ExtArgs>, T, 'findFirstOrThrow'>, never, ExtArgs>
+    findFirstOrThrow<T extends AuthorFindFirstOrThrowArgs<ExtArgs>>(
+      args?: SelectSubset<T, AuthorFindFirstOrThrowArgs<ExtArgs>>
+    ): Prisma__AuthorClient<$Result.GetResult<Prisma.$AuthorPayload<ExtArgs>, T, 'findFirstOrThrow'>, never, ExtArgs>
 
     /**
      * Find zero or more Authors that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {authorFindManyArgs=} args - Arguments to filter and select certain fields only.
+     * @param {AuthorFindManyArgs=} args - Arguments to filter and select certain fields only.
      * @example
      * // Get all Authors
      * const authors = await prisma.author.findMany()
@@ -1538,13 +1538,13 @@ export namespace Prisma {
      * const authorWithIdOnly = await prisma.author.findMany({ select: { id: true } })
      * 
     **/
-    findMany<T extends authorFindManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, authorFindManyArgs<ExtArgs>>
-    ): Prisma.PrismaPromise<$Result.GetResult<Prisma.$authorPayload<ExtArgs>, T, 'findMany'>>
+    findMany<T extends AuthorFindManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, AuthorFindManyArgs<ExtArgs>>
+    ): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AuthorPayload<ExtArgs>, T, 'findMany'>>
 
     /**
      * Create a Author.
-     * @param {authorCreateArgs} args - Arguments to create a Author.
+     * @param {AuthorCreateArgs} args - Arguments to create a Author.
      * @example
      * // Create one Author
      * const Author = await prisma.author.create({
@@ -1554,13 +1554,13 @@ export namespace Prisma {
      * })
      * 
     **/
-    create<T extends authorCreateArgs<ExtArgs>>(
-      args: SelectSubset<T, authorCreateArgs<ExtArgs>>
-    ): Prisma__authorClient<$Result.GetResult<Prisma.$authorPayload<ExtArgs>, T, 'create'>, never, ExtArgs>
+    create<T extends AuthorCreateArgs<ExtArgs>>(
+      args: SelectSubset<T, AuthorCreateArgs<ExtArgs>>
+    ): Prisma__AuthorClient<$Result.GetResult<Prisma.$AuthorPayload<ExtArgs>, T, 'create'>, never, ExtArgs>
 
     /**
      * Create many Authors.
-     *     @param {authorCreateManyArgs} args - Arguments to create many Authors.
+     *     @param {AuthorCreateManyArgs} args - Arguments to create many Authors.
      *     @example
      *     // Create many Authors
      *     const author = await prisma.author.createMany({
@@ -1570,13 +1570,13 @@ export namespace Prisma {
      *     })
      *     
     **/
-    createMany<T extends authorCreateManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, authorCreateManyArgs<ExtArgs>>
+    createMany<T extends AuthorCreateManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, AuthorCreateManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Delete a Author.
-     * @param {authorDeleteArgs} args - Arguments to delete one Author.
+     * @param {AuthorDeleteArgs} args - Arguments to delete one Author.
      * @example
      * // Delete one Author
      * const Author = await prisma.author.delete({
@@ -1586,13 +1586,13 @@ export namespace Prisma {
      * })
      * 
     **/
-    delete<T extends authorDeleteArgs<ExtArgs>>(
-      args: SelectSubset<T, authorDeleteArgs<ExtArgs>>
-    ): Prisma__authorClient<$Result.GetResult<Prisma.$authorPayload<ExtArgs>, T, 'delete'>, never, ExtArgs>
+    delete<T extends AuthorDeleteArgs<ExtArgs>>(
+      args: SelectSubset<T, AuthorDeleteArgs<ExtArgs>>
+    ): Prisma__AuthorClient<$Result.GetResult<Prisma.$AuthorPayload<ExtArgs>, T, 'delete'>, never, ExtArgs>
 
     /**
      * Update one Author.
-     * @param {authorUpdateArgs} args - Arguments to update one Author.
+     * @param {AuthorUpdateArgs} args - Arguments to update one Author.
      * @example
      * // Update one Author
      * const author = await prisma.author.update({
@@ -1605,13 +1605,13 @@ export namespace Prisma {
      * })
      * 
     **/
-    update<T extends authorUpdateArgs<ExtArgs>>(
-      args: SelectSubset<T, authorUpdateArgs<ExtArgs>>
-    ): Prisma__authorClient<$Result.GetResult<Prisma.$authorPayload<ExtArgs>, T, 'update'>, never, ExtArgs>
+    update<T extends AuthorUpdateArgs<ExtArgs>>(
+      args: SelectSubset<T, AuthorUpdateArgs<ExtArgs>>
+    ): Prisma__AuthorClient<$Result.GetResult<Prisma.$AuthorPayload<ExtArgs>, T, 'update'>, never, ExtArgs>
 
     /**
      * Delete zero or more Authors.
-     * @param {authorDeleteManyArgs} args - Arguments to filter Authors to delete.
+     * @param {AuthorDeleteManyArgs} args - Arguments to filter Authors to delete.
      * @example
      * // Delete a few Authors
      * const { count } = await prisma.author.deleteMany({
@@ -1621,15 +1621,15 @@ export namespace Prisma {
      * })
      * 
     **/
-    deleteMany<T extends authorDeleteManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, authorDeleteManyArgs<ExtArgs>>
+    deleteMany<T extends AuthorDeleteManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, AuthorDeleteManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Authors.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {authorUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {AuthorUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
      * // Update many Authors
      * const author = await prisma.author.updateMany({
@@ -1642,13 +1642,13 @@ export namespace Prisma {
      * })
      * 
     **/
-    updateMany<T extends authorUpdateManyArgs<ExtArgs>>(
-      args: SelectSubset<T, authorUpdateManyArgs<ExtArgs>>
+    updateMany<T extends AuthorUpdateManyArgs<ExtArgs>>(
+      args: SelectSubset<T, AuthorUpdateManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Create or update one Author.
-     * @param {authorUpsertArgs} args - Arguments to update or create a Author.
+     * @param {AuthorUpsertArgs} args - Arguments to update or create a Author.
      * @example
      * // Update or create a Author
      * const author = await prisma.author.upsert({
@@ -1663,15 +1663,15 @@ export namespace Prisma {
      *   }
      * })
     **/
-    upsert<T extends authorUpsertArgs<ExtArgs>>(
-      args: SelectSubset<T, authorUpsertArgs<ExtArgs>>
-    ): Prisma__authorClient<$Result.GetResult<Prisma.$authorPayload<ExtArgs>, T, 'upsert'>, never, ExtArgs>
+    upsert<T extends AuthorUpsertArgs<ExtArgs>>(
+      args: SelectSubset<T, AuthorUpsertArgs<ExtArgs>>
+    ): Prisma__AuthorClient<$Result.GetResult<Prisma.$AuthorPayload<ExtArgs>, T, 'upsert'>, never, ExtArgs>
 
     /**
      * Count the number of Authors.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {authorCountArgs} args - Arguments to filter Authors to count.
+     * @param {AuthorCountArgs} args - Arguments to filter Authors to count.
      * @example
      * // Count the number of Authors
      * const count = await prisma.author.count({
@@ -1680,8 +1680,8 @@ export namespace Prisma {
      *   }
      * })
     **/
-    count<T extends authorCountArgs>(
-      args?: Subset<T, authorCountArgs>,
+    count<T extends AuthorCountArgs>(
+      args?: Subset<T, AuthorCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
@@ -1720,7 +1720,7 @@ export namespace Prisma {
      * Group by Author.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {authorGroupByArgs} args - Group by arguments.
+     * @param {AuthorGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1735,14 +1735,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends authorGroupByArgs,
+      T extends AuthorGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: authorGroupByArgs['orderBy'] }
-        : { orderBy?: authorGroupByArgs['orderBy'] },
+        ? { orderBy: AuthorGroupByArgs['orderBy'] }
+        : { orderBy?: AuthorGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1791,27 +1791,27 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, authorGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetAuthorGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, AuthorGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetAuthorGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the author model
+   * Fields of the Author model
    */
-  readonly fields: authorFieldRefs;
+  readonly fields: AuthorFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for author.
+   * The delegate class that acts as a "Promise-like" for Author.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__authorClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__AuthorClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: 'PrismaPromise';
 
-    author_relation_author_relation_author_idToauthor<T extends author$author_relation_author_relation_author_idToauthorArgs<ExtArgs> = {}>(args?: Subset<T, author$author_relation_author_relation_author_idToauthorArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$author_relationPayload<ExtArgs>, T, 'findMany'> | Null>;
+    author_relation_author_relation_author_idToauthor<T extends Author$author_relation_author_relation_author_idToauthorArgs<ExtArgs> = {}>(args?: Subset<T, Author$author_relation_author_relation_author_idToauthorArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AuthorRelationPayload<ExtArgs>, T, 'findMany'> | Null>;
 
-    author_relation_author_relation_author_relationed_idToauthor<T extends author$author_relation_author_relation_author_relationed_idToauthorArgs<ExtArgs> = {}>(args?: Subset<T, author$author_relation_author_relation_author_relationed_idToauthorArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$author_relationPayload<ExtArgs>, T, 'findMany'> | Null>;
+    author_relation_author_relation_author_relationed_idToauthor<T extends Author$author_relation_author_relation_author_relationed_idToauthorArgs<ExtArgs> = {}>(args?: Subset<T, Author$author_relation_author_relation_author_relationed_idToauthorArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AuthorRelationPayload<ExtArgs>, T, 'findMany'> | Null>;
 
-    phrase<T extends author$phraseArgs<ExtArgs> = {}>(args?: Subset<T, author$phraseArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$phrasePayload<ExtArgs>, T, 'findMany'> | Null>;
+    phrase<T extends Author$phraseArgs<ExtArgs> = {}>(args?: Subset<T, Author$phraseArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PhrasePayload<ExtArgs>, T, 'findMany'> | Null>;
 
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -1838,194 +1838,194 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the author model
+   * Fields of the Author model
    */ 
-  interface authorFieldRefs {
-    readonly id: FieldRef<"author", 'Int'>
-    readonly name: FieldRef<"author", 'String'>
-    readonly last_name: FieldRef<"author", 'String'>
-    readonly description: FieldRef<"author", 'String'>
-    readonly created_at: FieldRef<"author", 'DateTime'>
-    readonly updated_at: FieldRef<"author", 'DateTime'>
+  interface AuthorFieldRefs {
+    readonly id: FieldRef<"Author", 'Int'>
+    readonly name: FieldRef<"Author", 'String'>
+    readonly last_name: FieldRef<"Author", 'String'>
+    readonly description: FieldRef<"Author", 'String'>
+    readonly created_at: FieldRef<"Author", 'DateTime'>
+    readonly updated_at: FieldRef<"Author", 'DateTime'>
   }
     
 
   // Custom InputTypes
 
   /**
-   * author findUnique
+   * Author findUnique
    */
-  export type authorFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author
+     * Select specific fields to fetch from the Author
      */
-    select?: authorSelect<ExtArgs> | null
+    select?: AuthorSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: authorInclude<ExtArgs> | null
+    include?: AuthorInclude<ExtArgs> | null
     /**
-     * Filter, which author to fetch.
+     * Filter, which Author to fetch.
      */
-    where: authorWhereUniqueInput
+    where: AuthorWhereUniqueInput
   }
 
 
   /**
-   * author findUniqueOrThrow
+   * Author findUniqueOrThrow
    */
-  export type authorFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author
+     * Select specific fields to fetch from the Author
      */
-    select?: authorSelect<ExtArgs> | null
+    select?: AuthorSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: authorInclude<ExtArgs> | null
+    include?: AuthorInclude<ExtArgs> | null
     /**
-     * Filter, which author to fetch.
+     * Filter, which Author to fetch.
      */
-    where: authorWhereUniqueInput
+    where: AuthorWhereUniqueInput
   }
 
 
   /**
-   * author findFirst
+   * Author findFirst
    */
-  export type authorFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author
+     * Select specific fields to fetch from the Author
      */
-    select?: authorSelect<ExtArgs> | null
+    select?: AuthorSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: authorInclude<ExtArgs> | null
+    include?: AuthorInclude<ExtArgs> | null
     /**
-     * Filter, which author to fetch.
+     * Filter, which Author to fetch.
      */
-    where?: authorWhereInput
+    where?: AuthorWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of authors to fetch.
+     * Determine the order of Authors to fetch.
      */
-    orderBy?: authorOrderByWithRelationInput | authorOrderByWithRelationInput[]
+    orderBy?: AuthorOrderByWithRelationInput | AuthorOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for authors.
+     * Sets the position for searching for Authors.
      */
-    cursor?: authorWhereUniqueInput
+    cursor?: AuthorWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` authors from the position of the cursor.
+     * Take `±n` Authors from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` authors.
+     * Skip the first `n` Authors.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of authors.
+     * Filter by unique combinations of Authors.
      */
     distinct?: AuthorScalarFieldEnum | AuthorScalarFieldEnum[]
   }
 
 
   /**
-   * author findFirstOrThrow
+   * Author findFirstOrThrow
    */
-  export type authorFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author
+     * Select specific fields to fetch from the Author
      */
-    select?: authorSelect<ExtArgs> | null
+    select?: AuthorSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: authorInclude<ExtArgs> | null
+    include?: AuthorInclude<ExtArgs> | null
     /**
-     * Filter, which author to fetch.
+     * Filter, which Author to fetch.
      */
-    where?: authorWhereInput
+    where?: AuthorWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of authors to fetch.
+     * Determine the order of Authors to fetch.
      */
-    orderBy?: authorOrderByWithRelationInput | authorOrderByWithRelationInput[]
+    orderBy?: AuthorOrderByWithRelationInput | AuthorOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for authors.
+     * Sets the position for searching for Authors.
      */
-    cursor?: authorWhereUniqueInput
+    cursor?: AuthorWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` authors from the position of the cursor.
+     * Take `±n` Authors from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` authors.
+     * Skip the first `n` Authors.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of authors.
+     * Filter by unique combinations of Authors.
      */
     distinct?: AuthorScalarFieldEnum | AuthorScalarFieldEnum[]
   }
 
 
   /**
-   * author findMany
+   * Author findMany
    */
-  export type authorFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author
+     * Select specific fields to fetch from the Author
      */
-    select?: authorSelect<ExtArgs> | null
+    select?: AuthorSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: authorInclude<ExtArgs> | null
+    include?: AuthorInclude<ExtArgs> | null
     /**
-     * Filter, which authors to fetch.
+     * Filter, which Authors to fetch.
      */
-    where?: authorWhereInput
+    where?: AuthorWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of authors to fetch.
+     * Determine the order of Authors to fetch.
      */
-    orderBy?: authorOrderByWithRelationInput | authorOrderByWithRelationInput[]
+    orderBy?: AuthorOrderByWithRelationInput | AuthorOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing authors.
+     * Sets the position for listing Authors.
      */
-    cursor?: authorWhereUniqueInput
+    cursor?: AuthorWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` authors from the position of the cursor.
+     * Take `±n` Authors from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` authors.
+     * Skip the first `n` Authors.
      */
     skip?: number
     distinct?: AuthorScalarFieldEnum | AuthorScalarFieldEnum[]
@@ -2033,188 +2033,188 @@ export namespace Prisma {
 
 
   /**
-   * author create
+   * Author create
    */
-  export type authorCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author
+     * Select specific fields to fetch from the Author
      */
-    select?: authorSelect<ExtArgs> | null
+    select?: AuthorSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: authorInclude<ExtArgs> | null
+    include?: AuthorInclude<ExtArgs> | null
     /**
-     * The data needed to create a author.
+     * The data needed to create a Author.
      */
-    data: XOR<authorCreateInput, authorUncheckedCreateInput>
+    data: XOR<AuthorCreateInput, AuthorUncheckedCreateInput>
   }
 
 
   /**
-   * author createMany
+   * Author createMany
    */
-  export type authorCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many authors.
+     * The data used to create many Authors.
      */
-    data: authorCreateManyInput | authorCreateManyInput[]
+    data: AuthorCreateManyInput | AuthorCreateManyInput[]
     skipDuplicates?: boolean
   }
 
 
   /**
-   * author update
+   * Author update
    */
-  export type authorUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author
+     * Select specific fields to fetch from the Author
      */
-    select?: authorSelect<ExtArgs> | null
+    select?: AuthorSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: authorInclude<ExtArgs> | null
+    include?: AuthorInclude<ExtArgs> | null
     /**
-     * The data needed to update a author.
+     * The data needed to update a Author.
      */
-    data: XOR<authorUpdateInput, authorUncheckedUpdateInput>
+    data: XOR<AuthorUpdateInput, AuthorUncheckedUpdateInput>
     /**
-     * Choose, which author to update.
+     * Choose, which Author to update.
      */
-    where: authorWhereUniqueInput
+    where: AuthorWhereUniqueInput
   }
 
 
   /**
-   * author updateMany
+   * Author updateMany
    */
-  export type authorUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update authors.
+     * The data used to update Authors.
      */
-    data: XOR<authorUpdateManyMutationInput, authorUncheckedUpdateManyInput>
+    data: XOR<AuthorUpdateManyMutationInput, AuthorUncheckedUpdateManyInput>
     /**
-     * Filter which authors to update
+     * Filter which Authors to update
      */
-    where?: authorWhereInput
+    where?: AuthorWhereInput
   }
 
 
   /**
-   * author upsert
+   * Author upsert
    */
-  export type authorUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author
+     * Select specific fields to fetch from the Author
      */
-    select?: authorSelect<ExtArgs> | null
+    select?: AuthorSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: authorInclude<ExtArgs> | null
+    include?: AuthorInclude<ExtArgs> | null
     /**
-     * The filter to search for the author to update in case it exists.
+     * The filter to search for the Author to update in case it exists.
      */
-    where: authorWhereUniqueInput
+    where: AuthorWhereUniqueInput
     /**
-     * In case the author found by the `where` argument doesn't exist, create a new author with this data.
+     * In case the Author found by the `where` argument doesn't exist, create a new Author with this data.
      */
-    create: XOR<authorCreateInput, authorUncheckedCreateInput>
+    create: XOR<AuthorCreateInput, AuthorUncheckedCreateInput>
     /**
-     * In case the author was found with the provided `where` argument, update it with this data.
+     * In case the Author was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<authorUpdateInput, authorUncheckedUpdateInput>
+    update: XOR<AuthorUpdateInput, AuthorUncheckedUpdateInput>
   }
 
 
   /**
-   * author delete
+   * Author delete
    */
-  export type authorDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author
+     * Select specific fields to fetch from the Author
      */
-    select?: authorSelect<ExtArgs> | null
+    select?: AuthorSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: authorInclude<ExtArgs> | null
+    include?: AuthorInclude<ExtArgs> | null
     /**
-     * Filter which author to delete.
+     * Filter which Author to delete.
      */
-    where: authorWhereUniqueInput
+    where: AuthorWhereUniqueInput
   }
 
 
   /**
-   * author deleteMany
+   * Author deleteMany
    */
-  export type authorDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which authors to delete
+     * Filter which Authors to delete
      */
-    where?: authorWhereInput
+    where?: AuthorWhereInput
   }
 
 
   /**
-   * author.author_relation_author_relation_author_idToauthor
+   * Author.author_relation_author_relation_author_idToauthor
    */
-  export type author$author_relation_author_relation_author_idToauthorArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type Author$author_relation_author_relation_author_idToauthorArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author_relation
+     * Select specific fields to fetch from the AuthorRelation
      */
-    select?: author_relationSelect<ExtArgs> | null
+    select?: AuthorRelationSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: author_relationInclude<ExtArgs> | null
-    where?: author_relationWhereInput
-    orderBy?: author_relationOrderByWithRelationInput | author_relationOrderByWithRelationInput[]
-    cursor?: author_relationWhereUniqueInput
+    include?: AuthorRelationInclude<ExtArgs> | null
+    where?: AuthorRelationWhereInput
+    orderBy?: AuthorRelationOrderByWithRelationInput | AuthorRelationOrderByWithRelationInput[]
+    cursor?: AuthorRelationWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: Author_relationScalarFieldEnum | Author_relationScalarFieldEnum[]
+    distinct?: AuthorRelationScalarFieldEnum | AuthorRelationScalarFieldEnum[]
   }
 
 
   /**
-   * author.author_relation_author_relation_author_relationed_idToauthor
+   * Author.author_relation_author_relation_author_relationed_idToauthor
    */
-  export type author$author_relation_author_relation_author_relationed_idToauthorArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type Author$author_relation_author_relation_author_relationed_idToauthorArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author_relation
+     * Select specific fields to fetch from the AuthorRelation
      */
-    select?: author_relationSelect<ExtArgs> | null
+    select?: AuthorRelationSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: author_relationInclude<ExtArgs> | null
-    where?: author_relationWhereInput
-    orderBy?: author_relationOrderByWithRelationInput | author_relationOrderByWithRelationInput[]
-    cursor?: author_relationWhereUniqueInput
+    include?: AuthorRelationInclude<ExtArgs> | null
+    where?: AuthorRelationWhereInput
+    orderBy?: AuthorRelationOrderByWithRelationInput | AuthorRelationOrderByWithRelationInput[]
+    cursor?: AuthorRelationWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: Author_relationScalarFieldEnum | Author_relationScalarFieldEnum[]
+    distinct?: AuthorRelationScalarFieldEnum | AuthorRelationScalarFieldEnum[]
   }
 
 
   /**
-   * author.phrase
+   * Author.phrase
    */
-  export type author$phraseArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type Author$phraseArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the phrase
+     * Select specific fields to fetch from the Phrase
      */
-    select?: phraseSelect<ExtArgs> | null
+    select?: PhraseSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: phraseInclude<ExtArgs> | null
-    where?: phraseWhereInput
-    orderBy?: phraseOrderByWithRelationInput | phraseOrderByWithRelationInput[]
-    cursor?: phraseWhereUniqueInput
+    include?: PhraseInclude<ExtArgs> | null
+    where?: PhraseWhereInput
+    orderBy?: PhraseOrderByWithRelationInput | PhraseOrderByWithRelationInput[]
+    cursor?: PhraseWhereUniqueInput
     take?: number
     skip?: number
     distinct?: PhraseScalarFieldEnum | PhraseScalarFieldEnum[]
@@ -2222,59 +2222,48 @@ export namespace Prisma {
 
 
   /**
-   * author without action
+   * Author without action
    */
-  export type authorDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author
+     * Select specific fields to fetch from the Author
      */
-    select?: authorSelect<ExtArgs> | null
+    select?: AuthorSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: authorInclude<ExtArgs> | null
+    include?: AuthorInclude<ExtArgs> | null
   }
 
 
 
   /**
-   * Model author_relation
+   * Model AuthorRelation
    */
 
-  export type AggregateAuthor_relation = {
-    _count: Author_relationCountAggregateOutputType | null
-    _avg: Author_relationAvgAggregateOutputType | null
-    _sum: Author_relationSumAggregateOutputType | null
-    _min: Author_relationMinAggregateOutputType | null
-    _max: Author_relationMaxAggregateOutputType | null
+  export type AggregateAuthorRelation = {
+    _count: AuthorRelationCountAggregateOutputType | null
+    _avg: AuthorRelationAvgAggregateOutputType | null
+    _sum: AuthorRelationSumAggregateOutputType | null
+    _min: AuthorRelationMinAggregateOutputType | null
+    _max: AuthorRelationMaxAggregateOutputType | null
   }
 
-  export type Author_relationAvgAggregateOutputType = {
+  export type AuthorRelationAvgAggregateOutputType = {
     id: number | null
     author_id: number | null
     author_relationed_id: number | null
     history_type_id: number | null
   }
 
-  export type Author_relationSumAggregateOutputType = {
+  export type AuthorRelationSumAggregateOutputType = {
     id: number | null
     author_id: number | null
     author_relationed_id: number | null
     history_type_id: number | null
   }
 
-  export type Author_relationMinAggregateOutputType = {
-    id: number | null
-    name_relation: string | null
-    type_relation: string | null
-    created_at: Date | null
-    updated_at: Date | null
-    author_id: number | null
-    author_relationed_id: number | null
-    history_type_id: number | null
-  }
-
-  export type Author_relationMaxAggregateOutputType = {
+  export type AuthorRelationMinAggregateOutputType = {
     id: number | null
     name_relation: string | null
     type_relation: string | null
@@ -2285,7 +2274,18 @@ export namespace Prisma {
     history_type_id: number | null
   }
 
-  export type Author_relationCountAggregateOutputType = {
+  export type AuthorRelationMaxAggregateOutputType = {
+    id: number | null
+    name_relation: string | null
+    type_relation: string | null
+    created_at: Date | null
+    updated_at: Date | null
+    author_id: number | null
+    author_relationed_id: number | null
+    history_type_id: number | null
+  }
+
+  export type AuthorRelationCountAggregateOutputType = {
     id: number
     name_relation: number
     type_relation: number
@@ -2298,32 +2298,21 @@ export namespace Prisma {
   }
 
 
-  export type Author_relationAvgAggregateInputType = {
+  export type AuthorRelationAvgAggregateInputType = {
     id?: true
     author_id?: true
     author_relationed_id?: true
     history_type_id?: true
   }
 
-  export type Author_relationSumAggregateInputType = {
+  export type AuthorRelationSumAggregateInputType = {
     id?: true
     author_id?: true
     author_relationed_id?: true
     history_type_id?: true
   }
 
-  export type Author_relationMinAggregateInputType = {
-    id?: true
-    name_relation?: true
-    type_relation?: true
-    created_at?: true
-    updated_at?: true
-    author_id?: true
-    author_relationed_id?: true
-    history_type_id?: true
-  }
-
-  export type Author_relationMaxAggregateInputType = {
+  export type AuthorRelationMinAggregateInputType = {
     id?: true
     name_relation?: true
     type_relation?: true
@@ -2334,7 +2323,18 @@ export namespace Prisma {
     history_type_id?: true
   }
 
-  export type Author_relationCountAggregateInputType = {
+  export type AuthorRelationMaxAggregateInputType = {
+    id?: true
+    name_relation?: true
+    type_relation?: true
+    created_at?: true
+    updated_at?: true
+    author_id?: true
+    author_relationed_id?: true
+    history_type_id?: true
+  }
+
+  export type AuthorRelationCountAggregateInputType = {
     id?: true
     name_relation?: true
     type_relation?: true
@@ -2346,93 +2346,93 @@ export namespace Prisma {
     _all?: true
   }
 
-  export type Author_relationAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorRelationAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which author_relation to aggregate.
+     * Filter which AuthorRelation to aggregate.
      */
-    where?: author_relationWhereInput
+    where?: AuthorRelationWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of author_relations to fetch.
+     * Determine the order of AuthorRelations to fetch.
      */
-    orderBy?: author_relationOrderByWithRelationInput | author_relationOrderByWithRelationInput[]
+    orderBy?: AuthorRelationOrderByWithRelationInput | AuthorRelationOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: author_relationWhereUniqueInput
+    cursor?: AuthorRelationWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` author_relations from the position of the cursor.
+     * Take `±n` AuthorRelations from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` author_relations.
+     * Skip the first `n` AuthorRelations.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned author_relations
+     * Count returned AuthorRelations
     **/
-    _count?: true | Author_relationCountAggregateInputType
+    _count?: true | AuthorRelationCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: Author_relationAvgAggregateInputType
+    _avg?: AuthorRelationAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: Author_relationSumAggregateInputType
+    _sum?: AuthorRelationSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: Author_relationMinAggregateInputType
+    _min?: AuthorRelationMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: Author_relationMaxAggregateInputType
+    _max?: AuthorRelationMaxAggregateInputType
   }
 
-  export type GetAuthor_relationAggregateType<T extends Author_relationAggregateArgs> = {
-        [P in keyof T & keyof AggregateAuthor_relation]: P extends '_count' | 'count'
+  export type GetAuthorRelationAggregateType<T extends AuthorRelationAggregateArgs> = {
+        [P in keyof T & keyof AggregateAuthorRelation]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateAuthor_relation[P]>
-      : GetScalarType<T[P], AggregateAuthor_relation[P]>
+        : GetScalarType<T[P], AggregateAuthorRelation[P]>
+      : GetScalarType<T[P], AggregateAuthorRelation[P]>
   }
 
 
 
 
-  export type author_relationGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: author_relationWhereInput
-    orderBy?: author_relationOrderByWithAggregationInput | author_relationOrderByWithAggregationInput[]
-    by: Author_relationScalarFieldEnum[] | Author_relationScalarFieldEnum
-    having?: author_relationScalarWhereWithAggregatesInput
+  export type AuthorRelationGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: AuthorRelationWhereInput
+    orderBy?: AuthorRelationOrderByWithAggregationInput | AuthorRelationOrderByWithAggregationInput[]
+    by: AuthorRelationScalarFieldEnum[] | AuthorRelationScalarFieldEnum
+    having?: AuthorRelationScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: Author_relationCountAggregateInputType | true
-    _avg?: Author_relationAvgAggregateInputType
-    _sum?: Author_relationSumAggregateInputType
-    _min?: Author_relationMinAggregateInputType
-    _max?: Author_relationMaxAggregateInputType
+    _count?: AuthorRelationCountAggregateInputType | true
+    _avg?: AuthorRelationAvgAggregateInputType
+    _sum?: AuthorRelationSumAggregateInputType
+    _min?: AuthorRelationMinAggregateInputType
+    _max?: AuthorRelationMaxAggregateInputType
   }
 
-  export type Author_relationGroupByOutputType = {
+  export type AuthorRelationGroupByOutputType = {
     id: number
     name_relation: string
     type_relation: string
@@ -2441,28 +2441,28 @@ export namespace Prisma {
     author_id: number
     author_relationed_id: number
     history_type_id: number
-    _count: Author_relationCountAggregateOutputType | null
-    _avg: Author_relationAvgAggregateOutputType | null
-    _sum: Author_relationSumAggregateOutputType | null
-    _min: Author_relationMinAggregateOutputType | null
-    _max: Author_relationMaxAggregateOutputType | null
+    _count: AuthorRelationCountAggregateOutputType | null
+    _avg: AuthorRelationAvgAggregateOutputType | null
+    _sum: AuthorRelationSumAggregateOutputType | null
+    _min: AuthorRelationMinAggregateOutputType | null
+    _max: AuthorRelationMaxAggregateOutputType | null
   }
 
-  type GetAuthor_relationGroupByPayload<T extends author_relationGroupByArgs> = Prisma.PrismaPromise<
+  type GetAuthorRelationGroupByPayload<T extends AuthorRelationGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<Author_relationGroupByOutputType, T['by']> &
+      PickEnumerable<AuthorRelationGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof Author_relationGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof AuthorRelationGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], Author_relationGroupByOutputType[P]>
-            : GetScalarType<T[P], Author_relationGroupByOutputType[P]>
+              : GetScalarType<T[P], AuthorRelationGroupByOutputType[P]>
+            : GetScalarType<T[P], AuthorRelationGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type author_relationSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type AuthorRelationSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name_relation?: boolean
     type_relation?: boolean
@@ -2471,12 +2471,12 @@ export namespace Prisma {
     author_id?: boolean
     author_relationed_id?: boolean
     history_type_id?: boolean
-    author_author_relation_author_idToauthor?: boolean | authorDefaultArgs<ExtArgs>
-    author_author_relation_author_relationed_idToauthor?: boolean | authorDefaultArgs<ExtArgs>
-    history_type?: boolean | history_typeDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["author_relation"]>
+    author_author_relation_author_idToauthor?: boolean | AuthorDefaultArgs<ExtArgs>
+    author_author_relation_author_relationed_idToauthor?: boolean | AuthorDefaultArgs<ExtArgs>
+    history_type?: boolean | HistoryTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["authorRelation"]>
 
-  export type author_relationSelectScalar = {
+  export type AuthorRelationSelectScalar = {
     id?: boolean
     name_relation?: boolean
     type_relation?: boolean
@@ -2487,19 +2487,19 @@ export namespace Prisma {
     history_type_id?: boolean
   }
 
-  export type author_relationInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    author_author_relation_author_idToauthor?: boolean | authorDefaultArgs<ExtArgs>
-    author_author_relation_author_relationed_idToauthor?: boolean | authorDefaultArgs<ExtArgs>
-    history_type?: boolean | history_typeDefaultArgs<ExtArgs>
+  export type AuthorRelationInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    author_author_relation_author_idToauthor?: boolean | AuthorDefaultArgs<ExtArgs>
+    author_author_relation_author_relationed_idToauthor?: boolean | AuthorDefaultArgs<ExtArgs>
+    history_type?: boolean | HistoryTypeDefaultArgs<ExtArgs>
   }
 
 
-  export type $author_relationPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "author_relation"
+  export type $AuthorRelationPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "AuthorRelation"
     objects: {
-      author_author_relation_author_idToauthor: Prisma.$authorPayload<ExtArgs>
-      author_author_relation_author_relationed_idToauthor: Prisma.$authorPayload<ExtArgs>
-      history_type: Prisma.$history_typePayload<ExtArgs>
+      author_author_relation_author_idToauthor: Prisma.$AuthorPayload<ExtArgs>
+      author_author_relation_author_relationed_idToauthor: Prisma.$AuthorPayload<ExtArgs>
+      history_type: Prisma.$HistoryTypePayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
@@ -2510,160 +2510,160 @@ export namespace Prisma {
       author_id: number
       author_relationed_id: number
       history_type_id: number
-    }, ExtArgs["result"]["author_relation"]>
+    }, ExtArgs["result"]["authorRelation"]>
     composites: {}
   }
 
 
-  type author_relationGetPayload<S extends boolean | null | undefined | author_relationDefaultArgs> = $Result.GetResult<Prisma.$author_relationPayload, S>
+  type AuthorRelationGetPayload<S extends boolean | null | undefined | AuthorRelationDefaultArgs> = $Result.GetResult<Prisma.$AuthorRelationPayload, S>
 
-  type author_relationCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<author_relationFindManyArgs, 'select' | 'include' | 'distinct'> & {
-      select?: Author_relationCountAggregateInputType | true
+  type AuthorRelationCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
+    Omit<AuthorRelationFindManyArgs, 'select' | 'include' | 'distinct'> & {
+      select?: AuthorRelationCountAggregateInputType | true
     }
 
-  export interface author_relationDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['author_relation'], meta: { name: 'author_relation' } }
+  export interface AuthorRelationDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['AuthorRelation'], meta: { name: 'AuthorRelation' } }
     /**
-     * Find zero or one Author_relation that matches the filter.
-     * @param {author_relationFindUniqueArgs} args - Arguments to find a Author_relation
+     * Find zero or one AuthorRelation that matches the filter.
+     * @param {AuthorRelationFindUniqueArgs} args - Arguments to find a AuthorRelation
      * @example
-     * // Get one Author_relation
-     * const author_relation = await prisma.author_relation.findUnique({
+     * // Get one AuthorRelation
+     * const authorRelation = await prisma.authorRelation.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findUnique<T extends author_relationFindUniqueArgs<ExtArgs>>(
-      args: SelectSubset<T, author_relationFindUniqueArgs<ExtArgs>>
-    ): Prisma__author_relationClient<$Result.GetResult<Prisma.$author_relationPayload<ExtArgs>, T, 'findUnique'> | null, null, ExtArgs>
+    findUnique<T extends AuthorRelationFindUniqueArgs<ExtArgs>>(
+      args: SelectSubset<T, AuthorRelationFindUniqueArgs<ExtArgs>>
+    ): Prisma__AuthorRelationClient<$Result.GetResult<Prisma.$AuthorRelationPayload<ExtArgs>, T, 'findUnique'> | null, null, ExtArgs>
 
     /**
-     * Find one Author_relation that matches the filter or throw an error  with `error.code='P2025'` 
+     * Find one AuthorRelation that matches the filter or throw an error  with `error.code='P2025'` 
      *     if no matches were found.
-     * @param {author_relationFindUniqueOrThrowArgs} args - Arguments to find a Author_relation
+     * @param {AuthorRelationFindUniqueOrThrowArgs} args - Arguments to find a AuthorRelation
      * @example
-     * // Get one Author_relation
-     * const author_relation = await prisma.author_relation.findUniqueOrThrow({
+     * // Get one AuthorRelation
+     * const authorRelation = await prisma.authorRelation.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findUniqueOrThrow<T extends author_relationFindUniqueOrThrowArgs<ExtArgs>>(
-      args?: SelectSubset<T, author_relationFindUniqueOrThrowArgs<ExtArgs>>
-    ): Prisma__author_relationClient<$Result.GetResult<Prisma.$author_relationPayload<ExtArgs>, T, 'findUniqueOrThrow'>, never, ExtArgs>
+    findUniqueOrThrow<T extends AuthorRelationFindUniqueOrThrowArgs<ExtArgs>>(
+      args?: SelectSubset<T, AuthorRelationFindUniqueOrThrowArgs<ExtArgs>>
+    ): Prisma__AuthorRelationClient<$Result.GetResult<Prisma.$AuthorRelationPayload<ExtArgs>, T, 'findUniqueOrThrow'>, never, ExtArgs>
 
     /**
-     * Find the first Author_relation that matches the filter.
+     * Find the first AuthorRelation that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {author_relationFindFirstArgs} args - Arguments to find a Author_relation
+     * @param {AuthorRelationFindFirstArgs} args - Arguments to find a AuthorRelation
      * @example
-     * // Get one Author_relation
-     * const author_relation = await prisma.author_relation.findFirst({
+     * // Get one AuthorRelation
+     * const authorRelation = await prisma.authorRelation.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findFirst<T extends author_relationFindFirstArgs<ExtArgs>>(
-      args?: SelectSubset<T, author_relationFindFirstArgs<ExtArgs>>
-    ): Prisma__author_relationClient<$Result.GetResult<Prisma.$author_relationPayload<ExtArgs>, T, 'findFirst'> | null, null, ExtArgs>
+    findFirst<T extends AuthorRelationFindFirstArgs<ExtArgs>>(
+      args?: SelectSubset<T, AuthorRelationFindFirstArgs<ExtArgs>>
+    ): Prisma__AuthorRelationClient<$Result.GetResult<Prisma.$AuthorRelationPayload<ExtArgs>, T, 'findFirst'> | null, null, ExtArgs>
 
     /**
-     * Find the first Author_relation that matches the filter or
+     * Find the first AuthorRelation that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {author_relationFindFirstOrThrowArgs} args - Arguments to find a Author_relation
+     * @param {AuthorRelationFindFirstOrThrowArgs} args - Arguments to find a AuthorRelation
      * @example
-     * // Get one Author_relation
-     * const author_relation = await prisma.author_relation.findFirstOrThrow({
+     * // Get one AuthorRelation
+     * const authorRelation = await prisma.authorRelation.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findFirstOrThrow<T extends author_relationFindFirstOrThrowArgs<ExtArgs>>(
-      args?: SelectSubset<T, author_relationFindFirstOrThrowArgs<ExtArgs>>
-    ): Prisma__author_relationClient<$Result.GetResult<Prisma.$author_relationPayload<ExtArgs>, T, 'findFirstOrThrow'>, never, ExtArgs>
+    findFirstOrThrow<T extends AuthorRelationFindFirstOrThrowArgs<ExtArgs>>(
+      args?: SelectSubset<T, AuthorRelationFindFirstOrThrowArgs<ExtArgs>>
+    ): Prisma__AuthorRelationClient<$Result.GetResult<Prisma.$AuthorRelationPayload<ExtArgs>, T, 'findFirstOrThrow'>, never, ExtArgs>
 
     /**
-     * Find zero or more Author_relations that matches the filter.
+     * Find zero or more AuthorRelations that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {author_relationFindManyArgs=} args - Arguments to filter and select certain fields only.
+     * @param {AuthorRelationFindManyArgs=} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Author_relations
-     * const author_relations = await prisma.author_relation.findMany()
+     * // Get all AuthorRelations
+     * const authorRelations = await prisma.authorRelation.findMany()
      * 
-     * // Get first 10 Author_relations
-     * const author_relations = await prisma.author_relation.findMany({ take: 10 })
+     * // Get first 10 AuthorRelations
+     * const authorRelations = await prisma.authorRelation.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const author_relationWithIdOnly = await prisma.author_relation.findMany({ select: { id: true } })
+     * const authorRelationWithIdOnly = await prisma.authorRelation.findMany({ select: { id: true } })
      * 
     **/
-    findMany<T extends author_relationFindManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, author_relationFindManyArgs<ExtArgs>>
-    ): Prisma.PrismaPromise<$Result.GetResult<Prisma.$author_relationPayload<ExtArgs>, T, 'findMany'>>
+    findMany<T extends AuthorRelationFindManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, AuthorRelationFindManyArgs<ExtArgs>>
+    ): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AuthorRelationPayload<ExtArgs>, T, 'findMany'>>
 
     /**
-     * Create a Author_relation.
-     * @param {author_relationCreateArgs} args - Arguments to create a Author_relation.
+     * Create a AuthorRelation.
+     * @param {AuthorRelationCreateArgs} args - Arguments to create a AuthorRelation.
      * @example
-     * // Create one Author_relation
-     * const Author_relation = await prisma.author_relation.create({
+     * // Create one AuthorRelation
+     * const AuthorRelation = await prisma.authorRelation.create({
      *   data: {
-     *     // ... data to create a Author_relation
+     *     // ... data to create a AuthorRelation
      *   }
      * })
      * 
     **/
-    create<T extends author_relationCreateArgs<ExtArgs>>(
-      args: SelectSubset<T, author_relationCreateArgs<ExtArgs>>
-    ): Prisma__author_relationClient<$Result.GetResult<Prisma.$author_relationPayload<ExtArgs>, T, 'create'>, never, ExtArgs>
+    create<T extends AuthorRelationCreateArgs<ExtArgs>>(
+      args: SelectSubset<T, AuthorRelationCreateArgs<ExtArgs>>
+    ): Prisma__AuthorRelationClient<$Result.GetResult<Prisma.$AuthorRelationPayload<ExtArgs>, T, 'create'>, never, ExtArgs>
 
     /**
-     * Create many Author_relations.
-     *     @param {author_relationCreateManyArgs} args - Arguments to create many Author_relations.
+     * Create many AuthorRelations.
+     *     @param {AuthorRelationCreateManyArgs} args - Arguments to create many AuthorRelations.
      *     @example
-     *     // Create many Author_relations
-     *     const author_relation = await prisma.author_relation.createMany({
+     *     // Create many AuthorRelations
+     *     const authorRelation = await prisma.authorRelation.createMany({
      *       data: {
      *         // ... provide data here
      *       }
      *     })
      *     
     **/
-    createMany<T extends author_relationCreateManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, author_relationCreateManyArgs<ExtArgs>>
+    createMany<T extends AuthorRelationCreateManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, AuthorRelationCreateManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Delete a Author_relation.
-     * @param {author_relationDeleteArgs} args - Arguments to delete one Author_relation.
+     * Delete a AuthorRelation.
+     * @param {AuthorRelationDeleteArgs} args - Arguments to delete one AuthorRelation.
      * @example
-     * // Delete one Author_relation
-     * const Author_relation = await prisma.author_relation.delete({
+     * // Delete one AuthorRelation
+     * const AuthorRelation = await prisma.authorRelation.delete({
      *   where: {
-     *     // ... filter to delete one Author_relation
+     *     // ... filter to delete one AuthorRelation
      *   }
      * })
      * 
     **/
-    delete<T extends author_relationDeleteArgs<ExtArgs>>(
-      args: SelectSubset<T, author_relationDeleteArgs<ExtArgs>>
-    ): Prisma__author_relationClient<$Result.GetResult<Prisma.$author_relationPayload<ExtArgs>, T, 'delete'>, never, ExtArgs>
+    delete<T extends AuthorRelationDeleteArgs<ExtArgs>>(
+      args: SelectSubset<T, AuthorRelationDeleteArgs<ExtArgs>>
+    ): Prisma__AuthorRelationClient<$Result.GetResult<Prisma.$AuthorRelationPayload<ExtArgs>, T, 'delete'>, never, ExtArgs>
 
     /**
-     * Update one Author_relation.
-     * @param {author_relationUpdateArgs} args - Arguments to update one Author_relation.
+     * Update one AuthorRelation.
+     * @param {AuthorRelationUpdateArgs} args - Arguments to update one AuthorRelation.
      * @example
-     * // Update one Author_relation
-     * const author_relation = await prisma.author_relation.update({
+     * // Update one AuthorRelation
+     * const authorRelation = await prisma.authorRelation.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2673,34 +2673,34 @@ export namespace Prisma {
      * })
      * 
     **/
-    update<T extends author_relationUpdateArgs<ExtArgs>>(
-      args: SelectSubset<T, author_relationUpdateArgs<ExtArgs>>
-    ): Prisma__author_relationClient<$Result.GetResult<Prisma.$author_relationPayload<ExtArgs>, T, 'update'>, never, ExtArgs>
+    update<T extends AuthorRelationUpdateArgs<ExtArgs>>(
+      args: SelectSubset<T, AuthorRelationUpdateArgs<ExtArgs>>
+    ): Prisma__AuthorRelationClient<$Result.GetResult<Prisma.$AuthorRelationPayload<ExtArgs>, T, 'update'>, never, ExtArgs>
 
     /**
-     * Delete zero or more Author_relations.
-     * @param {author_relationDeleteManyArgs} args - Arguments to filter Author_relations to delete.
+     * Delete zero or more AuthorRelations.
+     * @param {AuthorRelationDeleteManyArgs} args - Arguments to filter AuthorRelations to delete.
      * @example
-     * // Delete a few Author_relations
-     * const { count } = await prisma.author_relation.deleteMany({
+     * // Delete a few AuthorRelations
+     * const { count } = await prisma.authorRelation.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
     **/
-    deleteMany<T extends author_relationDeleteManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, author_relationDeleteManyArgs<ExtArgs>>
+    deleteMany<T extends AuthorRelationDeleteManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, AuthorRelationDeleteManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Author_relations.
+     * Update zero or more AuthorRelations.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {author_relationUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {AuthorRelationUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Author_relations
-     * const author_relation = await prisma.author_relation.updateMany({
+     * // Update many AuthorRelations
+     * const authorRelation = await prisma.authorRelation.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2710,59 +2710,59 @@ export namespace Prisma {
      * })
      * 
     **/
-    updateMany<T extends author_relationUpdateManyArgs<ExtArgs>>(
-      args: SelectSubset<T, author_relationUpdateManyArgs<ExtArgs>>
+    updateMany<T extends AuthorRelationUpdateManyArgs<ExtArgs>>(
+      args: SelectSubset<T, AuthorRelationUpdateManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create or update one Author_relation.
-     * @param {author_relationUpsertArgs} args - Arguments to update or create a Author_relation.
+     * Create or update one AuthorRelation.
+     * @param {AuthorRelationUpsertArgs} args - Arguments to update or create a AuthorRelation.
      * @example
-     * // Update or create a Author_relation
-     * const author_relation = await prisma.author_relation.upsert({
+     * // Update or create a AuthorRelation
+     * const authorRelation = await prisma.authorRelation.upsert({
      *   create: {
-     *     // ... data to create a Author_relation
+     *     // ... data to create a AuthorRelation
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Author_relation we want to update
+     *     // ... the filter for the AuthorRelation we want to update
      *   }
      * })
     **/
-    upsert<T extends author_relationUpsertArgs<ExtArgs>>(
-      args: SelectSubset<T, author_relationUpsertArgs<ExtArgs>>
-    ): Prisma__author_relationClient<$Result.GetResult<Prisma.$author_relationPayload<ExtArgs>, T, 'upsert'>, never, ExtArgs>
+    upsert<T extends AuthorRelationUpsertArgs<ExtArgs>>(
+      args: SelectSubset<T, AuthorRelationUpsertArgs<ExtArgs>>
+    ): Prisma__AuthorRelationClient<$Result.GetResult<Prisma.$AuthorRelationPayload<ExtArgs>, T, 'upsert'>, never, ExtArgs>
 
     /**
-     * Count the number of Author_relations.
+     * Count the number of AuthorRelations.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {author_relationCountArgs} args - Arguments to filter Author_relations to count.
+     * @param {AuthorRelationCountArgs} args - Arguments to filter AuthorRelations to count.
      * @example
-     * // Count the number of Author_relations
-     * const count = await prisma.author_relation.count({
+     * // Count the number of AuthorRelations
+     * const count = await prisma.authorRelation.count({
      *   where: {
-     *     // ... the filter for the Author_relations we want to count
+     *     // ... the filter for the AuthorRelations we want to count
      *   }
      * })
     **/
-    count<T extends author_relationCountArgs>(
-      args?: Subset<T, author_relationCountArgs>,
+    count<T extends AuthorRelationCountArgs>(
+      args?: Subset<T, AuthorRelationCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], Author_relationCountAggregateOutputType>
+          : GetScalarType<T['select'], AuthorRelationCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Author_relation.
+     * Allows you to perform aggregations operations on a AuthorRelation.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Author_relationAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {AuthorRelationAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -2782,13 +2782,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends Author_relationAggregateArgs>(args: Subset<T, Author_relationAggregateArgs>): Prisma.PrismaPromise<GetAuthor_relationAggregateType<T>>
+    aggregate<T extends AuthorRelationAggregateArgs>(args: Subset<T, AuthorRelationAggregateArgs>): Prisma.PrismaPromise<GetAuthorRelationAggregateType<T>>
 
     /**
-     * Group by Author_relation.
+     * Group by AuthorRelation.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {author_relationGroupByArgs} args - Group by arguments.
+     * @param {AuthorRelationGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -2803,14 +2803,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends author_relationGroupByArgs,
+      T extends AuthorRelationGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: author_relationGroupByArgs['orderBy'] }
-        : { orderBy?: author_relationGroupByArgs['orderBy'] },
+        ? { orderBy: AuthorRelationGroupByArgs['orderBy'] }
+        : { orderBy?: AuthorRelationGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -2859,27 +2859,27 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, author_relationGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetAuthor_relationGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, AuthorRelationGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetAuthorRelationGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the author_relation model
+   * Fields of the AuthorRelation model
    */
-  readonly fields: author_relationFieldRefs;
+  readonly fields: AuthorRelationFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for author_relation.
+   * The delegate class that acts as a "Promise-like" for AuthorRelation.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__author_relationClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__AuthorRelationClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: 'PrismaPromise';
 
-    author_author_relation_author_idToauthor<T extends authorDefaultArgs<ExtArgs> = {}>(args?: Subset<T, authorDefaultArgs<ExtArgs>>): Prisma__authorClient<$Result.GetResult<Prisma.$authorPayload<ExtArgs>, T, 'findUniqueOrThrow'> | Null, Null, ExtArgs>;
+    author_author_relation_author_idToauthor<T extends AuthorDefaultArgs<ExtArgs> = {}>(args?: Subset<T, AuthorDefaultArgs<ExtArgs>>): Prisma__AuthorClient<$Result.GetResult<Prisma.$AuthorPayload<ExtArgs>, T, 'findUniqueOrThrow'> | Null, Null, ExtArgs>;
 
-    author_author_relation_author_relationed_idToauthor<T extends authorDefaultArgs<ExtArgs> = {}>(args?: Subset<T, authorDefaultArgs<ExtArgs>>): Prisma__authorClient<$Result.GetResult<Prisma.$authorPayload<ExtArgs>, T, 'findUniqueOrThrow'> | Null, Null, ExtArgs>;
+    author_author_relation_author_relationed_idToauthor<T extends AuthorDefaultArgs<ExtArgs> = {}>(args?: Subset<T, AuthorDefaultArgs<ExtArgs>>): Prisma__AuthorClient<$Result.GetResult<Prisma.$AuthorPayload<ExtArgs>, T, 'findUniqueOrThrow'> | Null, Null, ExtArgs>;
 
-    history_type<T extends history_typeDefaultArgs<ExtArgs> = {}>(args?: Subset<T, history_typeDefaultArgs<ExtArgs>>): Prisma__history_typeClient<$Result.GetResult<Prisma.$history_typePayload<ExtArgs>, T, 'findUniqueOrThrow'> | Null, Null, ExtArgs>;
+    history_type<T extends HistoryTypeDefaultArgs<ExtArgs> = {}>(args?: Subset<T, HistoryTypeDefaultArgs<ExtArgs>>): Prisma__HistoryTypeClient<$Result.GetResult<Prisma.$HistoryTypePayload<ExtArgs>, T, 'findUniqueOrThrow'> | Null, Null, ExtArgs>;
 
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -2906,373 +2906,365 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the author_relation model
+   * Fields of the AuthorRelation model
    */ 
-  interface author_relationFieldRefs {
-    readonly id: FieldRef<"author_relation", 'Int'>
-    readonly name_relation: FieldRef<"author_relation", 'String'>
-    readonly type_relation: FieldRef<"author_relation", 'String'>
-    readonly created_at: FieldRef<"author_relation", 'DateTime'>
-    readonly updated_at: FieldRef<"author_relation", 'DateTime'>
-    readonly author_id: FieldRef<"author_relation", 'Int'>
-    readonly author_relationed_id: FieldRef<"author_relation", 'Int'>
-    readonly history_type_id: FieldRef<"author_relation", 'Int'>
+  interface AuthorRelationFieldRefs {
+    readonly id: FieldRef<"AuthorRelation", 'Int'>
+    readonly name_relation: FieldRef<"AuthorRelation", 'String'>
+    readonly type_relation: FieldRef<"AuthorRelation", 'String'>
+    readonly created_at: FieldRef<"AuthorRelation", 'DateTime'>
+    readonly updated_at: FieldRef<"AuthorRelation", 'DateTime'>
+    readonly author_id: FieldRef<"AuthorRelation", 'Int'>
+    readonly author_relationed_id: FieldRef<"AuthorRelation", 'Int'>
+    readonly history_type_id: FieldRef<"AuthorRelation", 'Int'>
   }
     
 
   // Custom InputTypes
 
   /**
-   * author_relation findUnique
+   * AuthorRelation findUnique
    */
-  export type author_relationFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorRelationFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author_relation
+     * Select specific fields to fetch from the AuthorRelation
      */
-    select?: author_relationSelect<ExtArgs> | null
+    select?: AuthorRelationSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: author_relationInclude<ExtArgs> | null
+    include?: AuthorRelationInclude<ExtArgs> | null
     /**
-     * Filter, which author_relation to fetch.
+     * Filter, which AuthorRelation to fetch.
      */
-    where: author_relationWhereUniqueInput
+    where: AuthorRelationWhereUniqueInput
   }
 
 
   /**
-   * author_relation findUniqueOrThrow
+   * AuthorRelation findUniqueOrThrow
    */
-  export type author_relationFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorRelationFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author_relation
+     * Select specific fields to fetch from the AuthorRelation
      */
-    select?: author_relationSelect<ExtArgs> | null
+    select?: AuthorRelationSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: author_relationInclude<ExtArgs> | null
+    include?: AuthorRelationInclude<ExtArgs> | null
     /**
-     * Filter, which author_relation to fetch.
+     * Filter, which AuthorRelation to fetch.
      */
-    where: author_relationWhereUniqueInput
+    where: AuthorRelationWhereUniqueInput
   }
 
 
   /**
-   * author_relation findFirst
+   * AuthorRelation findFirst
    */
-  export type author_relationFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorRelationFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author_relation
+     * Select specific fields to fetch from the AuthorRelation
      */
-    select?: author_relationSelect<ExtArgs> | null
+    select?: AuthorRelationSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: author_relationInclude<ExtArgs> | null
+    include?: AuthorRelationInclude<ExtArgs> | null
     /**
-     * Filter, which author_relation to fetch.
+     * Filter, which AuthorRelation to fetch.
      */
-    where?: author_relationWhereInput
+    where?: AuthorRelationWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of author_relations to fetch.
+     * Determine the order of AuthorRelations to fetch.
      */
-    orderBy?: author_relationOrderByWithRelationInput | author_relationOrderByWithRelationInput[]
+    orderBy?: AuthorRelationOrderByWithRelationInput | AuthorRelationOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for author_relations.
+     * Sets the position for searching for AuthorRelations.
      */
-    cursor?: author_relationWhereUniqueInput
+    cursor?: AuthorRelationWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` author_relations from the position of the cursor.
+     * Take `±n` AuthorRelations from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` author_relations.
+     * Skip the first `n` AuthorRelations.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of author_relations.
+     * Filter by unique combinations of AuthorRelations.
      */
-    distinct?: Author_relationScalarFieldEnum | Author_relationScalarFieldEnum[]
+    distinct?: AuthorRelationScalarFieldEnum | AuthorRelationScalarFieldEnum[]
   }
 
 
   /**
-   * author_relation findFirstOrThrow
+   * AuthorRelation findFirstOrThrow
    */
-  export type author_relationFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorRelationFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author_relation
+     * Select specific fields to fetch from the AuthorRelation
      */
-    select?: author_relationSelect<ExtArgs> | null
+    select?: AuthorRelationSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: author_relationInclude<ExtArgs> | null
+    include?: AuthorRelationInclude<ExtArgs> | null
     /**
-     * Filter, which author_relation to fetch.
+     * Filter, which AuthorRelation to fetch.
      */
-    where?: author_relationWhereInput
+    where?: AuthorRelationWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of author_relations to fetch.
+     * Determine the order of AuthorRelations to fetch.
      */
-    orderBy?: author_relationOrderByWithRelationInput | author_relationOrderByWithRelationInput[]
+    orderBy?: AuthorRelationOrderByWithRelationInput | AuthorRelationOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for author_relations.
+     * Sets the position for searching for AuthorRelations.
      */
-    cursor?: author_relationWhereUniqueInput
+    cursor?: AuthorRelationWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` author_relations from the position of the cursor.
+     * Take `±n` AuthorRelations from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` author_relations.
+     * Skip the first `n` AuthorRelations.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of author_relations.
+     * Filter by unique combinations of AuthorRelations.
      */
-    distinct?: Author_relationScalarFieldEnum | Author_relationScalarFieldEnum[]
+    distinct?: AuthorRelationScalarFieldEnum | AuthorRelationScalarFieldEnum[]
   }
 
 
   /**
-   * author_relation findMany
+   * AuthorRelation findMany
    */
-  export type author_relationFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorRelationFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author_relation
+     * Select specific fields to fetch from the AuthorRelation
      */
-    select?: author_relationSelect<ExtArgs> | null
+    select?: AuthorRelationSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: author_relationInclude<ExtArgs> | null
+    include?: AuthorRelationInclude<ExtArgs> | null
     /**
-     * Filter, which author_relations to fetch.
+     * Filter, which AuthorRelations to fetch.
      */
-    where?: author_relationWhereInput
+    where?: AuthorRelationWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of author_relations to fetch.
+     * Determine the order of AuthorRelations to fetch.
      */
-    orderBy?: author_relationOrderByWithRelationInput | author_relationOrderByWithRelationInput[]
+    orderBy?: AuthorRelationOrderByWithRelationInput | AuthorRelationOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing author_relations.
+     * Sets the position for listing AuthorRelations.
      */
-    cursor?: author_relationWhereUniqueInput
+    cursor?: AuthorRelationWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` author_relations from the position of the cursor.
+     * Take `±n` AuthorRelations from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` author_relations.
+     * Skip the first `n` AuthorRelations.
      */
     skip?: number
-    distinct?: Author_relationScalarFieldEnum | Author_relationScalarFieldEnum[]
+    distinct?: AuthorRelationScalarFieldEnum | AuthorRelationScalarFieldEnum[]
   }
 
 
   /**
-   * author_relation create
+   * AuthorRelation create
    */
-  export type author_relationCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorRelationCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author_relation
+     * Select specific fields to fetch from the AuthorRelation
      */
-    select?: author_relationSelect<ExtArgs> | null
+    select?: AuthorRelationSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: author_relationInclude<ExtArgs> | null
+    include?: AuthorRelationInclude<ExtArgs> | null
     /**
-     * The data needed to create a author_relation.
+     * The data needed to create a AuthorRelation.
      */
-    data: XOR<author_relationCreateInput, author_relationUncheckedCreateInput>
+    data: XOR<AuthorRelationCreateInput, AuthorRelationUncheckedCreateInput>
   }
 
 
   /**
-   * author_relation createMany
+   * AuthorRelation createMany
    */
-  export type author_relationCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorRelationCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many author_relations.
+     * The data used to create many AuthorRelations.
      */
-    data: author_relationCreateManyInput | author_relationCreateManyInput[]
+    data: AuthorRelationCreateManyInput | AuthorRelationCreateManyInput[]
     skipDuplicates?: boolean
   }
 
 
   /**
-   * author_relation update
+   * AuthorRelation update
    */
-  export type author_relationUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorRelationUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author_relation
+     * Select specific fields to fetch from the AuthorRelation
      */
-    select?: author_relationSelect<ExtArgs> | null
+    select?: AuthorRelationSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: author_relationInclude<ExtArgs> | null
+    include?: AuthorRelationInclude<ExtArgs> | null
     /**
-     * The data needed to update a author_relation.
+     * The data needed to update a AuthorRelation.
      */
-    data: XOR<author_relationUpdateInput, author_relationUncheckedUpdateInput>
+    data: XOR<AuthorRelationUpdateInput, AuthorRelationUncheckedUpdateInput>
     /**
-     * Choose, which author_relation to update.
+     * Choose, which AuthorRelation to update.
      */
-    where: author_relationWhereUniqueInput
+    where: AuthorRelationWhereUniqueInput
   }
 
 
   /**
-   * author_relation updateMany
+   * AuthorRelation updateMany
    */
-  export type author_relationUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorRelationUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update author_relations.
+     * The data used to update AuthorRelations.
      */
-    data: XOR<author_relationUpdateManyMutationInput, author_relationUncheckedUpdateManyInput>
+    data: XOR<AuthorRelationUpdateManyMutationInput, AuthorRelationUncheckedUpdateManyInput>
     /**
-     * Filter which author_relations to update
+     * Filter which AuthorRelations to update
      */
-    where?: author_relationWhereInput
+    where?: AuthorRelationWhereInput
   }
 
 
   /**
-   * author_relation upsert
+   * AuthorRelation upsert
    */
-  export type author_relationUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorRelationUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author_relation
+     * Select specific fields to fetch from the AuthorRelation
      */
-    select?: author_relationSelect<ExtArgs> | null
+    select?: AuthorRelationSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: author_relationInclude<ExtArgs> | null
+    include?: AuthorRelationInclude<ExtArgs> | null
     /**
-     * The filter to search for the author_relation to update in case it exists.
+     * The filter to search for the AuthorRelation to update in case it exists.
      */
-    where: author_relationWhereUniqueInput
+    where: AuthorRelationWhereUniqueInput
     /**
-     * In case the author_relation found by the `where` argument doesn't exist, create a new author_relation with this data.
+     * In case the AuthorRelation found by the `where` argument doesn't exist, create a new AuthorRelation with this data.
      */
-    create: XOR<author_relationCreateInput, author_relationUncheckedCreateInput>
+    create: XOR<AuthorRelationCreateInput, AuthorRelationUncheckedCreateInput>
     /**
-     * In case the author_relation was found with the provided `where` argument, update it with this data.
+     * In case the AuthorRelation was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<author_relationUpdateInput, author_relationUncheckedUpdateInput>
+    update: XOR<AuthorRelationUpdateInput, AuthorRelationUncheckedUpdateInput>
   }
 
 
   /**
-   * author_relation delete
+   * AuthorRelation delete
    */
-  export type author_relationDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorRelationDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author_relation
+     * Select specific fields to fetch from the AuthorRelation
      */
-    select?: author_relationSelect<ExtArgs> | null
+    select?: AuthorRelationSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: author_relationInclude<ExtArgs> | null
+    include?: AuthorRelationInclude<ExtArgs> | null
     /**
-     * Filter which author_relation to delete.
+     * Filter which AuthorRelation to delete.
      */
-    where: author_relationWhereUniqueInput
+    where: AuthorRelationWhereUniqueInput
   }
 
 
   /**
-   * author_relation deleteMany
+   * AuthorRelation deleteMany
    */
-  export type author_relationDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorRelationDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which author_relations to delete
+     * Filter which AuthorRelations to delete
      */
-    where?: author_relationWhereInput
+    where?: AuthorRelationWhereInput
   }
 
 
   /**
-   * author_relation without action
+   * AuthorRelation without action
    */
-  export type author_relationDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AuthorRelationDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author_relation
+     * Select specific fields to fetch from the AuthorRelation
      */
-    select?: author_relationSelect<ExtArgs> | null
+    select?: AuthorRelationSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: author_relationInclude<ExtArgs> | null
+    include?: AuthorRelationInclude<ExtArgs> | null
   }
 
 
 
   /**
-   * Model history_type
+   * Model HistoryType
    */
 
-  export type AggregateHistory_type = {
-    _count: History_typeCountAggregateOutputType | null
-    _avg: History_typeAvgAggregateOutputType | null
-    _sum: History_typeSumAggregateOutputType | null
-    _min: History_typeMinAggregateOutputType | null
-    _max: History_typeMaxAggregateOutputType | null
+  export type AggregateHistoryType = {
+    _count: HistoryTypeCountAggregateOutputType | null
+    _avg: HistoryTypeAvgAggregateOutputType | null
+    _sum: HistoryTypeSumAggregateOutputType | null
+    _min: HistoryTypeMinAggregateOutputType | null
+    _max: HistoryTypeMaxAggregateOutputType | null
   }
 
-  export type History_typeAvgAggregateOutputType = {
+  export type HistoryTypeAvgAggregateOutputType = {
     id: number | null
   }
 
-  export type History_typeSumAggregateOutputType = {
+  export type HistoryTypeSumAggregateOutputType = {
     id: number | null
   }
 
-  export type History_typeMinAggregateOutputType = {
-    id: number | null
-    name: string | null
-    description: string | null
-    created_at: Date | null
-    updated_at: Date | null
-  }
-
-  export type History_typeMaxAggregateOutputType = {
+  export type HistoryTypeMinAggregateOutputType = {
     id: number | null
     name: string | null
     description: string | null
@@ -3280,7 +3272,15 @@ export namespace Prisma {
     updated_at: Date | null
   }
 
-  export type History_typeCountAggregateOutputType = {
+  export type HistoryTypeMaxAggregateOutputType = {
+    id: number | null
+    name: string | null
+    description: string | null
+    created_at: Date | null
+    updated_at: Date | null
+  }
+
+  export type HistoryTypeCountAggregateOutputType = {
     id: number
     name: number
     description: number
@@ -3290,23 +3290,15 @@ export namespace Prisma {
   }
 
 
-  export type History_typeAvgAggregateInputType = {
+  export type HistoryTypeAvgAggregateInputType = {
     id?: true
   }
 
-  export type History_typeSumAggregateInputType = {
+  export type HistoryTypeSumAggregateInputType = {
     id?: true
   }
 
-  export type History_typeMinAggregateInputType = {
-    id?: true
-    name?: true
-    description?: true
-    created_at?: true
-    updated_at?: true
-  }
-
-  export type History_typeMaxAggregateInputType = {
+  export type HistoryTypeMinAggregateInputType = {
     id?: true
     name?: true
     description?: true
@@ -3314,7 +3306,15 @@ export namespace Prisma {
     updated_at?: true
   }
 
-  export type History_typeCountAggregateInputType = {
+  export type HistoryTypeMaxAggregateInputType = {
+    id?: true
+    name?: true
+    description?: true
+    created_at?: true
+    updated_at?: true
+  }
+
+  export type HistoryTypeCountAggregateInputType = {
     id?: true
     name?: true
     description?: true
@@ -3323,130 +3323,130 @@ export namespace Prisma {
     _all?: true
   }
 
-  export type History_typeAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type HistoryTypeAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which history_type to aggregate.
+     * Filter which HistoryType to aggregate.
      */
-    where?: history_typeWhereInput
+    where?: HistoryTypeWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of history_types to fetch.
+     * Determine the order of HistoryTypes to fetch.
      */
-    orderBy?: history_typeOrderByWithRelationInput | history_typeOrderByWithRelationInput[]
+    orderBy?: HistoryTypeOrderByWithRelationInput | HistoryTypeOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: history_typeWhereUniqueInput
+    cursor?: HistoryTypeWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` history_types from the position of the cursor.
+     * Take `±n` HistoryTypes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` history_types.
+     * Skip the first `n` HistoryTypes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned history_types
+     * Count returned HistoryTypes
     **/
-    _count?: true | History_typeCountAggregateInputType
+    _count?: true | HistoryTypeCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: History_typeAvgAggregateInputType
+    _avg?: HistoryTypeAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: History_typeSumAggregateInputType
+    _sum?: HistoryTypeSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: History_typeMinAggregateInputType
+    _min?: HistoryTypeMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: History_typeMaxAggregateInputType
+    _max?: HistoryTypeMaxAggregateInputType
   }
 
-  export type GetHistory_typeAggregateType<T extends History_typeAggregateArgs> = {
-        [P in keyof T & keyof AggregateHistory_type]: P extends '_count' | 'count'
+  export type GetHistoryTypeAggregateType<T extends HistoryTypeAggregateArgs> = {
+        [P in keyof T & keyof AggregateHistoryType]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateHistory_type[P]>
-      : GetScalarType<T[P], AggregateHistory_type[P]>
+        : GetScalarType<T[P], AggregateHistoryType[P]>
+      : GetScalarType<T[P], AggregateHistoryType[P]>
   }
 
 
 
 
-  export type history_typeGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: history_typeWhereInput
-    orderBy?: history_typeOrderByWithAggregationInput | history_typeOrderByWithAggregationInput[]
-    by: History_typeScalarFieldEnum[] | History_typeScalarFieldEnum
-    having?: history_typeScalarWhereWithAggregatesInput
+  export type HistoryTypeGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: HistoryTypeWhereInput
+    orderBy?: HistoryTypeOrderByWithAggregationInput | HistoryTypeOrderByWithAggregationInput[]
+    by: HistoryTypeScalarFieldEnum[] | HistoryTypeScalarFieldEnum
+    having?: HistoryTypeScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: History_typeCountAggregateInputType | true
-    _avg?: History_typeAvgAggregateInputType
-    _sum?: History_typeSumAggregateInputType
-    _min?: History_typeMinAggregateInputType
-    _max?: History_typeMaxAggregateInputType
+    _count?: HistoryTypeCountAggregateInputType | true
+    _avg?: HistoryTypeAvgAggregateInputType
+    _sum?: HistoryTypeSumAggregateInputType
+    _min?: HistoryTypeMinAggregateInputType
+    _max?: HistoryTypeMaxAggregateInputType
   }
 
-  export type History_typeGroupByOutputType = {
+  export type HistoryTypeGroupByOutputType = {
     id: number
     name: string
     description: string | null
     created_at: Date | null
     updated_at: Date | null
-    _count: History_typeCountAggregateOutputType | null
-    _avg: History_typeAvgAggregateOutputType | null
-    _sum: History_typeSumAggregateOutputType | null
-    _min: History_typeMinAggregateOutputType | null
-    _max: History_typeMaxAggregateOutputType | null
+    _count: HistoryTypeCountAggregateOutputType | null
+    _avg: HistoryTypeAvgAggregateOutputType | null
+    _sum: HistoryTypeSumAggregateOutputType | null
+    _min: HistoryTypeMinAggregateOutputType | null
+    _max: HistoryTypeMaxAggregateOutputType | null
   }
 
-  type GetHistory_typeGroupByPayload<T extends history_typeGroupByArgs> = Prisma.PrismaPromise<
+  type GetHistoryTypeGroupByPayload<T extends HistoryTypeGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<History_typeGroupByOutputType, T['by']> &
+      PickEnumerable<HistoryTypeGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof History_typeGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof HistoryTypeGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], History_typeGroupByOutputType[P]>
-            : GetScalarType<T[P], History_typeGroupByOutputType[P]>
+              : GetScalarType<T[P], HistoryTypeGroupByOutputType[P]>
+            : GetScalarType<T[P], HistoryTypeGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type history_typeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type HistoryTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
     description?: boolean
     created_at?: boolean
     updated_at?: boolean
-    author_relation?: boolean | history_type$author_relationArgs<ExtArgs>
-    _count?: boolean | History_typeCountOutputTypeDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["history_type"]>
+    author_relation?: boolean | HistoryType$author_relationArgs<ExtArgs>
+    _count?: boolean | HistoryTypeCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["historyType"]>
 
-  export type history_typeSelectScalar = {
+  export type HistoryTypeSelectScalar = {
     id?: boolean
     name?: boolean
     description?: boolean
@@ -3454,16 +3454,16 @@ export namespace Prisma {
     updated_at?: boolean
   }
 
-  export type history_typeInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    author_relation?: boolean | history_type$author_relationArgs<ExtArgs>
-    _count?: boolean | History_typeCountOutputTypeDefaultArgs<ExtArgs>
+  export type HistoryTypeInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    author_relation?: boolean | HistoryType$author_relationArgs<ExtArgs>
+    _count?: boolean | HistoryTypeCountOutputTypeDefaultArgs<ExtArgs>
   }
 
 
-  export type $history_typePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "history_type"
+  export type $HistoryTypePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "HistoryType"
     objects: {
-      author_relation: Prisma.$author_relationPayload<ExtArgs>[]
+      author_relation: Prisma.$AuthorRelationPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
@@ -3471,160 +3471,160 @@ export namespace Prisma {
       description: string | null
       created_at: Date | null
       updated_at: Date | null
-    }, ExtArgs["result"]["history_type"]>
+    }, ExtArgs["result"]["historyType"]>
     composites: {}
   }
 
 
-  type history_typeGetPayload<S extends boolean | null | undefined | history_typeDefaultArgs> = $Result.GetResult<Prisma.$history_typePayload, S>
+  type HistoryTypeGetPayload<S extends boolean | null | undefined | HistoryTypeDefaultArgs> = $Result.GetResult<Prisma.$HistoryTypePayload, S>
 
-  type history_typeCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<history_typeFindManyArgs, 'select' | 'include' | 'distinct'> & {
-      select?: History_typeCountAggregateInputType | true
+  type HistoryTypeCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
+    Omit<HistoryTypeFindManyArgs, 'select' | 'include' | 'distinct'> & {
+      select?: HistoryTypeCountAggregateInputType | true
     }
 
-  export interface history_typeDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['history_type'], meta: { name: 'history_type' } }
+  export interface HistoryTypeDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['HistoryType'], meta: { name: 'HistoryType' } }
     /**
-     * Find zero or one History_type that matches the filter.
-     * @param {history_typeFindUniqueArgs} args - Arguments to find a History_type
+     * Find zero or one HistoryType that matches the filter.
+     * @param {HistoryTypeFindUniqueArgs} args - Arguments to find a HistoryType
      * @example
-     * // Get one History_type
-     * const history_type = await prisma.history_type.findUnique({
+     * // Get one HistoryType
+     * const historyType = await prisma.historyType.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findUnique<T extends history_typeFindUniqueArgs<ExtArgs>>(
-      args: SelectSubset<T, history_typeFindUniqueArgs<ExtArgs>>
-    ): Prisma__history_typeClient<$Result.GetResult<Prisma.$history_typePayload<ExtArgs>, T, 'findUnique'> | null, null, ExtArgs>
+    findUnique<T extends HistoryTypeFindUniqueArgs<ExtArgs>>(
+      args: SelectSubset<T, HistoryTypeFindUniqueArgs<ExtArgs>>
+    ): Prisma__HistoryTypeClient<$Result.GetResult<Prisma.$HistoryTypePayload<ExtArgs>, T, 'findUnique'> | null, null, ExtArgs>
 
     /**
-     * Find one History_type that matches the filter or throw an error  with `error.code='P2025'` 
+     * Find one HistoryType that matches the filter or throw an error  with `error.code='P2025'` 
      *     if no matches were found.
-     * @param {history_typeFindUniqueOrThrowArgs} args - Arguments to find a History_type
+     * @param {HistoryTypeFindUniqueOrThrowArgs} args - Arguments to find a HistoryType
      * @example
-     * // Get one History_type
-     * const history_type = await prisma.history_type.findUniqueOrThrow({
+     * // Get one HistoryType
+     * const historyType = await prisma.historyType.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findUniqueOrThrow<T extends history_typeFindUniqueOrThrowArgs<ExtArgs>>(
-      args?: SelectSubset<T, history_typeFindUniqueOrThrowArgs<ExtArgs>>
-    ): Prisma__history_typeClient<$Result.GetResult<Prisma.$history_typePayload<ExtArgs>, T, 'findUniqueOrThrow'>, never, ExtArgs>
+    findUniqueOrThrow<T extends HistoryTypeFindUniqueOrThrowArgs<ExtArgs>>(
+      args?: SelectSubset<T, HistoryTypeFindUniqueOrThrowArgs<ExtArgs>>
+    ): Prisma__HistoryTypeClient<$Result.GetResult<Prisma.$HistoryTypePayload<ExtArgs>, T, 'findUniqueOrThrow'>, never, ExtArgs>
 
     /**
-     * Find the first History_type that matches the filter.
+     * Find the first HistoryType that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {history_typeFindFirstArgs} args - Arguments to find a History_type
+     * @param {HistoryTypeFindFirstArgs} args - Arguments to find a HistoryType
      * @example
-     * // Get one History_type
-     * const history_type = await prisma.history_type.findFirst({
+     * // Get one HistoryType
+     * const historyType = await prisma.historyType.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findFirst<T extends history_typeFindFirstArgs<ExtArgs>>(
-      args?: SelectSubset<T, history_typeFindFirstArgs<ExtArgs>>
-    ): Prisma__history_typeClient<$Result.GetResult<Prisma.$history_typePayload<ExtArgs>, T, 'findFirst'> | null, null, ExtArgs>
+    findFirst<T extends HistoryTypeFindFirstArgs<ExtArgs>>(
+      args?: SelectSubset<T, HistoryTypeFindFirstArgs<ExtArgs>>
+    ): Prisma__HistoryTypeClient<$Result.GetResult<Prisma.$HistoryTypePayload<ExtArgs>, T, 'findFirst'> | null, null, ExtArgs>
 
     /**
-     * Find the first History_type that matches the filter or
+     * Find the first HistoryType that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {history_typeFindFirstOrThrowArgs} args - Arguments to find a History_type
+     * @param {HistoryTypeFindFirstOrThrowArgs} args - Arguments to find a HistoryType
      * @example
-     * // Get one History_type
-     * const history_type = await prisma.history_type.findFirstOrThrow({
+     * // Get one HistoryType
+     * const historyType = await prisma.historyType.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findFirstOrThrow<T extends history_typeFindFirstOrThrowArgs<ExtArgs>>(
-      args?: SelectSubset<T, history_typeFindFirstOrThrowArgs<ExtArgs>>
-    ): Prisma__history_typeClient<$Result.GetResult<Prisma.$history_typePayload<ExtArgs>, T, 'findFirstOrThrow'>, never, ExtArgs>
+    findFirstOrThrow<T extends HistoryTypeFindFirstOrThrowArgs<ExtArgs>>(
+      args?: SelectSubset<T, HistoryTypeFindFirstOrThrowArgs<ExtArgs>>
+    ): Prisma__HistoryTypeClient<$Result.GetResult<Prisma.$HistoryTypePayload<ExtArgs>, T, 'findFirstOrThrow'>, never, ExtArgs>
 
     /**
-     * Find zero or more History_types that matches the filter.
+     * Find zero or more HistoryTypes that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {history_typeFindManyArgs=} args - Arguments to filter and select certain fields only.
+     * @param {HistoryTypeFindManyArgs=} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all History_types
-     * const history_types = await prisma.history_type.findMany()
+     * // Get all HistoryTypes
+     * const historyTypes = await prisma.historyType.findMany()
      * 
-     * // Get first 10 History_types
-     * const history_types = await prisma.history_type.findMany({ take: 10 })
+     * // Get first 10 HistoryTypes
+     * const historyTypes = await prisma.historyType.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const history_typeWithIdOnly = await prisma.history_type.findMany({ select: { id: true } })
+     * const historyTypeWithIdOnly = await prisma.historyType.findMany({ select: { id: true } })
      * 
     **/
-    findMany<T extends history_typeFindManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, history_typeFindManyArgs<ExtArgs>>
-    ): Prisma.PrismaPromise<$Result.GetResult<Prisma.$history_typePayload<ExtArgs>, T, 'findMany'>>
+    findMany<T extends HistoryTypeFindManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, HistoryTypeFindManyArgs<ExtArgs>>
+    ): Prisma.PrismaPromise<$Result.GetResult<Prisma.$HistoryTypePayload<ExtArgs>, T, 'findMany'>>
 
     /**
-     * Create a History_type.
-     * @param {history_typeCreateArgs} args - Arguments to create a History_type.
+     * Create a HistoryType.
+     * @param {HistoryTypeCreateArgs} args - Arguments to create a HistoryType.
      * @example
-     * // Create one History_type
-     * const History_type = await prisma.history_type.create({
+     * // Create one HistoryType
+     * const HistoryType = await prisma.historyType.create({
      *   data: {
-     *     // ... data to create a History_type
+     *     // ... data to create a HistoryType
      *   }
      * })
      * 
     **/
-    create<T extends history_typeCreateArgs<ExtArgs>>(
-      args: SelectSubset<T, history_typeCreateArgs<ExtArgs>>
-    ): Prisma__history_typeClient<$Result.GetResult<Prisma.$history_typePayload<ExtArgs>, T, 'create'>, never, ExtArgs>
+    create<T extends HistoryTypeCreateArgs<ExtArgs>>(
+      args: SelectSubset<T, HistoryTypeCreateArgs<ExtArgs>>
+    ): Prisma__HistoryTypeClient<$Result.GetResult<Prisma.$HistoryTypePayload<ExtArgs>, T, 'create'>, never, ExtArgs>
 
     /**
-     * Create many History_types.
-     *     @param {history_typeCreateManyArgs} args - Arguments to create many History_types.
+     * Create many HistoryTypes.
+     *     @param {HistoryTypeCreateManyArgs} args - Arguments to create many HistoryTypes.
      *     @example
-     *     // Create many History_types
-     *     const history_type = await prisma.history_type.createMany({
+     *     // Create many HistoryTypes
+     *     const historyType = await prisma.historyType.createMany({
      *       data: {
      *         // ... provide data here
      *       }
      *     })
      *     
     **/
-    createMany<T extends history_typeCreateManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, history_typeCreateManyArgs<ExtArgs>>
+    createMany<T extends HistoryTypeCreateManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, HistoryTypeCreateManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Delete a History_type.
-     * @param {history_typeDeleteArgs} args - Arguments to delete one History_type.
+     * Delete a HistoryType.
+     * @param {HistoryTypeDeleteArgs} args - Arguments to delete one HistoryType.
      * @example
-     * // Delete one History_type
-     * const History_type = await prisma.history_type.delete({
+     * // Delete one HistoryType
+     * const HistoryType = await prisma.historyType.delete({
      *   where: {
-     *     // ... filter to delete one History_type
+     *     // ... filter to delete one HistoryType
      *   }
      * })
      * 
     **/
-    delete<T extends history_typeDeleteArgs<ExtArgs>>(
-      args: SelectSubset<T, history_typeDeleteArgs<ExtArgs>>
-    ): Prisma__history_typeClient<$Result.GetResult<Prisma.$history_typePayload<ExtArgs>, T, 'delete'>, never, ExtArgs>
+    delete<T extends HistoryTypeDeleteArgs<ExtArgs>>(
+      args: SelectSubset<T, HistoryTypeDeleteArgs<ExtArgs>>
+    ): Prisma__HistoryTypeClient<$Result.GetResult<Prisma.$HistoryTypePayload<ExtArgs>, T, 'delete'>, never, ExtArgs>
 
     /**
-     * Update one History_type.
-     * @param {history_typeUpdateArgs} args - Arguments to update one History_type.
+     * Update one HistoryType.
+     * @param {HistoryTypeUpdateArgs} args - Arguments to update one HistoryType.
      * @example
-     * // Update one History_type
-     * const history_type = await prisma.history_type.update({
+     * // Update one HistoryType
+     * const historyType = await prisma.historyType.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3634,34 +3634,34 @@ export namespace Prisma {
      * })
      * 
     **/
-    update<T extends history_typeUpdateArgs<ExtArgs>>(
-      args: SelectSubset<T, history_typeUpdateArgs<ExtArgs>>
-    ): Prisma__history_typeClient<$Result.GetResult<Prisma.$history_typePayload<ExtArgs>, T, 'update'>, never, ExtArgs>
+    update<T extends HistoryTypeUpdateArgs<ExtArgs>>(
+      args: SelectSubset<T, HistoryTypeUpdateArgs<ExtArgs>>
+    ): Prisma__HistoryTypeClient<$Result.GetResult<Prisma.$HistoryTypePayload<ExtArgs>, T, 'update'>, never, ExtArgs>
 
     /**
-     * Delete zero or more History_types.
-     * @param {history_typeDeleteManyArgs} args - Arguments to filter History_types to delete.
+     * Delete zero or more HistoryTypes.
+     * @param {HistoryTypeDeleteManyArgs} args - Arguments to filter HistoryTypes to delete.
      * @example
-     * // Delete a few History_types
-     * const { count } = await prisma.history_type.deleteMany({
+     * // Delete a few HistoryTypes
+     * const { count } = await prisma.historyType.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
     **/
-    deleteMany<T extends history_typeDeleteManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, history_typeDeleteManyArgs<ExtArgs>>
+    deleteMany<T extends HistoryTypeDeleteManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, HistoryTypeDeleteManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more History_types.
+     * Update zero or more HistoryTypes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {history_typeUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {HistoryTypeUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many History_types
-     * const history_type = await prisma.history_type.updateMany({
+     * // Update many HistoryTypes
+     * const historyType = await prisma.historyType.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3671,59 +3671,59 @@ export namespace Prisma {
      * })
      * 
     **/
-    updateMany<T extends history_typeUpdateManyArgs<ExtArgs>>(
-      args: SelectSubset<T, history_typeUpdateManyArgs<ExtArgs>>
+    updateMany<T extends HistoryTypeUpdateManyArgs<ExtArgs>>(
+      args: SelectSubset<T, HistoryTypeUpdateManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create or update one History_type.
-     * @param {history_typeUpsertArgs} args - Arguments to update or create a History_type.
+     * Create or update one HistoryType.
+     * @param {HistoryTypeUpsertArgs} args - Arguments to update or create a HistoryType.
      * @example
-     * // Update or create a History_type
-     * const history_type = await prisma.history_type.upsert({
+     * // Update or create a HistoryType
+     * const historyType = await prisma.historyType.upsert({
      *   create: {
-     *     // ... data to create a History_type
+     *     // ... data to create a HistoryType
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the History_type we want to update
+     *     // ... the filter for the HistoryType we want to update
      *   }
      * })
     **/
-    upsert<T extends history_typeUpsertArgs<ExtArgs>>(
-      args: SelectSubset<T, history_typeUpsertArgs<ExtArgs>>
-    ): Prisma__history_typeClient<$Result.GetResult<Prisma.$history_typePayload<ExtArgs>, T, 'upsert'>, never, ExtArgs>
+    upsert<T extends HistoryTypeUpsertArgs<ExtArgs>>(
+      args: SelectSubset<T, HistoryTypeUpsertArgs<ExtArgs>>
+    ): Prisma__HistoryTypeClient<$Result.GetResult<Prisma.$HistoryTypePayload<ExtArgs>, T, 'upsert'>, never, ExtArgs>
 
     /**
-     * Count the number of History_types.
+     * Count the number of HistoryTypes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {history_typeCountArgs} args - Arguments to filter History_types to count.
+     * @param {HistoryTypeCountArgs} args - Arguments to filter HistoryTypes to count.
      * @example
-     * // Count the number of History_types
-     * const count = await prisma.history_type.count({
+     * // Count the number of HistoryTypes
+     * const count = await prisma.historyType.count({
      *   where: {
-     *     // ... the filter for the History_types we want to count
+     *     // ... the filter for the HistoryTypes we want to count
      *   }
      * })
     **/
-    count<T extends history_typeCountArgs>(
-      args?: Subset<T, history_typeCountArgs>,
+    count<T extends HistoryTypeCountArgs>(
+      args?: Subset<T, HistoryTypeCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], History_typeCountAggregateOutputType>
+          : GetScalarType<T['select'], HistoryTypeCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a History_type.
+     * Allows you to perform aggregations operations on a HistoryType.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {History_typeAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {HistoryTypeAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -3743,13 +3743,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends History_typeAggregateArgs>(args: Subset<T, History_typeAggregateArgs>): Prisma.PrismaPromise<GetHistory_typeAggregateType<T>>
+    aggregate<T extends HistoryTypeAggregateArgs>(args: Subset<T, HistoryTypeAggregateArgs>): Prisma.PrismaPromise<GetHistoryTypeAggregateType<T>>
 
     /**
-     * Group by History_type.
+     * Group by HistoryType.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {history_typeGroupByArgs} args - Group by arguments.
+     * @param {HistoryTypeGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -3764,14 +3764,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends history_typeGroupByArgs,
+      T extends HistoryTypeGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: history_typeGroupByArgs['orderBy'] }
-        : { orderBy?: history_typeGroupByArgs['orderBy'] },
+        ? { orderBy: HistoryTypeGroupByArgs['orderBy'] }
+        : { orderBy?: HistoryTypeGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -3820,23 +3820,23 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, history_typeGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetHistory_typeGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, HistoryTypeGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetHistoryTypeGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the history_type model
+   * Fields of the HistoryType model
    */
-  readonly fields: history_typeFieldRefs;
+  readonly fields: HistoryTypeFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for history_type.
+   * The delegate class that acts as a "Promise-like" for HistoryType.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__history_typeClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__HistoryTypeClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: 'PrismaPromise';
 
-    author_relation<T extends history_type$author_relationArgs<ExtArgs> = {}>(args?: Subset<T, history_type$author_relationArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$author_relationPayload<ExtArgs>, T, 'findMany'> | Null>;
+    author_relation<T extends HistoryType$author_relationArgs<ExtArgs> = {}>(args?: Subset<T, HistoryType$author_relationArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AuthorRelationPayload<ExtArgs>, T, 'findMany'> | Null>;
 
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -3863,364 +3863,364 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the history_type model
+   * Fields of the HistoryType model
    */ 
-  interface history_typeFieldRefs {
-    readonly id: FieldRef<"history_type", 'Int'>
-    readonly name: FieldRef<"history_type", 'String'>
-    readonly description: FieldRef<"history_type", 'String'>
-    readonly created_at: FieldRef<"history_type", 'DateTime'>
-    readonly updated_at: FieldRef<"history_type", 'DateTime'>
+  interface HistoryTypeFieldRefs {
+    readonly id: FieldRef<"HistoryType", 'Int'>
+    readonly name: FieldRef<"HistoryType", 'String'>
+    readonly description: FieldRef<"HistoryType", 'String'>
+    readonly created_at: FieldRef<"HistoryType", 'DateTime'>
+    readonly updated_at: FieldRef<"HistoryType", 'DateTime'>
   }
     
 
   // Custom InputTypes
 
   /**
-   * history_type findUnique
+   * HistoryType findUnique
    */
-  export type history_typeFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type HistoryTypeFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the history_type
+     * Select specific fields to fetch from the HistoryType
      */
-    select?: history_typeSelect<ExtArgs> | null
+    select?: HistoryTypeSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: history_typeInclude<ExtArgs> | null
+    include?: HistoryTypeInclude<ExtArgs> | null
     /**
-     * Filter, which history_type to fetch.
+     * Filter, which HistoryType to fetch.
      */
-    where: history_typeWhereUniqueInput
+    where: HistoryTypeWhereUniqueInput
   }
 
 
   /**
-   * history_type findUniqueOrThrow
+   * HistoryType findUniqueOrThrow
    */
-  export type history_typeFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type HistoryTypeFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the history_type
+     * Select specific fields to fetch from the HistoryType
      */
-    select?: history_typeSelect<ExtArgs> | null
+    select?: HistoryTypeSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: history_typeInclude<ExtArgs> | null
+    include?: HistoryTypeInclude<ExtArgs> | null
     /**
-     * Filter, which history_type to fetch.
+     * Filter, which HistoryType to fetch.
      */
-    where: history_typeWhereUniqueInput
+    where: HistoryTypeWhereUniqueInput
   }
 
 
   /**
-   * history_type findFirst
+   * HistoryType findFirst
    */
-  export type history_typeFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type HistoryTypeFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the history_type
+     * Select specific fields to fetch from the HistoryType
      */
-    select?: history_typeSelect<ExtArgs> | null
+    select?: HistoryTypeSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: history_typeInclude<ExtArgs> | null
+    include?: HistoryTypeInclude<ExtArgs> | null
     /**
-     * Filter, which history_type to fetch.
+     * Filter, which HistoryType to fetch.
      */
-    where?: history_typeWhereInput
+    where?: HistoryTypeWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of history_types to fetch.
+     * Determine the order of HistoryTypes to fetch.
      */
-    orderBy?: history_typeOrderByWithRelationInput | history_typeOrderByWithRelationInput[]
+    orderBy?: HistoryTypeOrderByWithRelationInput | HistoryTypeOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for history_types.
+     * Sets the position for searching for HistoryTypes.
      */
-    cursor?: history_typeWhereUniqueInput
+    cursor?: HistoryTypeWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` history_types from the position of the cursor.
+     * Take `±n` HistoryTypes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` history_types.
+     * Skip the first `n` HistoryTypes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of history_types.
+     * Filter by unique combinations of HistoryTypes.
      */
-    distinct?: History_typeScalarFieldEnum | History_typeScalarFieldEnum[]
+    distinct?: HistoryTypeScalarFieldEnum | HistoryTypeScalarFieldEnum[]
   }
 
 
   /**
-   * history_type findFirstOrThrow
+   * HistoryType findFirstOrThrow
    */
-  export type history_typeFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type HistoryTypeFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the history_type
+     * Select specific fields to fetch from the HistoryType
      */
-    select?: history_typeSelect<ExtArgs> | null
+    select?: HistoryTypeSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: history_typeInclude<ExtArgs> | null
+    include?: HistoryTypeInclude<ExtArgs> | null
     /**
-     * Filter, which history_type to fetch.
+     * Filter, which HistoryType to fetch.
      */
-    where?: history_typeWhereInput
+    where?: HistoryTypeWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of history_types to fetch.
+     * Determine the order of HistoryTypes to fetch.
      */
-    orderBy?: history_typeOrderByWithRelationInput | history_typeOrderByWithRelationInput[]
+    orderBy?: HistoryTypeOrderByWithRelationInput | HistoryTypeOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for history_types.
+     * Sets the position for searching for HistoryTypes.
      */
-    cursor?: history_typeWhereUniqueInput
+    cursor?: HistoryTypeWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` history_types from the position of the cursor.
+     * Take `±n` HistoryTypes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` history_types.
+     * Skip the first `n` HistoryTypes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of history_types.
+     * Filter by unique combinations of HistoryTypes.
      */
-    distinct?: History_typeScalarFieldEnum | History_typeScalarFieldEnum[]
+    distinct?: HistoryTypeScalarFieldEnum | HistoryTypeScalarFieldEnum[]
   }
 
 
   /**
-   * history_type findMany
+   * HistoryType findMany
    */
-  export type history_typeFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type HistoryTypeFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the history_type
+     * Select specific fields to fetch from the HistoryType
      */
-    select?: history_typeSelect<ExtArgs> | null
+    select?: HistoryTypeSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: history_typeInclude<ExtArgs> | null
+    include?: HistoryTypeInclude<ExtArgs> | null
     /**
-     * Filter, which history_types to fetch.
+     * Filter, which HistoryTypes to fetch.
      */
-    where?: history_typeWhereInput
+    where?: HistoryTypeWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of history_types to fetch.
+     * Determine the order of HistoryTypes to fetch.
      */
-    orderBy?: history_typeOrderByWithRelationInput | history_typeOrderByWithRelationInput[]
+    orderBy?: HistoryTypeOrderByWithRelationInput | HistoryTypeOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing history_types.
+     * Sets the position for listing HistoryTypes.
      */
-    cursor?: history_typeWhereUniqueInput
+    cursor?: HistoryTypeWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` history_types from the position of the cursor.
+     * Take `±n` HistoryTypes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` history_types.
+     * Skip the first `n` HistoryTypes.
      */
     skip?: number
-    distinct?: History_typeScalarFieldEnum | History_typeScalarFieldEnum[]
+    distinct?: HistoryTypeScalarFieldEnum | HistoryTypeScalarFieldEnum[]
   }
 
 
   /**
-   * history_type create
+   * HistoryType create
    */
-  export type history_typeCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type HistoryTypeCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the history_type
+     * Select specific fields to fetch from the HistoryType
      */
-    select?: history_typeSelect<ExtArgs> | null
+    select?: HistoryTypeSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: history_typeInclude<ExtArgs> | null
+    include?: HistoryTypeInclude<ExtArgs> | null
     /**
-     * The data needed to create a history_type.
+     * The data needed to create a HistoryType.
      */
-    data: XOR<history_typeCreateInput, history_typeUncheckedCreateInput>
+    data: XOR<HistoryTypeCreateInput, HistoryTypeUncheckedCreateInput>
   }
 
 
   /**
-   * history_type createMany
+   * HistoryType createMany
    */
-  export type history_typeCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type HistoryTypeCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many history_types.
+     * The data used to create many HistoryTypes.
      */
-    data: history_typeCreateManyInput | history_typeCreateManyInput[]
+    data: HistoryTypeCreateManyInput | HistoryTypeCreateManyInput[]
     skipDuplicates?: boolean
   }
 
 
   /**
-   * history_type update
+   * HistoryType update
    */
-  export type history_typeUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type HistoryTypeUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the history_type
+     * Select specific fields to fetch from the HistoryType
      */
-    select?: history_typeSelect<ExtArgs> | null
+    select?: HistoryTypeSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: history_typeInclude<ExtArgs> | null
+    include?: HistoryTypeInclude<ExtArgs> | null
     /**
-     * The data needed to update a history_type.
+     * The data needed to update a HistoryType.
      */
-    data: XOR<history_typeUpdateInput, history_typeUncheckedUpdateInput>
+    data: XOR<HistoryTypeUpdateInput, HistoryTypeUncheckedUpdateInput>
     /**
-     * Choose, which history_type to update.
+     * Choose, which HistoryType to update.
      */
-    where: history_typeWhereUniqueInput
+    where: HistoryTypeWhereUniqueInput
   }
 
 
   /**
-   * history_type updateMany
+   * HistoryType updateMany
    */
-  export type history_typeUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type HistoryTypeUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update history_types.
+     * The data used to update HistoryTypes.
      */
-    data: XOR<history_typeUpdateManyMutationInput, history_typeUncheckedUpdateManyInput>
+    data: XOR<HistoryTypeUpdateManyMutationInput, HistoryTypeUncheckedUpdateManyInput>
     /**
-     * Filter which history_types to update
+     * Filter which HistoryTypes to update
      */
-    where?: history_typeWhereInput
+    where?: HistoryTypeWhereInput
   }
 
 
   /**
-   * history_type upsert
+   * HistoryType upsert
    */
-  export type history_typeUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type HistoryTypeUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the history_type
+     * Select specific fields to fetch from the HistoryType
      */
-    select?: history_typeSelect<ExtArgs> | null
+    select?: HistoryTypeSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: history_typeInclude<ExtArgs> | null
+    include?: HistoryTypeInclude<ExtArgs> | null
     /**
-     * The filter to search for the history_type to update in case it exists.
+     * The filter to search for the HistoryType to update in case it exists.
      */
-    where: history_typeWhereUniqueInput
+    where: HistoryTypeWhereUniqueInput
     /**
-     * In case the history_type found by the `where` argument doesn't exist, create a new history_type with this data.
+     * In case the HistoryType found by the `where` argument doesn't exist, create a new HistoryType with this data.
      */
-    create: XOR<history_typeCreateInput, history_typeUncheckedCreateInput>
+    create: XOR<HistoryTypeCreateInput, HistoryTypeUncheckedCreateInput>
     /**
-     * In case the history_type was found with the provided `where` argument, update it with this data.
+     * In case the HistoryType was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<history_typeUpdateInput, history_typeUncheckedUpdateInput>
+    update: XOR<HistoryTypeUpdateInput, HistoryTypeUncheckedUpdateInput>
   }
 
 
   /**
-   * history_type delete
+   * HistoryType delete
    */
-  export type history_typeDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type HistoryTypeDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the history_type
+     * Select specific fields to fetch from the HistoryType
      */
-    select?: history_typeSelect<ExtArgs> | null
+    select?: HistoryTypeSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: history_typeInclude<ExtArgs> | null
+    include?: HistoryTypeInclude<ExtArgs> | null
     /**
-     * Filter which history_type to delete.
+     * Filter which HistoryType to delete.
      */
-    where: history_typeWhereUniqueInput
+    where: HistoryTypeWhereUniqueInput
   }
 
 
   /**
-   * history_type deleteMany
+   * HistoryType deleteMany
    */
-  export type history_typeDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type HistoryTypeDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which history_types to delete
+     * Filter which HistoryTypes to delete
      */
-    where?: history_typeWhereInput
+    where?: HistoryTypeWhereInput
   }
 
 
   /**
-   * history_type.author_relation
+   * HistoryType.author_relation
    */
-  export type history_type$author_relationArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type HistoryType$author_relationArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the author_relation
+     * Select specific fields to fetch from the AuthorRelation
      */
-    select?: author_relationSelect<ExtArgs> | null
+    select?: AuthorRelationSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: author_relationInclude<ExtArgs> | null
-    where?: author_relationWhereInput
-    orderBy?: author_relationOrderByWithRelationInput | author_relationOrderByWithRelationInput[]
-    cursor?: author_relationWhereUniqueInput
+    include?: AuthorRelationInclude<ExtArgs> | null
+    where?: AuthorRelationWhereInput
+    orderBy?: AuthorRelationOrderByWithRelationInput | AuthorRelationOrderByWithRelationInput[]
+    cursor?: AuthorRelationWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: Author_relationScalarFieldEnum | Author_relationScalarFieldEnum[]
+    distinct?: AuthorRelationScalarFieldEnum | AuthorRelationScalarFieldEnum[]
   }
 
 
   /**
-   * history_type without action
+   * HistoryType without action
    */
-  export type history_typeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type HistoryTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the history_type
+     * Select specific fields to fetch from the HistoryType
      */
-    select?: history_typeSelect<ExtArgs> | null
+    select?: HistoryTypeSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: history_typeInclude<ExtArgs> | null
+    include?: HistoryTypeInclude<ExtArgs> | null
   }
 
 
 
   /**
-   * Model phrase
+   * Model Phrase
    */
 
   export type AggregatePhrase = {
@@ -4310,37 +4310,37 @@ export namespace Prisma {
 
   export type PhraseAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which phrase to aggregate.
+     * Filter which Phrase to aggregate.
      */
-    where?: phraseWhereInput
+    where?: PhraseWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of phrases to fetch.
+     * Determine the order of Phrases to fetch.
      */
-    orderBy?: phraseOrderByWithRelationInput | phraseOrderByWithRelationInput[]
+    orderBy?: PhraseOrderByWithRelationInput | PhraseOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: phraseWhereUniqueInput
+    cursor?: PhraseWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` phrases from the position of the cursor.
+     * Take `±n` Phrases from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` phrases.
+     * Skip the first `n` Phrases.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned phrases
+     * Count returned Phrases
     **/
     _count?: true | PhraseCountAggregateInputType
     /**
@@ -4380,11 +4380,11 @@ export namespace Prisma {
 
 
 
-  export type phraseGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: phraseWhereInput
-    orderBy?: phraseOrderByWithAggregationInput | phraseOrderByWithAggregationInput[]
+  export type PhraseGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: PhraseWhereInput
+    orderBy?: PhraseOrderByWithAggregationInput | PhraseOrderByWithAggregationInput[]
     by: PhraseScalarFieldEnum[] | PhraseScalarFieldEnum
-    having?: phraseScalarWhereWithAggregatesInput
+    having?: PhraseScalarWhereWithAggregatesInput
     take?: number
     skip?: number
     _count?: PhraseCountAggregateInputType | true
@@ -4408,7 +4408,7 @@ export namespace Prisma {
     _max: PhraseMaxAggregateOutputType | null
   }
 
-  type GetPhraseGroupByPayload<T extends phraseGroupByArgs> = Prisma.PrismaPromise<
+  type GetPhraseGroupByPayload<T extends PhraseGroupByArgs> = Prisma.PrismaPromise<
     Array<
       PickEnumerable<PhraseGroupByOutputType, T['by']> &
         {
@@ -4422,17 +4422,17 @@ export namespace Prisma {
     >
 
 
-  export type phraseSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type PhraseSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     phrase?: boolean
     date?: boolean
     created_at?: boolean
     updated_at?: boolean
     author_id?: boolean
-    author?: boolean | authorDefaultArgs<ExtArgs>
+    author?: boolean | AuthorDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["phrase"]>
 
-  export type phraseSelectScalar = {
+  export type PhraseSelectScalar = {
     id?: boolean
     phrase?: boolean
     date?: boolean
@@ -4441,15 +4441,15 @@ export namespace Prisma {
     author_id?: boolean
   }
 
-  export type phraseInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    author?: boolean | authorDefaultArgs<ExtArgs>
+  export type PhraseInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    author?: boolean | AuthorDefaultArgs<ExtArgs>
   }
 
 
-  export type $phrasePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "phrase"
+  export type $PhrasePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Phrase"
     objects: {
-      author: Prisma.$authorPayload<ExtArgs>
+      author: Prisma.$AuthorPayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
@@ -4463,18 +4463,18 @@ export namespace Prisma {
   }
 
 
-  type phraseGetPayload<S extends boolean | null | undefined | phraseDefaultArgs> = $Result.GetResult<Prisma.$phrasePayload, S>
+  type PhraseGetPayload<S extends boolean | null | undefined | PhraseDefaultArgs> = $Result.GetResult<Prisma.$PhrasePayload, S>
 
-  type phraseCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<phraseFindManyArgs, 'select' | 'include' | 'distinct'> & {
+  type PhraseCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
+    Omit<PhraseFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: PhraseCountAggregateInputType | true
     }
 
-  export interface phraseDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['phrase'], meta: { name: 'phrase' } }
+  export interface PhraseDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Phrase'], meta: { name: 'Phrase' } }
     /**
      * Find zero or one Phrase that matches the filter.
-     * @param {phraseFindUniqueArgs} args - Arguments to find a Phrase
+     * @param {PhraseFindUniqueArgs} args - Arguments to find a Phrase
      * @example
      * // Get one Phrase
      * const phrase = await prisma.phrase.findUnique({
@@ -4483,14 +4483,14 @@ export namespace Prisma {
      *   }
      * })
     **/
-    findUnique<T extends phraseFindUniqueArgs<ExtArgs>>(
-      args: SelectSubset<T, phraseFindUniqueArgs<ExtArgs>>
-    ): Prisma__phraseClient<$Result.GetResult<Prisma.$phrasePayload<ExtArgs>, T, 'findUnique'> | null, null, ExtArgs>
+    findUnique<T extends PhraseFindUniqueArgs<ExtArgs>>(
+      args: SelectSubset<T, PhraseFindUniqueArgs<ExtArgs>>
+    ): Prisma__PhraseClient<$Result.GetResult<Prisma.$PhrasePayload<ExtArgs>, T, 'findUnique'> | null, null, ExtArgs>
 
     /**
      * Find one Phrase that matches the filter or throw an error  with `error.code='P2025'` 
      *     if no matches were found.
-     * @param {phraseFindUniqueOrThrowArgs} args - Arguments to find a Phrase
+     * @param {PhraseFindUniqueOrThrowArgs} args - Arguments to find a Phrase
      * @example
      * // Get one Phrase
      * const phrase = await prisma.phrase.findUniqueOrThrow({
@@ -4499,15 +4499,15 @@ export namespace Prisma {
      *   }
      * })
     **/
-    findUniqueOrThrow<T extends phraseFindUniqueOrThrowArgs<ExtArgs>>(
-      args?: SelectSubset<T, phraseFindUniqueOrThrowArgs<ExtArgs>>
-    ): Prisma__phraseClient<$Result.GetResult<Prisma.$phrasePayload<ExtArgs>, T, 'findUniqueOrThrow'>, never, ExtArgs>
+    findUniqueOrThrow<T extends PhraseFindUniqueOrThrowArgs<ExtArgs>>(
+      args?: SelectSubset<T, PhraseFindUniqueOrThrowArgs<ExtArgs>>
+    ): Prisma__PhraseClient<$Result.GetResult<Prisma.$PhrasePayload<ExtArgs>, T, 'findUniqueOrThrow'>, never, ExtArgs>
 
     /**
      * Find the first Phrase that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {phraseFindFirstArgs} args - Arguments to find a Phrase
+     * @param {PhraseFindFirstArgs} args - Arguments to find a Phrase
      * @example
      * // Get one Phrase
      * const phrase = await prisma.phrase.findFirst({
@@ -4516,16 +4516,16 @@ export namespace Prisma {
      *   }
      * })
     **/
-    findFirst<T extends phraseFindFirstArgs<ExtArgs>>(
-      args?: SelectSubset<T, phraseFindFirstArgs<ExtArgs>>
-    ): Prisma__phraseClient<$Result.GetResult<Prisma.$phrasePayload<ExtArgs>, T, 'findFirst'> | null, null, ExtArgs>
+    findFirst<T extends PhraseFindFirstArgs<ExtArgs>>(
+      args?: SelectSubset<T, PhraseFindFirstArgs<ExtArgs>>
+    ): Prisma__PhraseClient<$Result.GetResult<Prisma.$PhrasePayload<ExtArgs>, T, 'findFirst'> | null, null, ExtArgs>
 
     /**
      * Find the first Phrase that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {phraseFindFirstOrThrowArgs} args - Arguments to find a Phrase
+     * @param {PhraseFindFirstOrThrowArgs} args - Arguments to find a Phrase
      * @example
      * // Get one Phrase
      * const phrase = await prisma.phrase.findFirstOrThrow({
@@ -4534,15 +4534,15 @@ export namespace Prisma {
      *   }
      * })
     **/
-    findFirstOrThrow<T extends phraseFindFirstOrThrowArgs<ExtArgs>>(
-      args?: SelectSubset<T, phraseFindFirstOrThrowArgs<ExtArgs>>
-    ): Prisma__phraseClient<$Result.GetResult<Prisma.$phrasePayload<ExtArgs>, T, 'findFirstOrThrow'>, never, ExtArgs>
+    findFirstOrThrow<T extends PhraseFindFirstOrThrowArgs<ExtArgs>>(
+      args?: SelectSubset<T, PhraseFindFirstOrThrowArgs<ExtArgs>>
+    ): Prisma__PhraseClient<$Result.GetResult<Prisma.$PhrasePayload<ExtArgs>, T, 'findFirstOrThrow'>, never, ExtArgs>
 
     /**
      * Find zero or more Phrases that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {phraseFindManyArgs=} args - Arguments to filter and select certain fields only.
+     * @param {PhraseFindManyArgs=} args - Arguments to filter and select certain fields only.
      * @example
      * // Get all Phrases
      * const phrases = await prisma.phrase.findMany()
@@ -4554,13 +4554,13 @@ export namespace Prisma {
      * const phraseWithIdOnly = await prisma.phrase.findMany({ select: { id: true } })
      * 
     **/
-    findMany<T extends phraseFindManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, phraseFindManyArgs<ExtArgs>>
-    ): Prisma.PrismaPromise<$Result.GetResult<Prisma.$phrasePayload<ExtArgs>, T, 'findMany'>>
+    findMany<T extends PhraseFindManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, PhraseFindManyArgs<ExtArgs>>
+    ): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PhrasePayload<ExtArgs>, T, 'findMany'>>
 
     /**
      * Create a Phrase.
-     * @param {phraseCreateArgs} args - Arguments to create a Phrase.
+     * @param {PhraseCreateArgs} args - Arguments to create a Phrase.
      * @example
      * // Create one Phrase
      * const Phrase = await prisma.phrase.create({
@@ -4570,13 +4570,13 @@ export namespace Prisma {
      * })
      * 
     **/
-    create<T extends phraseCreateArgs<ExtArgs>>(
-      args: SelectSubset<T, phraseCreateArgs<ExtArgs>>
-    ): Prisma__phraseClient<$Result.GetResult<Prisma.$phrasePayload<ExtArgs>, T, 'create'>, never, ExtArgs>
+    create<T extends PhraseCreateArgs<ExtArgs>>(
+      args: SelectSubset<T, PhraseCreateArgs<ExtArgs>>
+    ): Prisma__PhraseClient<$Result.GetResult<Prisma.$PhrasePayload<ExtArgs>, T, 'create'>, never, ExtArgs>
 
     /**
      * Create many Phrases.
-     *     @param {phraseCreateManyArgs} args - Arguments to create many Phrases.
+     *     @param {PhraseCreateManyArgs} args - Arguments to create many Phrases.
      *     @example
      *     // Create many Phrases
      *     const phrase = await prisma.phrase.createMany({
@@ -4586,13 +4586,13 @@ export namespace Prisma {
      *     })
      *     
     **/
-    createMany<T extends phraseCreateManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, phraseCreateManyArgs<ExtArgs>>
+    createMany<T extends PhraseCreateManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, PhraseCreateManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Delete a Phrase.
-     * @param {phraseDeleteArgs} args - Arguments to delete one Phrase.
+     * @param {PhraseDeleteArgs} args - Arguments to delete one Phrase.
      * @example
      * // Delete one Phrase
      * const Phrase = await prisma.phrase.delete({
@@ -4602,13 +4602,13 @@ export namespace Prisma {
      * })
      * 
     **/
-    delete<T extends phraseDeleteArgs<ExtArgs>>(
-      args: SelectSubset<T, phraseDeleteArgs<ExtArgs>>
-    ): Prisma__phraseClient<$Result.GetResult<Prisma.$phrasePayload<ExtArgs>, T, 'delete'>, never, ExtArgs>
+    delete<T extends PhraseDeleteArgs<ExtArgs>>(
+      args: SelectSubset<T, PhraseDeleteArgs<ExtArgs>>
+    ): Prisma__PhraseClient<$Result.GetResult<Prisma.$PhrasePayload<ExtArgs>, T, 'delete'>, never, ExtArgs>
 
     /**
      * Update one Phrase.
-     * @param {phraseUpdateArgs} args - Arguments to update one Phrase.
+     * @param {PhraseUpdateArgs} args - Arguments to update one Phrase.
      * @example
      * // Update one Phrase
      * const phrase = await prisma.phrase.update({
@@ -4621,13 +4621,13 @@ export namespace Prisma {
      * })
      * 
     **/
-    update<T extends phraseUpdateArgs<ExtArgs>>(
-      args: SelectSubset<T, phraseUpdateArgs<ExtArgs>>
-    ): Prisma__phraseClient<$Result.GetResult<Prisma.$phrasePayload<ExtArgs>, T, 'update'>, never, ExtArgs>
+    update<T extends PhraseUpdateArgs<ExtArgs>>(
+      args: SelectSubset<T, PhraseUpdateArgs<ExtArgs>>
+    ): Prisma__PhraseClient<$Result.GetResult<Prisma.$PhrasePayload<ExtArgs>, T, 'update'>, never, ExtArgs>
 
     /**
      * Delete zero or more Phrases.
-     * @param {phraseDeleteManyArgs} args - Arguments to filter Phrases to delete.
+     * @param {PhraseDeleteManyArgs} args - Arguments to filter Phrases to delete.
      * @example
      * // Delete a few Phrases
      * const { count } = await prisma.phrase.deleteMany({
@@ -4637,15 +4637,15 @@ export namespace Prisma {
      * })
      * 
     **/
-    deleteMany<T extends phraseDeleteManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, phraseDeleteManyArgs<ExtArgs>>
+    deleteMany<T extends PhraseDeleteManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, PhraseDeleteManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Phrases.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {phraseUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {PhraseUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
      * // Update many Phrases
      * const phrase = await prisma.phrase.updateMany({
@@ -4658,13 +4658,13 @@ export namespace Prisma {
      * })
      * 
     **/
-    updateMany<T extends phraseUpdateManyArgs<ExtArgs>>(
-      args: SelectSubset<T, phraseUpdateManyArgs<ExtArgs>>
+    updateMany<T extends PhraseUpdateManyArgs<ExtArgs>>(
+      args: SelectSubset<T, PhraseUpdateManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Create or update one Phrase.
-     * @param {phraseUpsertArgs} args - Arguments to update or create a Phrase.
+     * @param {PhraseUpsertArgs} args - Arguments to update or create a Phrase.
      * @example
      * // Update or create a Phrase
      * const phrase = await prisma.phrase.upsert({
@@ -4679,15 +4679,15 @@ export namespace Prisma {
      *   }
      * })
     **/
-    upsert<T extends phraseUpsertArgs<ExtArgs>>(
-      args: SelectSubset<T, phraseUpsertArgs<ExtArgs>>
-    ): Prisma__phraseClient<$Result.GetResult<Prisma.$phrasePayload<ExtArgs>, T, 'upsert'>, never, ExtArgs>
+    upsert<T extends PhraseUpsertArgs<ExtArgs>>(
+      args: SelectSubset<T, PhraseUpsertArgs<ExtArgs>>
+    ): Prisma__PhraseClient<$Result.GetResult<Prisma.$PhrasePayload<ExtArgs>, T, 'upsert'>, never, ExtArgs>
 
     /**
      * Count the number of Phrases.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {phraseCountArgs} args - Arguments to filter Phrases to count.
+     * @param {PhraseCountArgs} args - Arguments to filter Phrases to count.
      * @example
      * // Count the number of Phrases
      * const count = await prisma.phrase.count({
@@ -4696,8 +4696,8 @@ export namespace Prisma {
      *   }
      * })
     **/
-    count<T extends phraseCountArgs>(
-      args?: Subset<T, phraseCountArgs>,
+    count<T extends PhraseCountArgs>(
+      args?: Subset<T, PhraseCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
@@ -4736,7 +4736,7 @@ export namespace Prisma {
      * Group by Phrase.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {phraseGroupByArgs} args - Group by arguments.
+     * @param {PhraseGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -4751,14 +4751,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends phraseGroupByArgs,
+      T extends PhraseGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: phraseGroupByArgs['orderBy'] }
-        : { orderBy?: phraseGroupByArgs['orderBy'] },
+        ? { orderBy: PhraseGroupByArgs['orderBy'] }
+        : { orderBy?: PhraseGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -4807,23 +4807,23 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, phraseGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetPhraseGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, PhraseGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetPhraseGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the phrase model
+   * Fields of the Phrase model
    */
-  readonly fields: phraseFieldRefs;
+  readonly fields: PhraseFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for phrase.
+   * The delegate class that acts as a "Promise-like" for Phrase.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__phraseClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__PhraseClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: 'PrismaPromise';
 
-    author<T extends authorDefaultArgs<ExtArgs> = {}>(args?: Subset<T, authorDefaultArgs<ExtArgs>>): Prisma__authorClient<$Result.GetResult<Prisma.$authorPayload<ExtArgs>, T, 'findUniqueOrThrow'> | Null, Null, ExtArgs>;
+    author<T extends AuthorDefaultArgs<ExtArgs> = {}>(args?: Subset<T, AuthorDefaultArgs<ExtArgs>>): Prisma__AuthorClient<$Result.GetResult<Prisma.$AuthorPayload<ExtArgs>, T, 'findUniqueOrThrow'> | Null, Null, ExtArgs>;
 
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -4850,194 +4850,194 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the phrase model
+   * Fields of the Phrase model
    */ 
-  interface phraseFieldRefs {
-    readonly id: FieldRef<"phrase", 'Int'>
-    readonly phrase: FieldRef<"phrase", 'String'>
-    readonly date: FieldRef<"phrase", 'DateTime'>
-    readonly created_at: FieldRef<"phrase", 'DateTime'>
-    readonly updated_at: FieldRef<"phrase", 'DateTime'>
-    readonly author_id: FieldRef<"phrase", 'Int'>
+  interface PhraseFieldRefs {
+    readonly id: FieldRef<"Phrase", 'Int'>
+    readonly phrase: FieldRef<"Phrase", 'String'>
+    readonly date: FieldRef<"Phrase", 'DateTime'>
+    readonly created_at: FieldRef<"Phrase", 'DateTime'>
+    readonly updated_at: FieldRef<"Phrase", 'DateTime'>
+    readonly author_id: FieldRef<"Phrase", 'Int'>
   }
     
 
   // Custom InputTypes
 
   /**
-   * phrase findUnique
+   * Phrase findUnique
    */
-  export type phraseFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PhraseFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the phrase
+     * Select specific fields to fetch from the Phrase
      */
-    select?: phraseSelect<ExtArgs> | null
+    select?: PhraseSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: phraseInclude<ExtArgs> | null
+    include?: PhraseInclude<ExtArgs> | null
     /**
-     * Filter, which phrase to fetch.
+     * Filter, which Phrase to fetch.
      */
-    where: phraseWhereUniqueInput
+    where: PhraseWhereUniqueInput
   }
 
 
   /**
-   * phrase findUniqueOrThrow
+   * Phrase findUniqueOrThrow
    */
-  export type phraseFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PhraseFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the phrase
+     * Select specific fields to fetch from the Phrase
      */
-    select?: phraseSelect<ExtArgs> | null
+    select?: PhraseSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: phraseInclude<ExtArgs> | null
+    include?: PhraseInclude<ExtArgs> | null
     /**
-     * Filter, which phrase to fetch.
+     * Filter, which Phrase to fetch.
      */
-    where: phraseWhereUniqueInput
+    where: PhraseWhereUniqueInput
   }
 
 
   /**
-   * phrase findFirst
+   * Phrase findFirst
    */
-  export type phraseFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PhraseFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the phrase
+     * Select specific fields to fetch from the Phrase
      */
-    select?: phraseSelect<ExtArgs> | null
+    select?: PhraseSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: phraseInclude<ExtArgs> | null
+    include?: PhraseInclude<ExtArgs> | null
     /**
-     * Filter, which phrase to fetch.
+     * Filter, which Phrase to fetch.
      */
-    where?: phraseWhereInput
+    where?: PhraseWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of phrases to fetch.
+     * Determine the order of Phrases to fetch.
      */
-    orderBy?: phraseOrderByWithRelationInput | phraseOrderByWithRelationInput[]
+    orderBy?: PhraseOrderByWithRelationInput | PhraseOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for phrases.
+     * Sets the position for searching for Phrases.
      */
-    cursor?: phraseWhereUniqueInput
+    cursor?: PhraseWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` phrases from the position of the cursor.
+     * Take `±n` Phrases from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` phrases.
+     * Skip the first `n` Phrases.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of phrases.
+     * Filter by unique combinations of Phrases.
      */
     distinct?: PhraseScalarFieldEnum | PhraseScalarFieldEnum[]
   }
 
 
   /**
-   * phrase findFirstOrThrow
+   * Phrase findFirstOrThrow
    */
-  export type phraseFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PhraseFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the phrase
+     * Select specific fields to fetch from the Phrase
      */
-    select?: phraseSelect<ExtArgs> | null
+    select?: PhraseSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: phraseInclude<ExtArgs> | null
+    include?: PhraseInclude<ExtArgs> | null
     /**
-     * Filter, which phrase to fetch.
+     * Filter, which Phrase to fetch.
      */
-    where?: phraseWhereInput
+    where?: PhraseWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of phrases to fetch.
+     * Determine the order of Phrases to fetch.
      */
-    orderBy?: phraseOrderByWithRelationInput | phraseOrderByWithRelationInput[]
+    orderBy?: PhraseOrderByWithRelationInput | PhraseOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for phrases.
+     * Sets the position for searching for Phrases.
      */
-    cursor?: phraseWhereUniqueInput
+    cursor?: PhraseWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` phrases from the position of the cursor.
+     * Take `±n` Phrases from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` phrases.
+     * Skip the first `n` Phrases.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of phrases.
+     * Filter by unique combinations of Phrases.
      */
     distinct?: PhraseScalarFieldEnum | PhraseScalarFieldEnum[]
   }
 
 
   /**
-   * phrase findMany
+   * Phrase findMany
    */
-  export type phraseFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PhraseFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the phrase
+     * Select specific fields to fetch from the Phrase
      */
-    select?: phraseSelect<ExtArgs> | null
+    select?: PhraseSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: phraseInclude<ExtArgs> | null
+    include?: PhraseInclude<ExtArgs> | null
     /**
-     * Filter, which phrases to fetch.
+     * Filter, which Phrases to fetch.
      */
-    where?: phraseWhereInput
+    where?: PhraseWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of phrases to fetch.
+     * Determine the order of Phrases to fetch.
      */
-    orderBy?: phraseOrderByWithRelationInput | phraseOrderByWithRelationInput[]
+    orderBy?: PhraseOrderByWithRelationInput | PhraseOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing phrases.
+     * Sets the position for listing Phrases.
      */
-    cursor?: phraseWhereUniqueInput
+    cursor?: PhraseWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` phrases from the position of the cursor.
+     * Take `±n` Phrases from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` phrases.
+     * Skip the first `n` Phrases.
      */
     skip?: number
     distinct?: PhraseScalarFieldEnum | PhraseScalarFieldEnum[]
@@ -5045,143 +5045,143 @@ export namespace Prisma {
 
 
   /**
-   * phrase create
+   * Phrase create
    */
-  export type phraseCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PhraseCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the phrase
+     * Select specific fields to fetch from the Phrase
      */
-    select?: phraseSelect<ExtArgs> | null
+    select?: PhraseSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: phraseInclude<ExtArgs> | null
+    include?: PhraseInclude<ExtArgs> | null
     /**
-     * The data needed to create a phrase.
+     * The data needed to create a Phrase.
      */
-    data: XOR<phraseCreateInput, phraseUncheckedCreateInput>
+    data: XOR<PhraseCreateInput, PhraseUncheckedCreateInput>
   }
 
 
   /**
-   * phrase createMany
+   * Phrase createMany
    */
-  export type phraseCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PhraseCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many phrases.
+     * The data used to create many Phrases.
      */
-    data: phraseCreateManyInput | phraseCreateManyInput[]
+    data: PhraseCreateManyInput | PhraseCreateManyInput[]
     skipDuplicates?: boolean
   }
 
 
   /**
-   * phrase update
+   * Phrase update
    */
-  export type phraseUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PhraseUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the phrase
+     * Select specific fields to fetch from the Phrase
      */
-    select?: phraseSelect<ExtArgs> | null
+    select?: PhraseSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: phraseInclude<ExtArgs> | null
+    include?: PhraseInclude<ExtArgs> | null
     /**
-     * The data needed to update a phrase.
+     * The data needed to update a Phrase.
      */
-    data: XOR<phraseUpdateInput, phraseUncheckedUpdateInput>
+    data: XOR<PhraseUpdateInput, PhraseUncheckedUpdateInput>
     /**
-     * Choose, which phrase to update.
+     * Choose, which Phrase to update.
      */
-    where: phraseWhereUniqueInput
+    where: PhraseWhereUniqueInput
   }
 
 
   /**
-   * phrase updateMany
+   * Phrase updateMany
    */
-  export type phraseUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PhraseUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update phrases.
+     * The data used to update Phrases.
      */
-    data: XOR<phraseUpdateManyMutationInput, phraseUncheckedUpdateManyInput>
+    data: XOR<PhraseUpdateManyMutationInput, PhraseUncheckedUpdateManyInput>
     /**
-     * Filter which phrases to update
+     * Filter which Phrases to update
      */
-    where?: phraseWhereInput
+    where?: PhraseWhereInput
   }
 
 
   /**
-   * phrase upsert
+   * Phrase upsert
    */
-  export type phraseUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PhraseUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the phrase
+     * Select specific fields to fetch from the Phrase
      */
-    select?: phraseSelect<ExtArgs> | null
+    select?: PhraseSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: phraseInclude<ExtArgs> | null
+    include?: PhraseInclude<ExtArgs> | null
     /**
-     * The filter to search for the phrase to update in case it exists.
+     * The filter to search for the Phrase to update in case it exists.
      */
-    where: phraseWhereUniqueInput
+    where: PhraseWhereUniqueInput
     /**
-     * In case the phrase found by the `where` argument doesn't exist, create a new phrase with this data.
+     * In case the Phrase found by the `where` argument doesn't exist, create a new Phrase with this data.
      */
-    create: XOR<phraseCreateInput, phraseUncheckedCreateInput>
+    create: XOR<PhraseCreateInput, PhraseUncheckedCreateInput>
     /**
-     * In case the phrase was found with the provided `where` argument, update it with this data.
+     * In case the Phrase was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<phraseUpdateInput, phraseUncheckedUpdateInput>
+    update: XOR<PhraseUpdateInput, PhraseUncheckedUpdateInput>
   }
 
 
   /**
-   * phrase delete
+   * Phrase delete
    */
-  export type phraseDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PhraseDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the phrase
+     * Select specific fields to fetch from the Phrase
      */
-    select?: phraseSelect<ExtArgs> | null
+    select?: PhraseSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: phraseInclude<ExtArgs> | null
+    include?: PhraseInclude<ExtArgs> | null
     /**
-     * Filter which phrase to delete.
+     * Filter which Phrase to delete.
      */
-    where: phraseWhereUniqueInput
+    where: PhraseWhereUniqueInput
   }
 
 
   /**
-   * phrase deleteMany
+   * Phrase deleteMany
    */
-  export type phraseDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PhraseDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which phrases to delete
+     * Filter which Phrases to delete
      */
-    where?: phraseWhereInput
+    where?: PhraseWhereInput
   }
 
 
   /**
-   * phrase without action
+   * Phrase without action
    */
-  export type phraseDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PhraseDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the phrase
+     * Select specific fields to fetch from the Phrase
      */
-    select?: phraseSelect<ExtArgs> | null
+    select?: PhraseSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well.
      */
-    include?: phraseInclude<ExtArgs> | null
+    include?: PhraseInclude<ExtArgs> | null
   }
 
 
@@ -5212,7 +5212,7 @@ export namespace Prisma {
   export type AuthorScalarFieldEnum = (typeof AuthorScalarFieldEnum)[keyof typeof AuthorScalarFieldEnum]
 
 
-  export const Author_relationScalarFieldEnum: {
+  export const AuthorRelationScalarFieldEnum: {
     id: 'id',
     name_relation: 'name_relation',
     type_relation: 'type_relation',
@@ -5223,10 +5223,10 @@ export namespace Prisma {
     history_type_id: 'history_type_id'
   };
 
-  export type Author_relationScalarFieldEnum = (typeof Author_relationScalarFieldEnum)[keyof typeof Author_relationScalarFieldEnum]
+  export type AuthorRelationScalarFieldEnum = (typeof AuthorRelationScalarFieldEnum)[keyof typeof AuthorRelationScalarFieldEnum]
 
 
-  export const History_typeScalarFieldEnum: {
+  export const HistoryTypeScalarFieldEnum: {
     id: 'id',
     name: 'name',
     description: 'description',
@@ -5234,7 +5234,7 @@ export namespace Prisma {
     updated_at: 'updated_at'
   };
 
-  export type History_typeScalarFieldEnum = (typeof History_typeScalarFieldEnum)[keyof typeof History_typeScalarFieldEnum]
+  export type HistoryTypeScalarFieldEnum = (typeof HistoryTypeScalarFieldEnum)[keyof typeof HistoryTypeScalarFieldEnum]
 
 
   export const PhraseScalarFieldEnum: {
@@ -5301,92 +5301,92 @@ export namespace Prisma {
    */
 
 
-  export type authorWhereInput = {
-    AND?: authorWhereInput | authorWhereInput[]
-    OR?: authorWhereInput[]
-    NOT?: authorWhereInput | authorWhereInput[]
-    id?: IntFilter<"author"> | number
-    name?: StringFilter<"author"> | string
-    last_name?: StringNullableFilter<"author"> | string | null
-    description?: StringNullableFilter<"author"> | string | null
-    created_at?: DateTimeNullableFilter<"author"> | Date | string | null
-    updated_at?: DateTimeNullableFilter<"author"> | Date | string | null
-    author_relation_author_relation_author_idToauthor?: Author_relationListRelationFilter
-    author_relation_author_relation_author_relationed_idToauthor?: Author_relationListRelationFilter
+  export type AuthorWhereInput = {
+    AND?: AuthorWhereInput | AuthorWhereInput[]
+    OR?: AuthorWhereInput[]
+    NOT?: AuthorWhereInput | AuthorWhereInput[]
+    id?: IntFilter<"Author"> | number
+    name?: StringFilter<"Author"> | string
+    last_name?: StringNullableFilter<"Author"> | string | null
+    description?: StringNullableFilter<"Author"> | string | null
+    created_at?: DateTimeNullableFilter<"Author"> | Date | string | null
+    updated_at?: DateTimeNullableFilter<"Author"> | Date | string | null
+    author_relation_author_relation_author_idToauthor?: AuthorRelationListRelationFilter
+    author_relation_author_relation_author_relationed_idToauthor?: AuthorRelationListRelationFilter
     phrase?: PhraseListRelationFilter
   }
 
-  export type authorOrderByWithRelationInput = {
+  export type AuthorOrderByWithRelationInput = {
     id?: SortOrder
     name?: SortOrder
     last_name?: SortOrderInput | SortOrder
     description?: SortOrderInput | SortOrder
     created_at?: SortOrderInput | SortOrder
     updated_at?: SortOrderInput | SortOrder
-    author_relation_author_relation_author_idToauthor?: author_relationOrderByRelationAggregateInput
-    author_relation_author_relation_author_relationed_idToauthor?: author_relationOrderByRelationAggregateInput
-    phrase?: phraseOrderByRelationAggregateInput
+    author_relation_author_relation_author_idToauthor?: AuthorRelationOrderByRelationAggregateInput
+    author_relation_author_relation_author_relationed_idToauthor?: AuthorRelationOrderByRelationAggregateInput
+    phrase?: PhraseOrderByRelationAggregateInput
   }
 
-  export type authorWhereUniqueInput = Prisma.AtLeast<{
+  export type AuthorWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: authorWhereInput | authorWhereInput[]
-    OR?: authorWhereInput[]
-    NOT?: authorWhereInput | authorWhereInput[]
-    name?: StringFilter<"author"> | string
-    last_name?: StringNullableFilter<"author"> | string | null
-    description?: StringNullableFilter<"author"> | string | null
-    created_at?: DateTimeNullableFilter<"author"> | Date | string | null
-    updated_at?: DateTimeNullableFilter<"author"> | Date | string | null
-    author_relation_author_relation_author_idToauthor?: Author_relationListRelationFilter
-    author_relation_author_relation_author_relationed_idToauthor?: Author_relationListRelationFilter
+    AND?: AuthorWhereInput | AuthorWhereInput[]
+    OR?: AuthorWhereInput[]
+    NOT?: AuthorWhereInput | AuthorWhereInput[]
+    name?: StringFilter<"Author"> | string
+    last_name?: StringNullableFilter<"Author"> | string | null
+    description?: StringNullableFilter<"Author"> | string | null
+    created_at?: DateTimeNullableFilter<"Author"> | Date | string | null
+    updated_at?: DateTimeNullableFilter<"Author"> | Date | string | null
+    author_relation_author_relation_author_idToauthor?: AuthorRelationListRelationFilter
+    author_relation_author_relation_author_relationed_idToauthor?: AuthorRelationListRelationFilter
     phrase?: PhraseListRelationFilter
   }, "id" | "id">
 
-  export type authorOrderByWithAggregationInput = {
+  export type AuthorOrderByWithAggregationInput = {
     id?: SortOrder
     name?: SortOrder
     last_name?: SortOrderInput | SortOrder
     description?: SortOrderInput | SortOrder
     created_at?: SortOrderInput | SortOrder
     updated_at?: SortOrderInput | SortOrder
-    _count?: authorCountOrderByAggregateInput
-    _avg?: authorAvgOrderByAggregateInput
-    _max?: authorMaxOrderByAggregateInput
-    _min?: authorMinOrderByAggregateInput
-    _sum?: authorSumOrderByAggregateInput
+    _count?: AuthorCountOrderByAggregateInput
+    _avg?: AuthorAvgOrderByAggregateInput
+    _max?: AuthorMaxOrderByAggregateInput
+    _min?: AuthorMinOrderByAggregateInput
+    _sum?: AuthorSumOrderByAggregateInput
   }
 
-  export type authorScalarWhereWithAggregatesInput = {
-    AND?: authorScalarWhereWithAggregatesInput | authorScalarWhereWithAggregatesInput[]
-    OR?: authorScalarWhereWithAggregatesInput[]
-    NOT?: authorScalarWhereWithAggregatesInput | authorScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"author"> | number
-    name?: StringWithAggregatesFilter<"author"> | string
-    last_name?: StringNullableWithAggregatesFilter<"author"> | string | null
-    description?: StringNullableWithAggregatesFilter<"author"> | string | null
-    created_at?: DateTimeNullableWithAggregatesFilter<"author"> | Date | string | null
-    updated_at?: DateTimeNullableWithAggregatesFilter<"author"> | Date | string | null
+  export type AuthorScalarWhereWithAggregatesInput = {
+    AND?: AuthorScalarWhereWithAggregatesInput | AuthorScalarWhereWithAggregatesInput[]
+    OR?: AuthorScalarWhereWithAggregatesInput[]
+    NOT?: AuthorScalarWhereWithAggregatesInput | AuthorScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"Author"> | number
+    name?: StringWithAggregatesFilter<"Author"> | string
+    last_name?: StringNullableWithAggregatesFilter<"Author"> | string | null
+    description?: StringNullableWithAggregatesFilter<"Author"> | string | null
+    created_at?: DateTimeNullableWithAggregatesFilter<"Author"> | Date | string | null
+    updated_at?: DateTimeNullableWithAggregatesFilter<"Author"> | Date | string | null
   }
 
-  export type author_relationWhereInput = {
-    AND?: author_relationWhereInput | author_relationWhereInput[]
-    OR?: author_relationWhereInput[]
-    NOT?: author_relationWhereInput | author_relationWhereInput[]
-    id?: IntFilter<"author_relation"> | number
-    name_relation?: StringFilter<"author_relation"> | string
-    type_relation?: StringFilter<"author_relation"> | string
-    created_at?: DateTimeNullableFilter<"author_relation"> | Date | string | null
-    updated_at?: DateTimeNullableFilter<"author_relation"> | Date | string | null
-    author_id?: IntFilter<"author_relation"> | number
-    author_relationed_id?: IntFilter<"author_relation"> | number
-    history_type_id?: IntFilter<"author_relation"> | number
-    author_author_relation_author_idToauthor?: XOR<AuthorRelationFilter, authorWhereInput>
-    author_author_relation_author_relationed_idToauthor?: XOR<AuthorRelationFilter, authorWhereInput>
-    history_type?: XOR<History_typeRelationFilter, history_typeWhereInput>
+  export type AuthorRelationWhereInput = {
+    AND?: AuthorRelationWhereInput | AuthorRelationWhereInput[]
+    OR?: AuthorRelationWhereInput[]
+    NOT?: AuthorRelationWhereInput | AuthorRelationWhereInput[]
+    id?: IntFilter<"AuthorRelation"> | number
+    name_relation?: StringFilter<"AuthorRelation"> | string
+    type_relation?: StringFilter<"AuthorRelation"> | string
+    created_at?: DateTimeNullableFilter<"AuthorRelation"> | Date | string | null
+    updated_at?: DateTimeNullableFilter<"AuthorRelation"> | Date | string | null
+    author_id?: IntFilter<"AuthorRelation"> | number
+    author_relationed_id?: IntFilter<"AuthorRelation"> | number
+    history_type_id?: IntFilter<"AuthorRelation"> | number
+    author_author_relation_author_idToauthor?: XOR<AuthorRelationFilter, AuthorWhereInput>
+    author_author_relation_author_relationed_idToauthor?: XOR<AuthorRelationFilter, AuthorWhereInput>
+    history_type?: XOR<HistoryTypeRelationFilter, HistoryTypeWhereInput>
   }
 
-  export type author_relationOrderByWithRelationInput = {
+  export type AuthorRelationOrderByWithRelationInput = {
     id?: SortOrder
     name_relation?: SortOrder
     type_relation?: SortOrder
@@ -5395,29 +5395,29 @@ export namespace Prisma {
     author_id?: SortOrder
     author_relationed_id?: SortOrder
     history_type_id?: SortOrder
-    author_author_relation_author_idToauthor?: authorOrderByWithRelationInput
-    author_author_relation_author_relationed_idToauthor?: authorOrderByWithRelationInput
-    history_type?: history_typeOrderByWithRelationInput
+    author_author_relation_author_idToauthor?: AuthorOrderByWithRelationInput
+    author_author_relation_author_relationed_idToauthor?: AuthorOrderByWithRelationInput
+    history_type?: HistoryTypeOrderByWithRelationInput
   }
 
-  export type author_relationWhereUniqueInput = Prisma.AtLeast<{
+  export type AuthorRelationWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: author_relationWhereInput | author_relationWhereInput[]
-    OR?: author_relationWhereInput[]
-    NOT?: author_relationWhereInput | author_relationWhereInput[]
-    name_relation?: StringFilter<"author_relation"> | string
-    type_relation?: StringFilter<"author_relation"> | string
-    created_at?: DateTimeNullableFilter<"author_relation"> | Date | string | null
-    updated_at?: DateTimeNullableFilter<"author_relation"> | Date | string | null
-    author_id?: IntFilter<"author_relation"> | number
-    author_relationed_id?: IntFilter<"author_relation"> | number
-    history_type_id?: IntFilter<"author_relation"> | number
-    author_author_relation_author_idToauthor?: XOR<AuthorRelationFilter, authorWhereInput>
-    author_author_relation_author_relationed_idToauthor?: XOR<AuthorRelationFilter, authorWhereInput>
-    history_type?: XOR<History_typeRelationFilter, history_typeWhereInput>
+    AND?: AuthorRelationWhereInput | AuthorRelationWhereInput[]
+    OR?: AuthorRelationWhereInput[]
+    NOT?: AuthorRelationWhereInput | AuthorRelationWhereInput[]
+    name_relation?: StringFilter<"AuthorRelation"> | string
+    type_relation?: StringFilter<"AuthorRelation"> | string
+    created_at?: DateTimeNullableFilter<"AuthorRelation"> | Date | string | null
+    updated_at?: DateTimeNullableFilter<"AuthorRelation"> | Date | string | null
+    author_id?: IntFilter<"AuthorRelation"> | number
+    author_relationed_id?: IntFilter<"AuthorRelation"> | number
+    history_type_id?: IntFilter<"AuthorRelation"> | number
+    author_author_relation_author_idToauthor?: XOR<AuthorRelationFilter, AuthorWhereInput>
+    author_author_relation_author_relationed_idToauthor?: XOR<AuthorRelationFilter, AuthorWhereInput>
+    history_type?: XOR<HistoryTypeRelationFilter, HistoryTypeWhereInput>
   }, "id" | "id">
 
-  export type author_relationOrderByWithAggregationInput = {
+  export type AuthorRelationOrderByWithAggregationInput = {
     id?: SortOrder
     name_relation?: SortOrder
     type_relation?: SortOrder
@@ -5426,193 +5426,193 @@ export namespace Prisma {
     author_id?: SortOrder
     author_relationed_id?: SortOrder
     history_type_id?: SortOrder
-    _count?: author_relationCountOrderByAggregateInput
-    _avg?: author_relationAvgOrderByAggregateInput
-    _max?: author_relationMaxOrderByAggregateInput
-    _min?: author_relationMinOrderByAggregateInput
-    _sum?: author_relationSumOrderByAggregateInput
+    _count?: AuthorRelationCountOrderByAggregateInput
+    _avg?: AuthorRelationAvgOrderByAggregateInput
+    _max?: AuthorRelationMaxOrderByAggregateInput
+    _min?: AuthorRelationMinOrderByAggregateInput
+    _sum?: AuthorRelationSumOrderByAggregateInput
   }
 
-  export type author_relationScalarWhereWithAggregatesInput = {
-    AND?: author_relationScalarWhereWithAggregatesInput | author_relationScalarWhereWithAggregatesInput[]
-    OR?: author_relationScalarWhereWithAggregatesInput[]
-    NOT?: author_relationScalarWhereWithAggregatesInput | author_relationScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"author_relation"> | number
-    name_relation?: StringWithAggregatesFilter<"author_relation"> | string
-    type_relation?: StringWithAggregatesFilter<"author_relation"> | string
-    created_at?: DateTimeNullableWithAggregatesFilter<"author_relation"> | Date | string | null
-    updated_at?: DateTimeNullableWithAggregatesFilter<"author_relation"> | Date | string | null
-    author_id?: IntWithAggregatesFilter<"author_relation"> | number
-    author_relationed_id?: IntWithAggregatesFilter<"author_relation"> | number
-    history_type_id?: IntWithAggregatesFilter<"author_relation"> | number
+  export type AuthorRelationScalarWhereWithAggregatesInput = {
+    AND?: AuthorRelationScalarWhereWithAggregatesInput | AuthorRelationScalarWhereWithAggregatesInput[]
+    OR?: AuthorRelationScalarWhereWithAggregatesInput[]
+    NOT?: AuthorRelationScalarWhereWithAggregatesInput | AuthorRelationScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"AuthorRelation"> | number
+    name_relation?: StringWithAggregatesFilter<"AuthorRelation"> | string
+    type_relation?: StringWithAggregatesFilter<"AuthorRelation"> | string
+    created_at?: DateTimeNullableWithAggregatesFilter<"AuthorRelation"> | Date | string | null
+    updated_at?: DateTimeNullableWithAggregatesFilter<"AuthorRelation"> | Date | string | null
+    author_id?: IntWithAggregatesFilter<"AuthorRelation"> | number
+    author_relationed_id?: IntWithAggregatesFilter<"AuthorRelation"> | number
+    history_type_id?: IntWithAggregatesFilter<"AuthorRelation"> | number
   }
 
-  export type history_typeWhereInput = {
-    AND?: history_typeWhereInput | history_typeWhereInput[]
-    OR?: history_typeWhereInput[]
-    NOT?: history_typeWhereInput | history_typeWhereInput[]
-    id?: IntFilter<"history_type"> | number
-    name?: StringFilter<"history_type"> | string
-    description?: StringNullableFilter<"history_type"> | string | null
-    created_at?: DateTimeNullableFilter<"history_type"> | Date | string | null
-    updated_at?: DateTimeNullableFilter<"history_type"> | Date | string | null
-    author_relation?: Author_relationListRelationFilter
+  export type HistoryTypeWhereInput = {
+    AND?: HistoryTypeWhereInput | HistoryTypeWhereInput[]
+    OR?: HistoryTypeWhereInput[]
+    NOT?: HistoryTypeWhereInput | HistoryTypeWhereInput[]
+    id?: IntFilter<"HistoryType"> | number
+    name?: StringFilter<"HistoryType"> | string
+    description?: StringNullableFilter<"HistoryType"> | string | null
+    created_at?: DateTimeNullableFilter<"HistoryType"> | Date | string | null
+    updated_at?: DateTimeNullableFilter<"HistoryType"> | Date | string | null
+    author_relation?: AuthorRelationListRelationFilter
   }
 
-  export type history_typeOrderByWithRelationInput = {
+  export type HistoryTypeOrderByWithRelationInput = {
     id?: SortOrder
     name?: SortOrder
     description?: SortOrderInput | SortOrder
     created_at?: SortOrderInput | SortOrder
     updated_at?: SortOrderInput | SortOrder
-    author_relation?: author_relationOrderByRelationAggregateInput
+    author_relation?: AuthorRelationOrderByRelationAggregateInput
   }
 
-  export type history_typeWhereUniqueInput = Prisma.AtLeast<{
+  export type HistoryTypeWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: history_typeWhereInput | history_typeWhereInput[]
-    OR?: history_typeWhereInput[]
-    NOT?: history_typeWhereInput | history_typeWhereInput[]
-    name?: StringFilter<"history_type"> | string
-    description?: StringNullableFilter<"history_type"> | string | null
-    created_at?: DateTimeNullableFilter<"history_type"> | Date | string | null
-    updated_at?: DateTimeNullableFilter<"history_type"> | Date | string | null
-    author_relation?: Author_relationListRelationFilter
+    AND?: HistoryTypeWhereInput | HistoryTypeWhereInput[]
+    OR?: HistoryTypeWhereInput[]
+    NOT?: HistoryTypeWhereInput | HistoryTypeWhereInput[]
+    name?: StringFilter<"HistoryType"> | string
+    description?: StringNullableFilter<"HistoryType"> | string | null
+    created_at?: DateTimeNullableFilter<"HistoryType"> | Date | string | null
+    updated_at?: DateTimeNullableFilter<"HistoryType"> | Date | string | null
+    author_relation?: AuthorRelationListRelationFilter
   }, "id" | "id">
 
-  export type history_typeOrderByWithAggregationInput = {
+  export type HistoryTypeOrderByWithAggregationInput = {
     id?: SortOrder
     name?: SortOrder
     description?: SortOrderInput | SortOrder
     created_at?: SortOrderInput | SortOrder
     updated_at?: SortOrderInput | SortOrder
-    _count?: history_typeCountOrderByAggregateInput
-    _avg?: history_typeAvgOrderByAggregateInput
-    _max?: history_typeMaxOrderByAggregateInput
-    _min?: history_typeMinOrderByAggregateInput
-    _sum?: history_typeSumOrderByAggregateInput
+    _count?: HistoryTypeCountOrderByAggregateInput
+    _avg?: HistoryTypeAvgOrderByAggregateInput
+    _max?: HistoryTypeMaxOrderByAggregateInput
+    _min?: HistoryTypeMinOrderByAggregateInput
+    _sum?: HistoryTypeSumOrderByAggregateInput
   }
 
-  export type history_typeScalarWhereWithAggregatesInput = {
-    AND?: history_typeScalarWhereWithAggregatesInput | history_typeScalarWhereWithAggregatesInput[]
-    OR?: history_typeScalarWhereWithAggregatesInput[]
-    NOT?: history_typeScalarWhereWithAggregatesInput | history_typeScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"history_type"> | number
-    name?: StringWithAggregatesFilter<"history_type"> | string
-    description?: StringNullableWithAggregatesFilter<"history_type"> | string | null
-    created_at?: DateTimeNullableWithAggregatesFilter<"history_type"> | Date | string | null
-    updated_at?: DateTimeNullableWithAggregatesFilter<"history_type"> | Date | string | null
+  export type HistoryTypeScalarWhereWithAggregatesInput = {
+    AND?: HistoryTypeScalarWhereWithAggregatesInput | HistoryTypeScalarWhereWithAggregatesInput[]
+    OR?: HistoryTypeScalarWhereWithAggregatesInput[]
+    NOT?: HistoryTypeScalarWhereWithAggregatesInput | HistoryTypeScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"HistoryType"> | number
+    name?: StringWithAggregatesFilter<"HistoryType"> | string
+    description?: StringNullableWithAggregatesFilter<"HistoryType"> | string | null
+    created_at?: DateTimeNullableWithAggregatesFilter<"HistoryType"> | Date | string | null
+    updated_at?: DateTimeNullableWithAggregatesFilter<"HistoryType"> | Date | string | null
   }
 
-  export type phraseWhereInput = {
-    AND?: phraseWhereInput | phraseWhereInput[]
-    OR?: phraseWhereInput[]
-    NOT?: phraseWhereInput | phraseWhereInput[]
-    id?: IntFilter<"phrase"> | number
-    phrase?: StringFilter<"phrase"> | string
-    date?: DateTimeNullableFilter<"phrase"> | Date | string | null
-    created_at?: DateTimeNullableFilter<"phrase"> | Date | string | null
-    updated_at?: DateTimeNullableFilter<"phrase"> | Date | string | null
-    author_id?: IntFilter<"phrase"> | number
-    author?: XOR<AuthorRelationFilter, authorWhereInput>
+  export type PhraseWhereInput = {
+    AND?: PhraseWhereInput | PhraseWhereInput[]
+    OR?: PhraseWhereInput[]
+    NOT?: PhraseWhereInput | PhraseWhereInput[]
+    id?: IntFilter<"Phrase"> | number
+    phrase?: StringFilter<"Phrase"> | string
+    date?: DateTimeNullableFilter<"Phrase"> | Date | string | null
+    created_at?: DateTimeNullableFilter<"Phrase"> | Date | string | null
+    updated_at?: DateTimeNullableFilter<"Phrase"> | Date | string | null
+    author_id?: IntFilter<"Phrase"> | number
+    author?: XOR<AuthorRelationFilter, AuthorWhereInput>
   }
 
-  export type phraseOrderByWithRelationInput = {
+  export type PhraseOrderByWithRelationInput = {
     id?: SortOrder
     phrase?: SortOrder
     date?: SortOrderInput | SortOrder
     created_at?: SortOrderInput | SortOrder
     updated_at?: SortOrderInput | SortOrder
     author_id?: SortOrder
-    author?: authorOrderByWithRelationInput
+    author?: AuthorOrderByWithRelationInput
   }
 
-  export type phraseWhereUniqueInput = Prisma.AtLeast<{
+  export type PhraseWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: phraseWhereInput | phraseWhereInput[]
-    OR?: phraseWhereInput[]
-    NOT?: phraseWhereInput | phraseWhereInput[]
-    phrase?: StringFilter<"phrase"> | string
-    date?: DateTimeNullableFilter<"phrase"> | Date | string | null
-    created_at?: DateTimeNullableFilter<"phrase"> | Date | string | null
-    updated_at?: DateTimeNullableFilter<"phrase"> | Date | string | null
-    author_id?: IntFilter<"phrase"> | number
-    author?: XOR<AuthorRelationFilter, authorWhereInput>
+    AND?: PhraseWhereInput | PhraseWhereInput[]
+    OR?: PhraseWhereInput[]
+    NOT?: PhraseWhereInput | PhraseWhereInput[]
+    phrase?: StringFilter<"Phrase"> | string
+    date?: DateTimeNullableFilter<"Phrase"> | Date | string | null
+    created_at?: DateTimeNullableFilter<"Phrase"> | Date | string | null
+    updated_at?: DateTimeNullableFilter<"Phrase"> | Date | string | null
+    author_id?: IntFilter<"Phrase"> | number
+    author?: XOR<AuthorRelationFilter, AuthorWhereInput>
   }, "id" | "id">
 
-  export type phraseOrderByWithAggregationInput = {
+  export type PhraseOrderByWithAggregationInput = {
     id?: SortOrder
     phrase?: SortOrder
     date?: SortOrderInput | SortOrder
     created_at?: SortOrderInput | SortOrder
     updated_at?: SortOrderInput | SortOrder
     author_id?: SortOrder
-    _count?: phraseCountOrderByAggregateInput
-    _avg?: phraseAvgOrderByAggregateInput
-    _max?: phraseMaxOrderByAggregateInput
-    _min?: phraseMinOrderByAggregateInput
-    _sum?: phraseSumOrderByAggregateInput
+    _count?: PhraseCountOrderByAggregateInput
+    _avg?: PhraseAvgOrderByAggregateInput
+    _max?: PhraseMaxOrderByAggregateInput
+    _min?: PhraseMinOrderByAggregateInput
+    _sum?: PhraseSumOrderByAggregateInput
   }
 
-  export type phraseScalarWhereWithAggregatesInput = {
-    AND?: phraseScalarWhereWithAggregatesInput | phraseScalarWhereWithAggregatesInput[]
-    OR?: phraseScalarWhereWithAggregatesInput[]
-    NOT?: phraseScalarWhereWithAggregatesInput | phraseScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"phrase"> | number
-    phrase?: StringWithAggregatesFilter<"phrase"> | string
-    date?: DateTimeNullableWithAggregatesFilter<"phrase"> | Date | string | null
-    created_at?: DateTimeNullableWithAggregatesFilter<"phrase"> | Date | string | null
-    updated_at?: DateTimeNullableWithAggregatesFilter<"phrase"> | Date | string | null
-    author_id?: IntWithAggregatesFilter<"phrase"> | number
+  export type PhraseScalarWhereWithAggregatesInput = {
+    AND?: PhraseScalarWhereWithAggregatesInput | PhraseScalarWhereWithAggregatesInput[]
+    OR?: PhraseScalarWhereWithAggregatesInput[]
+    NOT?: PhraseScalarWhereWithAggregatesInput | PhraseScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"Phrase"> | number
+    phrase?: StringWithAggregatesFilter<"Phrase"> | string
+    date?: DateTimeNullableWithAggregatesFilter<"Phrase"> | Date | string | null
+    created_at?: DateTimeNullableWithAggregatesFilter<"Phrase"> | Date | string | null
+    updated_at?: DateTimeNullableWithAggregatesFilter<"Phrase"> | Date | string | null
+    author_id?: IntWithAggregatesFilter<"Phrase"> | number
   }
 
-  export type authorCreateInput = {
+  export type AuthorCreateInput = {
     name: string
     last_name?: string | null
     description?: string | null
     created_at?: Date | string | null
     updated_at?: Date | string | null
-    author_relation_author_relation_author_idToauthor?: author_relationCreateNestedManyWithoutAuthor_author_relation_author_idToauthorInput
-    author_relation_author_relation_author_relationed_idToauthor?: author_relationCreateNestedManyWithoutAuthor_author_relation_author_relationed_idToauthorInput
-    phrase?: phraseCreateNestedManyWithoutAuthorInput
+    author_relation_author_relation_author_idToauthor?: AuthorRelationCreateNestedManyWithoutAuthor_author_relation_author_idToauthorInput
+    author_relation_author_relation_author_relationed_idToauthor?: AuthorRelationCreateNestedManyWithoutAuthor_author_relation_author_relationed_idToauthorInput
+    phrase?: PhraseCreateNestedManyWithoutAuthorInput
   }
 
-  export type authorUncheckedCreateInput = {
+  export type AuthorUncheckedCreateInput = {
     id?: number
     name: string
     last_name?: string | null
     description?: string | null
     created_at?: Date | string | null
     updated_at?: Date | string | null
-    author_relation_author_relation_author_idToauthor?: author_relationUncheckedCreateNestedManyWithoutAuthor_author_relation_author_idToauthorInput
-    author_relation_author_relation_author_relationed_idToauthor?: author_relationUncheckedCreateNestedManyWithoutAuthor_author_relation_author_relationed_idToauthorInput
-    phrase?: phraseUncheckedCreateNestedManyWithoutAuthorInput
+    author_relation_author_relation_author_idToauthor?: AuthorRelationUncheckedCreateNestedManyWithoutAuthor_author_relation_author_idToauthorInput
+    author_relation_author_relation_author_relationed_idToauthor?: AuthorRelationUncheckedCreateNestedManyWithoutAuthor_author_relation_author_relationed_idToauthorInput
+    phrase?: PhraseUncheckedCreateNestedManyWithoutAuthorInput
   }
 
-  export type authorUpdateInput = {
+  export type AuthorUpdateInput = {
     name?: StringFieldUpdateOperationsInput | string
     last_name?: NullableStringFieldUpdateOperationsInput | string | null
     description?: NullableStringFieldUpdateOperationsInput | string | null
     created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    author_relation_author_relation_author_idToauthor?: author_relationUpdateManyWithoutAuthor_author_relation_author_idToauthorNestedInput
-    author_relation_author_relation_author_relationed_idToauthor?: author_relationUpdateManyWithoutAuthor_author_relation_author_relationed_idToauthorNestedInput
-    phrase?: phraseUpdateManyWithoutAuthorNestedInput
+    author_relation_author_relation_author_idToauthor?: AuthorRelationUpdateManyWithoutAuthor_author_relation_author_idToauthorNestedInput
+    author_relation_author_relation_author_relationed_idToauthor?: AuthorRelationUpdateManyWithoutAuthor_author_relation_author_relationed_idToauthorNestedInput
+    phrase?: PhraseUpdateManyWithoutAuthorNestedInput
   }
 
-  export type authorUncheckedUpdateInput = {
+  export type AuthorUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     last_name?: NullableStringFieldUpdateOperationsInput | string | null
     description?: NullableStringFieldUpdateOperationsInput | string | null
     created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    author_relation_author_relation_author_idToauthor?: author_relationUncheckedUpdateManyWithoutAuthor_author_relation_author_idToauthorNestedInput
-    author_relation_author_relation_author_relationed_idToauthor?: author_relationUncheckedUpdateManyWithoutAuthor_author_relation_author_relationed_idToauthorNestedInput
-    phrase?: phraseUncheckedUpdateManyWithoutAuthorNestedInput
+    author_relation_author_relation_author_idToauthor?: AuthorRelationUncheckedUpdateManyWithoutAuthor_author_relation_author_idToauthorNestedInput
+    author_relation_author_relation_author_relationed_idToauthor?: AuthorRelationUncheckedUpdateManyWithoutAuthor_author_relation_author_relationed_idToauthorNestedInput
+    phrase?: PhraseUncheckedUpdateManyWithoutAuthorNestedInput
   }
 
-  export type authorCreateManyInput = {
+  export type AuthorCreateManyInput = {
     id?: number
     name: string
     last_name?: string | null
@@ -5621,7 +5621,7 @@ export namespace Prisma {
     updated_at?: Date | string | null
   }
 
-  export type authorUpdateManyMutationInput = {
+  export type AuthorUpdateManyMutationInput = {
     name?: StringFieldUpdateOperationsInput | string
     last_name?: NullableStringFieldUpdateOperationsInput | string | null
     description?: NullableStringFieldUpdateOperationsInput | string | null
@@ -5629,7 +5629,7 @@ export namespace Prisma {
     updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
-  export type authorUncheckedUpdateManyInput = {
+  export type AuthorUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     last_name?: NullableStringFieldUpdateOperationsInput | string | null
@@ -5638,17 +5638,17 @@ export namespace Prisma {
     updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
-  export type author_relationCreateInput = {
+  export type AuthorRelationCreateInput = {
     name_relation: string
     type_relation: string
     created_at?: Date | string | null
     updated_at?: Date | string | null
-    author_author_relation_author_idToauthor: authorCreateNestedOneWithoutAuthor_relation_author_relation_author_idToauthorInput
-    author_author_relation_author_relationed_idToauthor: authorCreateNestedOneWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput
-    history_type: history_typeCreateNestedOneWithoutAuthor_relationInput
+    author_author_relation_author_idToauthor: AuthorCreateNestedOneWithoutAuthor_relation_author_relation_author_idToauthorInput
+    author_author_relation_author_relationed_idToauthor: AuthorCreateNestedOneWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput
+    history_type: HistoryTypeCreateNestedOneWithoutAuthor_relationInput
   }
 
-  export type author_relationUncheckedCreateInput = {
+  export type AuthorRelationUncheckedCreateInput = {
     id?: number
     name_relation: string
     type_relation: string
@@ -5659,17 +5659,17 @@ export namespace Prisma {
     history_type_id: number
   }
 
-  export type author_relationUpdateInput = {
+  export type AuthorRelationUpdateInput = {
     name_relation?: StringFieldUpdateOperationsInput | string
     type_relation?: StringFieldUpdateOperationsInput | string
     created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    author_author_relation_author_idToauthor?: authorUpdateOneRequiredWithoutAuthor_relation_author_relation_author_idToauthorNestedInput
-    author_author_relation_author_relationed_idToauthor?: authorUpdateOneRequiredWithoutAuthor_relation_author_relation_author_relationed_idToauthorNestedInput
-    history_type?: history_typeUpdateOneRequiredWithoutAuthor_relationNestedInput
+    author_author_relation_author_idToauthor?: AuthorUpdateOneRequiredWithoutAuthor_relation_author_relation_author_idToauthorNestedInput
+    author_author_relation_author_relationed_idToauthor?: AuthorUpdateOneRequiredWithoutAuthor_relation_author_relation_author_relationed_idToauthorNestedInput
+    history_type?: HistoryTypeUpdateOneRequiredWithoutAuthor_relationNestedInput
   }
 
-  export type author_relationUncheckedUpdateInput = {
+  export type AuthorRelationUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     name_relation?: StringFieldUpdateOperationsInput | string
     type_relation?: StringFieldUpdateOperationsInput | string
@@ -5680,7 +5680,7 @@ export namespace Prisma {
     history_type_id?: IntFieldUpdateOperationsInput | number
   }
 
-  export type author_relationCreateManyInput = {
+  export type AuthorRelationCreateManyInput = {
     id?: number
     name_relation: string
     type_relation: string
@@ -5691,14 +5691,14 @@ export namespace Prisma {
     history_type_id: number
   }
 
-  export type author_relationUpdateManyMutationInput = {
+  export type AuthorRelationUpdateManyMutationInput = {
     name_relation?: StringFieldUpdateOperationsInput | string
     type_relation?: StringFieldUpdateOperationsInput | string
     created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
-  export type author_relationUncheckedUpdateManyInput = {
+  export type AuthorRelationUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     name_relation?: StringFieldUpdateOperationsInput | string
     type_relation?: StringFieldUpdateOperationsInput | string
@@ -5709,41 +5709,41 @@ export namespace Prisma {
     history_type_id?: IntFieldUpdateOperationsInput | number
   }
 
-  export type history_typeCreateInput = {
+  export type HistoryTypeCreateInput = {
     name: string
     description?: string | null
     created_at?: Date | string | null
     updated_at?: Date | string | null
-    author_relation?: author_relationCreateNestedManyWithoutHistory_typeInput
+    author_relation?: AuthorRelationCreateNestedManyWithoutHistory_typeInput
   }
 
-  export type history_typeUncheckedCreateInput = {
+  export type HistoryTypeUncheckedCreateInput = {
     id?: number
     name: string
     description?: string | null
     created_at?: Date | string | null
     updated_at?: Date | string | null
-    author_relation?: author_relationUncheckedCreateNestedManyWithoutHistory_typeInput
+    author_relation?: AuthorRelationUncheckedCreateNestedManyWithoutHistory_typeInput
   }
 
-  export type history_typeUpdateInput = {
+  export type HistoryTypeUpdateInput = {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    author_relation?: author_relationUpdateManyWithoutHistory_typeNestedInput
+    author_relation?: AuthorRelationUpdateManyWithoutHistory_typeNestedInput
   }
 
-  export type history_typeUncheckedUpdateInput = {
+  export type HistoryTypeUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    author_relation?: author_relationUncheckedUpdateManyWithoutHistory_typeNestedInput
+    author_relation?: AuthorRelationUncheckedUpdateManyWithoutHistory_typeNestedInput
   }
 
-  export type history_typeCreateManyInput = {
+  export type HistoryTypeCreateManyInput = {
     id?: number
     name: string
     description?: string | null
@@ -5751,14 +5751,14 @@ export namespace Prisma {
     updated_at?: Date | string | null
   }
 
-  export type history_typeUpdateManyMutationInput = {
+  export type HistoryTypeUpdateManyMutationInput = {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
-  export type history_typeUncheckedUpdateManyInput = {
+  export type HistoryTypeUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
@@ -5766,15 +5766,15 @@ export namespace Prisma {
     updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
-  export type phraseCreateInput = {
+  export type PhraseCreateInput = {
     phrase: string
     date?: Date | string | null
     created_at?: Date | string | null
     updated_at?: Date | string | null
-    author: authorCreateNestedOneWithoutPhraseInput
+    author: AuthorCreateNestedOneWithoutPhraseInput
   }
 
-  export type phraseUncheckedCreateInput = {
+  export type PhraseUncheckedCreateInput = {
     id?: number
     phrase: string
     date?: Date | string | null
@@ -5783,15 +5783,15 @@ export namespace Prisma {
     author_id: number
   }
 
-  export type phraseUpdateInput = {
+  export type PhraseUpdateInput = {
     phrase?: StringFieldUpdateOperationsInput | string
     date?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    author?: authorUpdateOneRequiredWithoutPhraseNestedInput
+    author?: AuthorUpdateOneRequiredWithoutPhraseNestedInput
   }
 
-  export type phraseUncheckedUpdateInput = {
+  export type PhraseUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     phrase?: StringFieldUpdateOperationsInput | string
     date?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -5800,7 +5800,7 @@ export namespace Prisma {
     author_id?: IntFieldUpdateOperationsInput | number
   }
 
-  export type phraseCreateManyInput = {
+  export type PhraseCreateManyInput = {
     id?: number
     phrase: string
     date?: Date | string | null
@@ -5809,14 +5809,14 @@ export namespace Prisma {
     author_id: number
   }
 
-  export type phraseUpdateManyMutationInput = {
+  export type PhraseUpdateManyMutationInput = {
     phrase?: StringFieldUpdateOperationsInput | string
     date?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
-  export type phraseUncheckedUpdateManyInput = {
+  export type PhraseUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     phrase?: StringFieldUpdateOperationsInput | string
     date?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -5875,16 +5875,16 @@ export namespace Prisma {
     not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
   }
 
-  export type Author_relationListRelationFilter = {
-    every?: author_relationWhereInput
-    some?: author_relationWhereInput
-    none?: author_relationWhereInput
+  export type AuthorRelationListRelationFilter = {
+    every?: AuthorRelationWhereInput
+    some?: AuthorRelationWhereInput
+    none?: AuthorRelationWhereInput
   }
 
   export type PhraseListRelationFilter = {
-    every?: phraseWhereInput
-    some?: phraseWhereInput
-    none?: phraseWhereInput
+    every?: PhraseWhereInput
+    some?: PhraseWhereInput
+    none?: PhraseWhereInput
   }
 
   export type SortOrderInput = {
@@ -5892,15 +5892,15 @@ export namespace Prisma {
     nulls?: NullsOrder
   }
 
-  export type author_relationOrderByRelationAggregateInput = {
+  export type AuthorRelationOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
-  export type phraseOrderByRelationAggregateInput = {
+  export type PhraseOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
-  export type authorCountOrderByAggregateInput = {
+  export type AuthorCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     last_name?: SortOrder
@@ -5909,20 +5909,11 @@ export namespace Prisma {
     updated_at?: SortOrder
   }
 
-  export type authorAvgOrderByAggregateInput = {
+  export type AuthorAvgOrderByAggregateInput = {
     id?: SortOrder
   }
 
-  export type authorMaxOrderByAggregateInput = {
-    id?: SortOrder
-    name?: SortOrder
-    last_name?: SortOrder
-    description?: SortOrder
-    created_at?: SortOrder
-    updated_at?: SortOrder
-  }
-
-  export type authorMinOrderByAggregateInput = {
+  export type AuthorMaxOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     last_name?: SortOrder
@@ -5931,7 +5922,16 @@ export namespace Prisma {
     updated_at?: SortOrder
   }
 
-  export type authorSumOrderByAggregateInput = {
+  export type AuthorMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    last_name?: SortOrder
+    description?: SortOrder
+    created_at?: SortOrder
+    updated_at?: SortOrder
+  }
+
+  export type AuthorSumOrderByAggregateInput = {
     id?: SortOrder
   }
 
@@ -6000,16 +6000,16 @@ export namespace Prisma {
   }
 
   export type AuthorRelationFilter = {
-    is?: authorWhereInput
-    isNot?: authorWhereInput
+    is?: AuthorWhereInput
+    isNot?: AuthorWhereInput
   }
 
-  export type History_typeRelationFilter = {
-    is?: history_typeWhereInput
-    isNot?: history_typeWhereInput
+  export type HistoryTypeRelationFilter = {
+    is?: HistoryTypeWhereInput
+    isNot?: HistoryTypeWhereInput
   }
 
-  export type author_relationCountOrderByAggregateInput = {
+  export type AuthorRelationCountOrderByAggregateInput = {
     id?: SortOrder
     name_relation?: SortOrder
     type_relation?: SortOrder
@@ -6020,14 +6020,14 @@ export namespace Prisma {
     history_type_id?: SortOrder
   }
 
-  export type author_relationAvgOrderByAggregateInput = {
+  export type AuthorRelationAvgOrderByAggregateInput = {
     id?: SortOrder
     author_id?: SortOrder
     author_relationed_id?: SortOrder
     history_type_id?: SortOrder
   }
 
-  export type author_relationMaxOrderByAggregateInput = {
+  export type AuthorRelationMaxOrderByAggregateInput = {
     id?: SortOrder
     name_relation?: SortOrder
     type_relation?: SortOrder
@@ -6038,7 +6038,7 @@ export namespace Prisma {
     history_type_id?: SortOrder
   }
 
-  export type author_relationMinOrderByAggregateInput = {
+  export type AuthorRelationMinOrderByAggregateInput = {
     id?: SortOrder
     name_relation?: SortOrder
     type_relation?: SortOrder
@@ -6049,14 +6049,14 @@ export namespace Prisma {
     history_type_id?: SortOrder
   }
 
-  export type author_relationSumOrderByAggregateInput = {
+  export type AuthorRelationSumOrderByAggregateInput = {
     id?: SortOrder
     author_id?: SortOrder
     author_relationed_id?: SortOrder
     history_type_id?: SortOrder
   }
 
-  export type history_typeCountOrderByAggregateInput = {
+  export type HistoryTypeCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     description?: SortOrder
@@ -6064,19 +6064,11 @@ export namespace Prisma {
     updated_at?: SortOrder
   }
 
-  export type history_typeAvgOrderByAggregateInput = {
+  export type HistoryTypeAvgOrderByAggregateInput = {
     id?: SortOrder
   }
 
-  export type history_typeMaxOrderByAggregateInput = {
-    id?: SortOrder
-    name?: SortOrder
-    description?: SortOrder
-    created_at?: SortOrder
-    updated_at?: SortOrder
-  }
-
-  export type history_typeMinOrderByAggregateInput = {
+  export type HistoryTypeMaxOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     description?: SortOrder
@@ -6084,11 +6076,19 @@ export namespace Prisma {
     updated_at?: SortOrder
   }
 
-  export type history_typeSumOrderByAggregateInput = {
+  export type HistoryTypeMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    description?: SortOrder
+    created_at?: SortOrder
+    updated_at?: SortOrder
+  }
+
+  export type HistoryTypeSumOrderByAggregateInput = {
     id?: SortOrder
   }
 
-  export type phraseCountOrderByAggregateInput = {
+  export type PhraseCountOrderByAggregateInput = {
     id?: SortOrder
     phrase?: SortOrder
     date?: SortOrder
@@ -6097,21 +6097,12 @@ export namespace Prisma {
     author_id?: SortOrder
   }
 
-  export type phraseAvgOrderByAggregateInput = {
+  export type PhraseAvgOrderByAggregateInput = {
     id?: SortOrder
     author_id?: SortOrder
   }
 
-  export type phraseMaxOrderByAggregateInput = {
-    id?: SortOrder
-    phrase?: SortOrder
-    date?: SortOrder
-    created_at?: SortOrder
-    updated_at?: SortOrder
-    author_id?: SortOrder
-  }
-
-  export type phraseMinOrderByAggregateInput = {
+  export type PhraseMaxOrderByAggregateInput = {
     id?: SortOrder
     phrase?: SortOrder
     date?: SortOrder
@@ -6120,51 +6111,60 @@ export namespace Prisma {
     author_id?: SortOrder
   }
 
-  export type phraseSumOrderByAggregateInput = {
+  export type PhraseMinOrderByAggregateInput = {
+    id?: SortOrder
+    phrase?: SortOrder
+    date?: SortOrder
+    created_at?: SortOrder
+    updated_at?: SortOrder
+    author_id?: SortOrder
+  }
+
+  export type PhraseSumOrderByAggregateInput = {
     id?: SortOrder
     author_id?: SortOrder
   }
 
-  export type author_relationCreateNestedManyWithoutAuthor_author_relation_author_idToauthorInput = {
-    create?: XOR<author_relationCreateWithoutAuthor_author_relation_author_idToauthorInput, author_relationUncheckedCreateWithoutAuthor_author_relation_author_idToauthorInput> | author_relationCreateWithoutAuthor_author_relation_author_idToauthorInput[] | author_relationUncheckedCreateWithoutAuthor_author_relation_author_idToauthorInput[]
-    connectOrCreate?: author_relationCreateOrConnectWithoutAuthor_author_relation_author_idToauthorInput | author_relationCreateOrConnectWithoutAuthor_author_relation_author_idToauthorInput[]
-    createMany?: author_relationCreateManyAuthor_author_relation_author_idToauthorInputEnvelope
-    connect?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
+  export type AuthorRelationCreateNestedManyWithoutAuthor_author_relation_author_idToauthorInput = {
+    create?: XOR<AuthorRelationCreateWithoutAuthor_author_relation_author_idToauthorInput, AuthorRelationUncheckedCreateWithoutAuthor_author_relation_author_idToauthorInput> | AuthorRelationCreateWithoutAuthor_author_relation_author_idToauthorInput[] | AuthorRelationUncheckedCreateWithoutAuthor_author_relation_author_idToauthorInput[]
+    connectOrCreate?: AuthorRelationCreateOrConnectWithoutAuthor_author_relation_author_idToauthorInput | AuthorRelationCreateOrConnectWithoutAuthor_author_relation_author_idToauthorInput[]
+    createMany?: AuthorRelationCreateManyAuthor_author_relation_author_idToauthorInputEnvelope
+    connect?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
   }
 
-  export type author_relationCreateNestedManyWithoutAuthor_author_relation_author_relationed_idToauthorInput = {
-    create?: XOR<author_relationCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput, author_relationUncheckedCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput> | author_relationCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput[] | author_relationUncheckedCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
-    connectOrCreate?: author_relationCreateOrConnectWithoutAuthor_author_relation_author_relationed_idToauthorInput | author_relationCreateOrConnectWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
-    createMany?: author_relationCreateManyAuthor_author_relation_author_relationed_idToauthorInputEnvelope
-    connect?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
+  export type AuthorRelationCreateNestedManyWithoutAuthor_author_relation_author_relationed_idToauthorInput = {
+    create?: XOR<AuthorRelationCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput, AuthorRelationUncheckedCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput> | AuthorRelationCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput[] | AuthorRelationUncheckedCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
+    connectOrCreate?: AuthorRelationCreateOrConnectWithoutAuthor_author_relation_author_relationed_idToauthorInput | AuthorRelationCreateOrConnectWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
+    createMany?: AuthorRelationCreateManyAuthor_author_relation_author_relationed_idToauthorInputEnvelope
+    connect?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
   }
 
-  export type phraseCreateNestedManyWithoutAuthorInput = {
-    create?: XOR<phraseCreateWithoutAuthorInput, phraseUncheckedCreateWithoutAuthorInput> | phraseCreateWithoutAuthorInput[] | phraseUncheckedCreateWithoutAuthorInput[]
-    connectOrCreate?: phraseCreateOrConnectWithoutAuthorInput | phraseCreateOrConnectWithoutAuthorInput[]
-    createMany?: phraseCreateManyAuthorInputEnvelope
-    connect?: phraseWhereUniqueInput | phraseWhereUniqueInput[]
+  export type PhraseCreateNestedManyWithoutAuthorInput = {
+    create?: XOR<PhraseCreateWithoutAuthorInput, PhraseUncheckedCreateWithoutAuthorInput> | PhraseCreateWithoutAuthorInput[] | PhraseUncheckedCreateWithoutAuthorInput[]
+    connectOrCreate?: PhraseCreateOrConnectWithoutAuthorInput | PhraseCreateOrConnectWithoutAuthorInput[]
+    createMany?: PhraseCreateManyAuthorInputEnvelope
+    connect?: PhraseWhereUniqueInput | PhraseWhereUniqueInput[]
   }
 
-  export type author_relationUncheckedCreateNestedManyWithoutAuthor_author_relation_author_idToauthorInput = {
-    create?: XOR<author_relationCreateWithoutAuthor_author_relation_author_idToauthorInput, author_relationUncheckedCreateWithoutAuthor_author_relation_author_idToauthorInput> | author_relationCreateWithoutAuthor_author_relation_author_idToauthorInput[] | author_relationUncheckedCreateWithoutAuthor_author_relation_author_idToauthorInput[]
-    connectOrCreate?: author_relationCreateOrConnectWithoutAuthor_author_relation_author_idToauthorInput | author_relationCreateOrConnectWithoutAuthor_author_relation_author_idToauthorInput[]
-    createMany?: author_relationCreateManyAuthor_author_relation_author_idToauthorInputEnvelope
-    connect?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
+  export type AuthorRelationUncheckedCreateNestedManyWithoutAuthor_author_relation_author_idToauthorInput = {
+    create?: XOR<AuthorRelationCreateWithoutAuthor_author_relation_author_idToauthorInput, AuthorRelationUncheckedCreateWithoutAuthor_author_relation_author_idToauthorInput> | AuthorRelationCreateWithoutAuthor_author_relation_author_idToauthorInput[] | AuthorRelationUncheckedCreateWithoutAuthor_author_relation_author_idToauthorInput[]
+    connectOrCreate?: AuthorRelationCreateOrConnectWithoutAuthor_author_relation_author_idToauthorInput | AuthorRelationCreateOrConnectWithoutAuthor_author_relation_author_idToauthorInput[]
+    createMany?: AuthorRelationCreateManyAuthor_author_relation_author_idToauthorInputEnvelope
+    connect?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
   }
 
-  export type author_relationUncheckedCreateNestedManyWithoutAuthor_author_relation_author_relationed_idToauthorInput = {
-    create?: XOR<author_relationCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput, author_relationUncheckedCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput> | author_relationCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput[] | author_relationUncheckedCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
-    connectOrCreate?: author_relationCreateOrConnectWithoutAuthor_author_relation_author_relationed_idToauthorInput | author_relationCreateOrConnectWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
-    createMany?: author_relationCreateManyAuthor_author_relation_author_relationed_idToauthorInputEnvelope
-    connect?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
+  export type AuthorRelationUncheckedCreateNestedManyWithoutAuthor_author_relation_author_relationed_idToauthorInput = {
+    create?: XOR<AuthorRelationCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput, AuthorRelationUncheckedCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput> | AuthorRelationCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput[] | AuthorRelationUncheckedCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
+    connectOrCreate?: AuthorRelationCreateOrConnectWithoutAuthor_author_relation_author_relationed_idToauthorInput | AuthorRelationCreateOrConnectWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
+    createMany?: AuthorRelationCreateManyAuthor_author_relation_author_relationed_idToauthorInputEnvelope
+    connect?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
   }
 
-  export type phraseUncheckedCreateNestedManyWithoutAuthorInput = {
-    create?: XOR<phraseCreateWithoutAuthorInput, phraseUncheckedCreateWithoutAuthorInput> | phraseCreateWithoutAuthorInput[] | phraseUncheckedCreateWithoutAuthorInput[]
-    connectOrCreate?: phraseCreateOrConnectWithoutAuthorInput | phraseCreateOrConnectWithoutAuthorInput[]
-    createMany?: phraseCreateManyAuthorInputEnvelope
-    connect?: phraseWhereUniqueInput | phraseWhereUniqueInput[]
+  export type PhraseUncheckedCreateNestedManyWithoutAuthorInput = {
+    create?: XOR<PhraseCreateWithoutAuthorInput, PhraseUncheckedCreateWithoutAuthorInput> | PhraseCreateWithoutAuthorInput[] | PhraseUncheckedCreateWithoutAuthorInput[]
+    connectOrCreate?: PhraseCreateOrConnectWithoutAuthorInput | PhraseCreateOrConnectWithoutAuthorInput[]
+    createMany?: PhraseCreateManyAuthorInputEnvelope
+    connect?: PhraseWhereUniqueInput | PhraseWhereUniqueInput[]
   }
 
   export type StringFieldUpdateOperationsInput = {
@@ -6179,46 +6179,46 @@ export namespace Prisma {
     set?: Date | string | null
   }
 
-  export type author_relationUpdateManyWithoutAuthor_author_relation_author_idToauthorNestedInput = {
-    create?: XOR<author_relationCreateWithoutAuthor_author_relation_author_idToauthorInput, author_relationUncheckedCreateWithoutAuthor_author_relation_author_idToauthorInput> | author_relationCreateWithoutAuthor_author_relation_author_idToauthorInput[] | author_relationUncheckedCreateWithoutAuthor_author_relation_author_idToauthorInput[]
-    connectOrCreate?: author_relationCreateOrConnectWithoutAuthor_author_relation_author_idToauthorInput | author_relationCreateOrConnectWithoutAuthor_author_relation_author_idToauthorInput[]
-    upsert?: author_relationUpsertWithWhereUniqueWithoutAuthor_author_relation_author_idToauthorInput | author_relationUpsertWithWhereUniqueWithoutAuthor_author_relation_author_idToauthorInput[]
-    createMany?: author_relationCreateManyAuthor_author_relation_author_idToauthorInputEnvelope
-    set?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    disconnect?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    delete?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    connect?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    update?: author_relationUpdateWithWhereUniqueWithoutAuthor_author_relation_author_idToauthorInput | author_relationUpdateWithWhereUniqueWithoutAuthor_author_relation_author_idToauthorInput[]
-    updateMany?: author_relationUpdateManyWithWhereWithoutAuthor_author_relation_author_idToauthorInput | author_relationUpdateManyWithWhereWithoutAuthor_author_relation_author_idToauthorInput[]
-    deleteMany?: author_relationScalarWhereInput | author_relationScalarWhereInput[]
+  export type AuthorRelationUpdateManyWithoutAuthor_author_relation_author_idToauthorNestedInput = {
+    create?: XOR<AuthorRelationCreateWithoutAuthor_author_relation_author_idToauthorInput, AuthorRelationUncheckedCreateWithoutAuthor_author_relation_author_idToauthorInput> | AuthorRelationCreateWithoutAuthor_author_relation_author_idToauthorInput[] | AuthorRelationUncheckedCreateWithoutAuthor_author_relation_author_idToauthorInput[]
+    connectOrCreate?: AuthorRelationCreateOrConnectWithoutAuthor_author_relation_author_idToauthorInput | AuthorRelationCreateOrConnectWithoutAuthor_author_relation_author_idToauthorInput[]
+    upsert?: AuthorRelationUpsertWithWhereUniqueWithoutAuthor_author_relation_author_idToauthorInput | AuthorRelationUpsertWithWhereUniqueWithoutAuthor_author_relation_author_idToauthorInput[]
+    createMany?: AuthorRelationCreateManyAuthor_author_relation_author_idToauthorInputEnvelope
+    set?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    disconnect?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    delete?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    connect?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    update?: AuthorRelationUpdateWithWhereUniqueWithoutAuthor_author_relation_author_idToauthorInput | AuthorRelationUpdateWithWhereUniqueWithoutAuthor_author_relation_author_idToauthorInput[]
+    updateMany?: AuthorRelationUpdateManyWithWhereWithoutAuthor_author_relation_author_idToauthorInput | AuthorRelationUpdateManyWithWhereWithoutAuthor_author_relation_author_idToauthorInput[]
+    deleteMany?: AuthorRelationScalarWhereInput | AuthorRelationScalarWhereInput[]
   }
 
-  export type author_relationUpdateManyWithoutAuthor_author_relation_author_relationed_idToauthorNestedInput = {
-    create?: XOR<author_relationCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput, author_relationUncheckedCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput> | author_relationCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput[] | author_relationUncheckedCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
-    connectOrCreate?: author_relationCreateOrConnectWithoutAuthor_author_relation_author_relationed_idToauthorInput | author_relationCreateOrConnectWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
-    upsert?: author_relationUpsertWithWhereUniqueWithoutAuthor_author_relation_author_relationed_idToauthorInput | author_relationUpsertWithWhereUniqueWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
-    createMany?: author_relationCreateManyAuthor_author_relation_author_relationed_idToauthorInputEnvelope
-    set?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    disconnect?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    delete?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    connect?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    update?: author_relationUpdateWithWhereUniqueWithoutAuthor_author_relation_author_relationed_idToauthorInput | author_relationUpdateWithWhereUniqueWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
-    updateMany?: author_relationUpdateManyWithWhereWithoutAuthor_author_relation_author_relationed_idToauthorInput | author_relationUpdateManyWithWhereWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
-    deleteMany?: author_relationScalarWhereInput | author_relationScalarWhereInput[]
+  export type AuthorRelationUpdateManyWithoutAuthor_author_relation_author_relationed_idToauthorNestedInput = {
+    create?: XOR<AuthorRelationCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput, AuthorRelationUncheckedCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput> | AuthorRelationCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput[] | AuthorRelationUncheckedCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
+    connectOrCreate?: AuthorRelationCreateOrConnectWithoutAuthor_author_relation_author_relationed_idToauthorInput | AuthorRelationCreateOrConnectWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
+    upsert?: AuthorRelationUpsertWithWhereUniqueWithoutAuthor_author_relation_author_relationed_idToauthorInput | AuthorRelationUpsertWithWhereUniqueWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
+    createMany?: AuthorRelationCreateManyAuthor_author_relation_author_relationed_idToauthorInputEnvelope
+    set?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    disconnect?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    delete?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    connect?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    update?: AuthorRelationUpdateWithWhereUniqueWithoutAuthor_author_relation_author_relationed_idToauthorInput | AuthorRelationUpdateWithWhereUniqueWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
+    updateMany?: AuthorRelationUpdateManyWithWhereWithoutAuthor_author_relation_author_relationed_idToauthorInput | AuthorRelationUpdateManyWithWhereWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
+    deleteMany?: AuthorRelationScalarWhereInput | AuthorRelationScalarWhereInput[]
   }
 
-  export type phraseUpdateManyWithoutAuthorNestedInput = {
-    create?: XOR<phraseCreateWithoutAuthorInput, phraseUncheckedCreateWithoutAuthorInput> | phraseCreateWithoutAuthorInput[] | phraseUncheckedCreateWithoutAuthorInput[]
-    connectOrCreate?: phraseCreateOrConnectWithoutAuthorInput | phraseCreateOrConnectWithoutAuthorInput[]
-    upsert?: phraseUpsertWithWhereUniqueWithoutAuthorInput | phraseUpsertWithWhereUniqueWithoutAuthorInput[]
-    createMany?: phraseCreateManyAuthorInputEnvelope
-    set?: phraseWhereUniqueInput | phraseWhereUniqueInput[]
-    disconnect?: phraseWhereUniqueInput | phraseWhereUniqueInput[]
-    delete?: phraseWhereUniqueInput | phraseWhereUniqueInput[]
-    connect?: phraseWhereUniqueInput | phraseWhereUniqueInput[]
-    update?: phraseUpdateWithWhereUniqueWithoutAuthorInput | phraseUpdateWithWhereUniqueWithoutAuthorInput[]
-    updateMany?: phraseUpdateManyWithWhereWithoutAuthorInput | phraseUpdateManyWithWhereWithoutAuthorInput[]
-    deleteMany?: phraseScalarWhereInput | phraseScalarWhereInput[]
+  export type PhraseUpdateManyWithoutAuthorNestedInput = {
+    create?: XOR<PhraseCreateWithoutAuthorInput, PhraseUncheckedCreateWithoutAuthorInput> | PhraseCreateWithoutAuthorInput[] | PhraseUncheckedCreateWithoutAuthorInput[]
+    connectOrCreate?: PhraseCreateOrConnectWithoutAuthorInput | PhraseCreateOrConnectWithoutAuthorInput[]
+    upsert?: PhraseUpsertWithWhereUniqueWithoutAuthorInput | PhraseUpsertWithWhereUniqueWithoutAuthorInput[]
+    createMany?: PhraseCreateManyAuthorInputEnvelope
+    set?: PhraseWhereUniqueInput | PhraseWhereUniqueInput[]
+    disconnect?: PhraseWhereUniqueInput | PhraseWhereUniqueInput[]
+    delete?: PhraseWhereUniqueInput | PhraseWhereUniqueInput[]
+    connect?: PhraseWhereUniqueInput | PhraseWhereUniqueInput[]
+    update?: PhraseUpdateWithWhereUniqueWithoutAuthorInput | PhraseUpdateWithWhereUniqueWithoutAuthorInput[]
+    updateMany?: PhraseUpdateManyWithWhereWithoutAuthorInput | PhraseUpdateManyWithWhereWithoutAuthorInput[]
+    deleteMany?: PhraseScalarWhereInput | PhraseScalarWhereInput[]
   }
 
   export type IntFieldUpdateOperationsInput = {
@@ -6229,144 +6229,144 @@ export namespace Prisma {
     divide?: number
   }
 
-  export type author_relationUncheckedUpdateManyWithoutAuthor_author_relation_author_idToauthorNestedInput = {
-    create?: XOR<author_relationCreateWithoutAuthor_author_relation_author_idToauthorInput, author_relationUncheckedCreateWithoutAuthor_author_relation_author_idToauthorInput> | author_relationCreateWithoutAuthor_author_relation_author_idToauthorInput[] | author_relationUncheckedCreateWithoutAuthor_author_relation_author_idToauthorInput[]
-    connectOrCreate?: author_relationCreateOrConnectWithoutAuthor_author_relation_author_idToauthorInput | author_relationCreateOrConnectWithoutAuthor_author_relation_author_idToauthorInput[]
-    upsert?: author_relationUpsertWithWhereUniqueWithoutAuthor_author_relation_author_idToauthorInput | author_relationUpsertWithWhereUniqueWithoutAuthor_author_relation_author_idToauthorInput[]
-    createMany?: author_relationCreateManyAuthor_author_relation_author_idToauthorInputEnvelope
-    set?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    disconnect?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    delete?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    connect?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    update?: author_relationUpdateWithWhereUniqueWithoutAuthor_author_relation_author_idToauthorInput | author_relationUpdateWithWhereUniqueWithoutAuthor_author_relation_author_idToauthorInput[]
-    updateMany?: author_relationUpdateManyWithWhereWithoutAuthor_author_relation_author_idToauthorInput | author_relationUpdateManyWithWhereWithoutAuthor_author_relation_author_idToauthorInput[]
-    deleteMany?: author_relationScalarWhereInput | author_relationScalarWhereInput[]
+  export type AuthorRelationUncheckedUpdateManyWithoutAuthor_author_relation_author_idToauthorNestedInput = {
+    create?: XOR<AuthorRelationCreateWithoutAuthor_author_relation_author_idToauthorInput, AuthorRelationUncheckedCreateWithoutAuthor_author_relation_author_idToauthorInput> | AuthorRelationCreateWithoutAuthor_author_relation_author_idToauthorInput[] | AuthorRelationUncheckedCreateWithoutAuthor_author_relation_author_idToauthorInput[]
+    connectOrCreate?: AuthorRelationCreateOrConnectWithoutAuthor_author_relation_author_idToauthorInput | AuthorRelationCreateOrConnectWithoutAuthor_author_relation_author_idToauthorInput[]
+    upsert?: AuthorRelationUpsertWithWhereUniqueWithoutAuthor_author_relation_author_idToauthorInput | AuthorRelationUpsertWithWhereUniqueWithoutAuthor_author_relation_author_idToauthorInput[]
+    createMany?: AuthorRelationCreateManyAuthor_author_relation_author_idToauthorInputEnvelope
+    set?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    disconnect?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    delete?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    connect?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    update?: AuthorRelationUpdateWithWhereUniqueWithoutAuthor_author_relation_author_idToauthorInput | AuthorRelationUpdateWithWhereUniqueWithoutAuthor_author_relation_author_idToauthorInput[]
+    updateMany?: AuthorRelationUpdateManyWithWhereWithoutAuthor_author_relation_author_idToauthorInput | AuthorRelationUpdateManyWithWhereWithoutAuthor_author_relation_author_idToauthorInput[]
+    deleteMany?: AuthorRelationScalarWhereInput | AuthorRelationScalarWhereInput[]
   }
 
-  export type author_relationUncheckedUpdateManyWithoutAuthor_author_relation_author_relationed_idToauthorNestedInput = {
-    create?: XOR<author_relationCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput, author_relationUncheckedCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput> | author_relationCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput[] | author_relationUncheckedCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
-    connectOrCreate?: author_relationCreateOrConnectWithoutAuthor_author_relation_author_relationed_idToauthorInput | author_relationCreateOrConnectWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
-    upsert?: author_relationUpsertWithWhereUniqueWithoutAuthor_author_relation_author_relationed_idToauthorInput | author_relationUpsertWithWhereUniqueWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
-    createMany?: author_relationCreateManyAuthor_author_relation_author_relationed_idToauthorInputEnvelope
-    set?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    disconnect?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    delete?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    connect?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    update?: author_relationUpdateWithWhereUniqueWithoutAuthor_author_relation_author_relationed_idToauthorInput | author_relationUpdateWithWhereUniqueWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
-    updateMany?: author_relationUpdateManyWithWhereWithoutAuthor_author_relation_author_relationed_idToauthorInput | author_relationUpdateManyWithWhereWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
-    deleteMany?: author_relationScalarWhereInput | author_relationScalarWhereInput[]
+  export type AuthorRelationUncheckedUpdateManyWithoutAuthor_author_relation_author_relationed_idToauthorNestedInput = {
+    create?: XOR<AuthorRelationCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput, AuthorRelationUncheckedCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput> | AuthorRelationCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput[] | AuthorRelationUncheckedCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
+    connectOrCreate?: AuthorRelationCreateOrConnectWithoutAuthor_author_relation_author_relationed_idToauthorInput | AuthorRelationCreateOrConnectWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
+    upsert?: AuthorRelationUpsertWithWhereUniqueWithoutAuthor_author_relation_author_relationed_idToauthorInput | AuthorRelationUpsertWithWhereUniqueWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
+    createMany?: AuthorRelationCreateManyAuthor_author_relation_author_relationed_idToauthorInputEnvelope
+    set?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    disconnect?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    delete?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    connect?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    update?: AuthorRelationUpdateWithWhereUniqueWithoutAuthor_author_relation_author_relationed_idToauthorInput | AuthorRelationUpdateWithWhereUniqueWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
+    updateMany?: AuthorRelationUpdateManyWithWhereWithoutAuthor_author_relation_author_relationed_idToauthorInput | AuthorRelationUpdateManyWithWhereWithoutAuthor_author_relation_author_relationed_idToauthorInput[]
+    deleteMany?: AuthorRelationScalarWhereInput | AuthorRelationScalarWhereInput[]
   }
 
-  export type phraseUncheckedUpdateManyWithoutAuthorNestedInput = {
-    create?: XOR<phraseCreateWithoutAuthorInput, phraseUncheckedCreateWithoutAuthorInput> | phraseCreateWithoutAuthorInput[] | phraseUncheckedCreateWithoutAuthorInput[]
-    connectOrCreate?: phraseCreateOrConnectWithoutAuthorInput | phraseCreateOrConnectWithoutAuthorInput[]
-    upsert?: phraseUpsertWithWhereUniqueWithoutAuthorInput | phraseUpsertWithWhereUniqueWithoutAuthorInput[]
-    createMany?: phraseCreateManyAuthorInputEnvelope
-    set?: phraseWhereUniqueInput | phraseWhereUniqueInput[]
-    disconnect?: phraseWhereUniqueInput | phraseWhereUniqueInput[]
-    delete?: phraseWhereUniqueInput | phraseWhereUniqueInput[]
-    connect?: phraseWhereUniqueInput | phraseWhereUniqueInput[]
-    update?: phraseUpdateWithWhereUniqueWithoutAuthorInput | phraseUpdateWithWhereUniqueWithoutAuthorInput[]
-    updateMany?: phraseUpdateManyWithWhereWithoutAuthorInput | phraseUpdateManyWithWhereWithoutAuthorInput[]
-    deleteMany?: phraseScalarWhereInput | phraseScalarWhereInput[]
+  export type PhraseUncheckedUpdateManyWithoutAuthorNestedInput = {
+    create?: XOR<PhraseCreateWithoutAuthorInput, PhraseUncheckedCreateWithoutAuthorInput> | PhraseCreateWithoutAuthorInput[] | PhraseUncheckedCreateWithoutAuthorInput[]
+    connectOrCreate?: PhraseCreateOrConnectWithoutAuthorInput | PhraseCreateOrConnectWithoutAuthorInput[]
+    upsert?: PhraseUpsertWithWhereUniqueWithoutAuthorInput | PhraseUpsertWithWhereUniqueWithoutAuthorInput[]
+    createMany?: PhraseCreateManyAuthorInputEnvelope
+    set?: PhraseWhereUniqueInput | PhraseWhereUniqueInput[]
+    disconnect?: PhraseWhereUniqueInput | PhraseWhereUniqueInput[]
+    delete?: PhraseWhereUniqueInput | PhraseWhereUniqueInput[]
+    connect?: PhraseWhereUniqueInput | PhraseWhereUniqueInput[]
+    update?: PhraseUpdateWithWhereUniqueWithoutAuthorInput | PhraseUpdateWithWhereUniqueWithoutAuthorInput[]
+    updateMany?: PhraseUpdateManyWithWhereWithoutAuthorInput | PhraseUpdateManyWithWhereWithoutAuthorInput[]
+    deleteMany?: PhraseScalarWhereInput | PhraseScalarWhereInput[]
   }
 
-  export type authorCreateNestedOneWithoutAuthor_relation_author_relation_author_idToauthorInput = {
-    create?: XOR<authorCreateWithoutAuthor_relation_author_relation_author_idToauthorInput, authorUncheckedCreateWithoutAuthor_relation_author_relation_author_idToauthorInput>
-    connectOrCreate?: authorCreateOrConnectWithoutAuthor_relation_author_relation_author_idToauthorInput
-    connect?: authorWhereUniqueInput
+  export type AuthorCreateNestedOneWithoutAuthor_relation_author_relation_author_idToauthorInput = {
+    create?: XOR<AuthorCreateWithoutAuthor_relation_author_relation_author_idToauthorInput, AuthorUncheckedCreateWithoutAuthor_relation_author_relation_author_idToauthorInput>
+    connectOrCreate?: AuthorCreateOrConnectWithoutAuthor_relation_author_relation_author_idToauthorInput
+    connect?: AuthorWhereUniqueInput
   }
 
-  export type authorCreateNestedOneWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput = {
-    create?: XOR<authorCreateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput, authorUncheckedCreateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput>
-    connectOrCreate?: authorCreateOrConnectWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput
-    connect?: authorWhereUniqueInput
+  export type AuthorCreateNestedOneWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput = {
+    create?: XOR<AuthorCreateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput, AuthorUncheckedCreateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput>
+    connectOrCreate?: AuthorCreateOrConnectWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput
+    connect?: AuthorWhereUniqueInput
   }
 
-  export type history_typeCreateNestedOneWithoutAuthor_relationInput = {
-    create?: XOR<history_typeCreateWithoutAuthor_relationInput, history_typeUncheckedCreateWithoutAuthor_relationInput>
-    connectOrCreate?: history_typeCreateOrConnectWithoutAuthor_relationInput
-    connect?: history_typeWhereUniqueInput
+  export type HistoryTypeCreateNestedOneWithoutAuthor_relationInput = {
+    create?: XOR<HistoryTypeCreateWithoutAuthor_relationInput, HistoryTypeUncheckedCreateWithoutAuthor_relationInput>
+    connectOrCreate?: HistoryTypeCreateOrConnectWithoutAuthor_relationInput
+    connect?: HistoryTypeWhereUniqueInput
   }
 
-  export type authorUpdateOneRequiredWithoutAuthor_relation_author_relation_author_idToauthorNestedInput = {
-    create?: XOR<authorCreateWithoutAuthor_relation_author_relation_author_idToauthorInput, authorUncheckedCreateWithoutAuthor_relation_author_relation_author_idToauthorInput>
-    connectOrCreate?: authorCreateOrConnectWithoutAuthor_relation_author_relation_author_idToauthorInput
-    upsert?: authorUpsertWithoutAuthor_relation_author_relation_author_idToauthorInput
-    connect?: authorWhereUniqueInput
-    update?: XOR<XOR<authorUpdateToOneWithWhereWithoutAuthor_relation_author_relation_author_idToauthorInput, authorUpdateWithoutAuthor_relation_author_relation_author_idToauthorInput>, authorUncheckedUpdateWithoutAuthor_relation_author_relation_author_idToauthorInput>
+  export type AuthorUpdateOneRequiredWithoutAuthor_relation_author_relation_author_idToauthorNestedInput = {
+    create?: XOR<AuthorCreateWithoutAuthor_relation_author_relation_author_idToauthorInput, AuthorUncheckedCreateWithoutAuthor_relation_author_relation_author_idToauthorInput>
+    connectOrCreate?: AuthorCreateOrConnectWithoutAuthor_relation_author_relation_author_idToauthorInput
+    upsert?: AuthorUpsertWithoutAuthor_relation_author_relation_author_idToauthorInput
+    connect?: AuthorWhereUniqueInput
+    update?: XOR<XOR<AuthorUpdateToOneWithWhereWithoutAuthor_relation_author_relation_author_idToauthorInput, AuthorUpdateWithoutAuthor_relation_author_relation_author_idToauthorInput>, AuthorUncheckedUpdateWithoutAuthor_relation_author_relation_author_idToauthorInput>
   }
 
-  export type authorUpdateOneRequiredWithoutAuthor_relation_author_relation_author_relationed_idToauthorNestedInput = {
-    create?: XOR<authorCreateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput, authorUncheckedCreateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput>
-    connectOrCreate?: authorCreateOrConnectWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput
-    upsert?: authorUpsertWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput
-    connect?: authorWhereUniqueInput
-    update?: XOR<XOR<authorUpdateToOneWithWhereWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput, authorUpdateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput>, authorUncheckedUpdateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput>
+  export type AuthorUpdateOneRequiredWithoutAuthor_relation_author_relation_author_relationed_idToauthorNestedInput = {
+    create?: XOR<AuthorCreateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput, AuthorUncheckedCreateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput>
+    connectOrCreate?: AuthorCreateOrConnectWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput
+    upsert?: AuthorUpsertWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput
+    connect?: AuthorWhereUniqueInput
+    update?: XOR<XOR<AuthorUpdateToOneWithWhereWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput, AuthorUpdateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput>, AuthorUncheckedUpdateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput>
   }
 
-  export type history_typeUpdateOneRequiredWithoutAuthor_relationNestedInput = {
-    create?: XOR<history_typeCreateWithoutAuthor_relationInput, history_typeUncheckedCreateWithoutAuthor_relationInput>
-    connectOrCreate?: history_typeCreateOrConnectWithoutAuthor_relationInput
-    upsert?: history_typeUpsertWithoutAuthor_relationInput
-    connect?: history_typeWhereUniqueInput
-    update?: XOR<XOR<history_typeUpdateToOneWithWhereWithoutAuthor_relationInput, history_typeUpdateWithoutAuthor_relationInput>, history_typeUncheckedUpdateWithoutAuthor_relationInput>
+  export type HistoryTypeUpdateOneRequiredWithoutAuthor_relationNestedInput = {
+    create?: XOR<HistoryTypeCreateWithoutAuthor_relationInput, HistoryTypeUncheckedCreateWithoutAuthor_relationInput>
+    connectOrCreate?: HistoryTypeCreateOrConnectWithoutAuthor_relationInput
+    upsert?: HistoryTypeUpsertWithoutAuthor_relationInput
+    connect?: HistoryTypeWhereUniqueInput
+    update?: XOR<XOR<HistoryTypeUpdateToOneWithWhereWithoutAuthor_relationInput, HistoryTypeUpdateWithoutAuthor_relationInput>, HistoryTypeUncheckedUpdateWithoutAuthor_relationInput>
   }
 
-  export type author_relationCreateNestedManyWithoutHistory_typeInput = {
-    create?: XOR<author_relationCreateWithoutHistory_typeInput, author_relationUncheckedCreateWithoutHistory_typeInput> | author_relationCreateWithoutHistory_typeInput[] | author_relationUncheckedCreateWithoutHistory_typeInput[]
-    connectOrCreate?: author_relationCreateOrConnectWithoutHistory_typeInput | author_relationCreateOrConnectWithoutHistory_typeInput[]
-    createMany?: author_relationCreateManyHistory_typeInputEnvelope
-    connect?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
+  export type AuthorRelationCreateNestedManyWithoutHistory_typeInput = {
+    create?: XOR<AuthorRelationCreateWithoutHistory_typeInput, AuthorRelationUncheckedCreateWithoutHistory_typeInput> | AuthorRelationCreateWithoutHistory_typeInput[] | AuthorRelationUncheckedCreateWithoutHistory_typeInput[]
+    connectOrCreate?: AuthorRelationCreateOrConnectWithoutHistory_typeInput | AuthorRelationCreateOrConnectWithoutHistory_typeInput[]
+    createMany?: AuthorRelationCreateManyHistory_typeInputEnvelope
+    connect?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
   }
 
-  export type author_relationUncheckedCreateNestedManyWithoutHistory_typeInput = {
-    create?: XOR<author_relationCreateWithoutHistory_typeInput, author_relationUncheckedCreateWithoutHistory_typeInput> | author_relationCreateWithoutHistory_typeInput[] | author_relationUncheckedCreateWithoutHistory_typeInput[]
-    connectOrCreate?: author_relationCreateOrConnectWithoutHistory_typeInput | author_relationCreateOrConnectWithoutHistory_typeInput[]
-    createMany?: author_relationCreateManyHistory_typeInputEnvelope
-    connect?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
+  export type AuthorRelationUncheckedCreateNestedManyWithoutHistory_typeInput = {
+    create?: XOR<AuthorRelationCreateWithoutHistory_typeInput, AuthorRelationUncheckedCreateWithoutHistory_typeInput> | AuthorRelationCreateWithoutHistory_typeInput[] | AuthorRelationUncheckedCreateWithoutHistory_typeInput[]
+    connectOrCreate?: AuthorRelationCreateOrConnectWithoutHistory_typeInput | AuthorRelationCreateOrConnectWithoutHistory_typeInput[]
+    createMany?: AuthorRelationCreateManyHistory_typeInputEnvelope
+    connect?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
   }
 
-  export type author_relationUpdateManyWithoutHistory_typeNestedInput = {
-    create?: XOR<author_relationCreateWithoutHistory_typeInput, author_relationUncheckedCreateWithoutHistory_typeInput> | author_relationCreateWithoutHistory_typeInput[] | author_relationUncheckedCreateWithoutHistory_typeInput[]
-    connectOrCreate?: author_relationCreateOrConnectWithoutHistory_typeInput | author_relationCreateOrConnectWithoutHistory_typeInput[]
-    upsert?: author_relationUpsertWithWhereUniqueWithoutHistory_typeInput | author_relationUpsertWithWhereUniqueWithoutHistory_typeInput[]
-    createMany?: author_relationCreateManyHistory_typeInputEnvelope
-    set?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    disconnect?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    delete?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    connect?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    update?: author_relationUpdateWithWhereUniqueWithoutHistory_typeInput | author_relationUpdateWithWhereUniqueWithoutHistory_typeInput[]
-    updateMany?: author_relationUpdateManyWithWhereWithoutHistory_typeInput | author_relationUpdateManyWithWhereWithoutHistory_typeInput[]
-    deleteMany?: author_relationScalarWhereInput | author_relationScalarWhereInput[]
+  export type AuthorRelationUpdateManyWithoutHistory_typeNestedInput = {
+    create?: XOR<AuthorRelationCreateWithoutHistory_typeInput, AuthorRelationUncheckedCreateWithoutHistory_typeInput> | AuthorRelationCreateWithoutHistory_typeInput[] | AuthorRelationUncheckedCreateWithoutHistory_typeInput[]
+    connectOrCreate?: AuthorRelationCreateOrConnectWithoutHistory_typeInput | AuthorRelationCreateOrConnectWithoutHistory_typeInput[]
+    upsert?: AuthorRelationUpsertWithWhereUniqueWithoutHistory_typeInput | AuthorRelationUpsertWithWhereUniqueWithoutHistory_typeInput[]
+    createMany?: AuthorRelationCreateManyHistory_typeInputEnvelope
+    set?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    disconnect?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    delete?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    connect?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    update?: AuthorRelationUpdateWithWhereUniqueWithoutHistory_typeInput | AuthorRelationUpdateWithWhereUniqueWithoutHistory_typeInput[]
+    updateMany?: AuthorRelationUpdateManyWithWhereWithoutHistory_typeInput | AuthorRelationUpdateManyWithWhereWithoutHistory_typeInput[]
+    deleteMany?: AuthorRelationScalarWhereInput | AuthorRelationScalarWhereInput[]
   }
 
-  export type author_relationUncheckedUpdateManyWithoutHistory_typeNestedInput = {
-    create?: XOR<author_relationCreateWithoutHistory_typeInput, author_relationUncheckedCreateWithoutHistory_typeInput> | author_relationCreateWithoutHistory_typeInput[] | author_relationUncheckedCreateWithoutHistory_typeInput[]
-    connectOrCreate?: author_relationCreateOrConnectWithoutHistory_typeInput | author_relationCreateOrConnectWithoutHistory_typeInput[]
-    upsert?: author_relationUpsertWithWhereUniqueWithoutHistory_typeInput | author_relationUpsertWithWhereUniqueWithoutHistory_typeInput[]
-    createMany?: author_relationCreateManyHistory_typeInputEnvelope
-    set?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    disconnect?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    delete?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    connect?: author_relationWhereUniqueInput | author_relationWhereUniqueInput[]
-    update?: author_relationUpdateWithWhereUniqueWithoutHistory_typeInput | author_relationUpdateWithWhereUniqueWithoutHistory_typeInput[]
-    updateMany?: author_relationUpdateManyWithWhereWithoutHistory_typeInput | author_relationUpdateManyWithWhereWithoutHistory_typeInput[]
-    deleteMany?: author_relationScalarWhereInput | author_relationScalarWhereInput[]
+  export type AuthorRelationUncheckedUpdateManyWithoutHistory_typeNestedInput = {
+    create?: XOR<AuthorRelationCreateWithoutHistory_typeInput, AuthorRelationUncheckedCreateWithoutHistory_typeInput> | AuthorRelationCreateWithoutHistory_typeInput[] | AuthorRelationUncheckedCreateWithoutHistory_typeInput[]
+    connectOrCreate?: AuthorRelationCreateOrConnectWithoutHistory_typeInput | AuthorRelationCreateOrConnectWithoutHistory_typeInput[]
+    upsert?: AuthorRelationUpsertWithWhereUniqueWithoutHistory_typeInput | AuthorRelationUpsertWithWhereUniqueWithoutHistory_typeInput[]
+    createMany?: AuthorRelationCreateManyHistory_typeInputEnvelope
+    set?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    disconnect?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    delete?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    connect?: AuthorRelationWhereUniqueInput | AuthorRelationWhereUniqueInput[]
+    update?: AuthorRelationUpdateWithWhereUniqueWithoutHistory_typeInput | AuthorRelationUpdateWithWhereUniqueWithoutHistory_typeInput[]
+    updateMany?: AuthorRelationUpdateManyWithWhereWithoutHistory_typeInput | AuthorRelationUpdateManyWithWhereWithoutHistory_typeInput[]
+    deleteMany?: AuthorRelationScalarWhereInput | AuthorRelationScalarWhereInput[]
   }
 
-  export type authorCreateNestedOneWithoutPhraseInput = {
-    create?: XOR<authorCreateWithoutPhraseInput, authorUncheckedCreateWithoutPhraseInput>
-    connectOrCreate?: authorCreateOrConnectWithoutPhraseInput
-    connect?: authorWhereUniqueInput
+  export type AuthorCreateNestedOneWithoutPhraseInput = {
+    create?: XOR<AuthorCreateWithoutPhraseInput, AuthorUncheckedCreateWithoutPhraseInput>
+    connectOrCreate?: AuthorCreateOrConnectWithoutPhraseInput
+    connect?: AuthorWhereUniqueInput
   }
 
-  export type authorUpdateOneRequiredWithoutPhraseNestedInput = {
-    create?: XOR<authorCreateWithoutPhraseInput, authorUncheckedCreateWithoutPhraseInput>
-    connectOrCreate?: authorCreateOrConnectWithoutPhraseInput
-    upsert?: authorUpsertWithoutPhraseInput
-    connect?: authorWhereUniqueInput
-    update?: XOR<XOR<authorUpdateToOneWithWhereWithoutPhraseInput, authorUpdateWithoutPhraseInput>, authorUncheckedUpdateWithoutPhraseInput>
+  export type AuthorUpdateOneRequiredWithoutPhraseNestedInput = {
+    create?: XOR<AuthorCreateWithoutPhraseInput, AuthorUncheckedCreateWithoutPhraseInput>
+    connectOrCreate?: AuthorCreateOrConnectWithoutPhraseInput
+    upsert?: AuthorUpsertWithoutPhraseInput
+    connect?: AuthorWhereUniqueInput
+    update?: XOR<XOR<AuthorUpdateToOneWithWhereWithoutPhraseInput, AuthorUpdateWithoutPhraseInput>, AuthorUncheckedUpdateWithoutPhraseInput>
   }
 
   export type NestedIntFilter<$PrismaModel = never> = {
@@ -6505,429 +6505,16 @@ export namespace Prisma {
     _max?: NestedDateTimeNullableFilter<$PrismaModel>
   }
 
-  export type author_relationCreateWithoutAuthor_author_relation_author_idToauthorInput = {
+  export type AuthorRelationCreateWithoutAuthor_author_relation_author_idToauthorInput = {
     name_relation: string
     type_relation: string
     created_at?: Date | string | null
     updated_at?: Date | string | null
-    author_author_relation_author_relationed_idToauthor: authorCreateNestedOneWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput
-    history_type: history_typeCreateNestedOneWithoutAuthor_relationInput
+    author_author_relation_author_relationed_idToauthor: AuthorCreateNestedOneWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput
+    history_type: HistoryTypeCreateNestedOneWithoutAuthor_relationInput
   }
 
-  export type author_relationUncheckedCreateWithoutAuthor_author_relation_author_idToauthorInput = {
-    id?: number
-    name_relation: string
-    type_relation: string
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
-    author_relationed_id: number
-    history_type_id: number
-  }
-
-  export type author_relationCreateOrConnectWithoutAuthor_author_relation_author_idToauthorInput = {
-    where: author_relationWhereUniqueInput
-    create: XOR<author_relationCreateWithoutAuthor_author_relation_author_idToauthorInput, author_relationUncheckedCreateWithoutAuthor_author_relation_author_idToauthorInput>
-  }
-
-  export type author_relationCreateManyAuthor_author_relation_author_idToauthorInputEnvelope = {
-    data: author_relationCreateManyAuthor_author_relation_author_idToauthorInput | author_relationCreateManyAuthor_author_relation_author_idToauthorInput[]
-    skipDuplicates?: boolean
-  }
-
-  export type author_relationCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput = {
-    name_relation: string
-    type_relation: string
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
-    author_author_relation_author_idToauthor: authorCreateNestedOneWithoutAuthor_relation_author_relation_author_idToauthorInput
-    history_type: history_typeCreateNestedOneWithoutAuthor_relationInput
-  }
-
-  export type author_relationUncheckedCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput = {
-    id?: number
-    name_relation: string
-    type_relation: string
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
-    author_id: number
-    history_type_id: number
-  }
-
-  export type author_relationCreateOrConnectWithoutAuthor_author_relation_author_relationed_idToauthorInput = {
-    where: author_relationWhereUniqueInput
-    create: XOR<author_relationCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput, author_relationUncheckedCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput>
-  }
-
-  export type author_relationCreateManyAuthor_author_relation_author_relationed_idToauthorInputEnvelope = {
-    data: author_relationCreateManyAuthor_author_relation_author_relationed_idToauthorInput | author_relationCreateManyAuthor_author_relation_author_relationed_idToauthorInput[]
-    skipDuplicates?: boolean
-  }
-
-  export type phraseCreateWithoutAuthorInput = {
-    phrase: string
-    date?: Date | string | null
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
-  }
-
-  export type phraseUncheckedCreateWithoutAuthorInput = {
-    id?: number
-    phrase: string
-    date?: Date | string | null
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
-  }
-
-  export type phraseCreateOrConnectWithoutAuthorInput = {
-    where: phraseWhereUniqueInput
-    create: XOR<phraseCreateWithoutAuthorInput, phraseUncheckedCreateWithoutAuthorInput>
-  }
-
-  export type phraseCreateManyAuthorInputEnvelope = {
-    data: phraseCreateManyAuthorInput | phraseCreateManyAuthorInput[]
-    skipDuplicates?: boolean
-  }
-
-  export type author_relationUpsertWithWhereUniqueWithoutAuthor_author_relation_author_idToauthorInput = {
-    where: author_relationWhereUniqueInput
-    update: XOR<author_relationUpdateWithoutAuthor_author_relation_author_idToauthorInput, author_relationUncheckedUpdateWithoutAuthor_author_relation_author_idToauthorInput>
-    create: XOR<author_relationCreateWithoutAuthor_author_relation_author_idToauthorInput, author_relationUncheckedCreateWithoutAuthor_author_relation_author_idToauthorInput>
-  }
-
-  export type author_relationUpdateWithWhereUniqueWithoutAuthor_author_relation_author_idToauthorInput = {
-    where: author_relationWhereUniqueInput
-    data: XOR<author_relationUpdateWithoutAuthor_author_relation_author_idToauthorInput, author_relationUncheckedUpdateWithoutAuthor_author_relation_author_idToauthorInput>
-  }
-
-  export type author_relationUpdateManyWithWhereWithoutAuthor_author_relation_author_idToauthorInput = {
-    where: author_relationScalarWhereInput
-    data: XOR<author_relationUpdateManyMutationInput, author_relationUncheckedUpdateManyWithoutAuthor_author_relation_author_idToauthorInput>
-  }
-
-  export type author_relationScalarWhereInput = {
-    AND?: author_relationScalarWhereInput | author_relationScalarWhereInput[]
-    OR?: author_relationScalarWhereInput[]
-    NOT?: author_relationScalarWhereInput | author_relationScalarWhereInput[]
-    id?: IntFilter<"author_relation"> | number
-    name_relation?: StringFilter<"author_relation"> | string
-    type_relation?: StringFilter<"author_relation"> | string
-    created_at?: DateTimeNullableFilter<"author_relation"> | Date | string | null
-    updated_at?: DateTimeNullableFilter<"author_relation"> | Date | string | null
-    author_id?: IntFilter<"author_relation"> | number
-    author_relationed_id?: IntFilter<"author_relation"> | number
-    history_type_id?: IntFilter<"author_relation"> | number
-  }
-
-  export type author_relationUpsertWithWhereUniqueWithoutAuthor_author_relation_author_relationed_idToauthorInput = {
-    where: author_relationWhereUniqueInput
-    update: XOR<author_relationUpdateWithoutAuthor_author_relation_author_relationed_idToauthorInput, author_relationUncheckedUpdateWithoutAuthor_author_relation_author_relationed_idToauthorInput>
-    create: XOR<author_relationCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput, author_relationUncheckedCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput>
-  }
-
-  export type author_relationUpdateWithWhereUniqueWithoutAuthor_author_relation_author_relationed_idToauthorInput = {
-    where: author_relationWhereUniqueInput
-    data: XOR<author_relationUpdateWithoutAuthor_author_relation_author_relationed_idToauthorInput, author_relationUncheckedUpdateWithoutAuthor_author_relation_author_relationed_idToauthorInput>
-  }
-
-  export type author_relationUpdateManyWithWhereWithoutAuthor_author_relation_author_relationed_idToauthorInput = {
-    where: author_relationScalarWhereInput
-    data: XOR<author_relationUpdateManyMutationInput, author_relationUncheckedUpdateManyWithoutAuthor_author_relation_author_relationed_idToauthorInput>
-  }
-
-  export type phraseUpsertWithWhereUniqueWithoutAuthorInput = {
-    where: phraseWhereUniqueInput
-    update: XOR<phraseUpdateWithoutAuthorInput, phraseUncheckedUpdateWithoutAuthorInput>
-    create: XOR<phraseCreateWithoutAuthorInput, phraseUncheckedCreateWithoutAuthorInput>
-  }
-
-  export type phraseUpdateWithWhereUniqueWithoutAuthorInput = {
-    where: phraseWhereUniqueInput
-    data: XOR<phraseUpdateWithoutAuthorInput, phraseUncheckedUpdateWithoutAuthorInput>
-  }
-
-  export type phraseUpdateManyWithWhereWithoutAuthorInput = {
-    where: phraseScalarWhereInput
-    data: XOR<phraseUpdateManyMutationInput, phraseUncheckedUpdateManyWithoutAuthorInput>
-  }
-
-  export type phraseScalarWhereInput = {
-    AND?: phraseScalarWhereInput | phraseScalarWhereInput[]
-    OR?: phraseScalarWhereInput[]
-    NOT?: phraseScalarWhereInput | phraseScalarWhereInput[]
-    id?: IntFilter<"phrase"> | number
-    phrase?: StringFilter<"phrase"> | string
-    date?: DateTimeNullableFilter<"phrase"> | Date | string | null
-    created_at?: DateTimeNullableFilter<"phrase"> | Date | string | null
-    updated_at?: DateTimeNullableFilter<"phrase"> | Date | string | null
-    author_id?: IntFilter<"phrase"> | number
-  }
-
-  export type authorCreateWithoutAuthor_relation_author_relation_author_idToauthorInput = {
-    name: string
-    last_name?: string | null
-    description?: string | null
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
-    author_relation_author_relation_author_relationed_idToauthor?: author_relationCreateNestedManyWithoutAuthor_author_relation_author_relationed_idToauthorInput
-    phrase?: phraseCreateNestedManyWithoutAuthorInput
-  }
-
-  export type authorUncheckedCreateWithoutAuthor_relation_author_relation_author_idToauthorInput = {
-    id?: number
-    name: string
-    last_name?: string | null
-    description?: string | null
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
-    author_relation_author_relation_author_relationed_idToauthor?: author_relationUncheckedCreateNestedManyWithoutAuthor_author_relation_author_relationed_idToauthorInput
-    phrase?: phraseUncheckedCreateNestedManyWithoutAuthorInput
-  }
-
-  export type authorCreateOrConnectWithoutAuthor_relation_author_relation_author_idToauthorInput = {
-    where: authorWhereUniqueInput
-    create: XOR<authorCreateWithoutAuthor_relation_author_relation_author_idToauthorInput, authorUncheckedCreateWithoutAuthor_relation_author_relation_author_idToauthorInput>
-  }
-
-  export type authorCreateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput = {
-    name: string
-    last_name?: string | null
-    description?: string | null
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
-    author_relation_author_relation_author_idToauthor?: author_relationCreateNestedManyWithoutAuthor_author_relation_author_idToauthorInput
-    phrase?: phraseCreateNestedManyWithoutAuthorInput
-  }
-
-  export type authorUncheckedCreateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput = {
-    id?: number
-    name: string
-    last_name?: string | null
-    description?: string | null
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
-    author_relation_author_relation_author_idToauthor?: author_relationUncheckedCreateNestedManyWithoutAuthor_author_relation_author_idToauthorInput
-    phrase?: phraseUncheckedCreateNestedManyWithoutAuthorInput
-  }
-
-  export type authorCreateOrConnectWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput = {
-    where: authorWhereUniqueInput
-    create: XOR<authorCreateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput, authorUncheckedCreateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput>
-  }
-
-  export type history_typeCreateWithoutAuthor_relationInput = {
-    name: string
-    description?: string | null
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
-  }
-
-  export type history_typeUncheckedCreateWithoutAuthor_relationInput = {
-    id?: number
-    name: string
-    description?: string | null
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
-  }
-
-  export type history_typeCreateOrConnectWithoutAuthor_relationInput = {
-    where: history_typeWhereUniqueInput
-    create: XOR<history_typeCreateWithoutAuthor_relationInput, history_typeUncheckedCreateWithoutAuthor_relationInput>
-  }
-
-  export type authorUpsertWithoutAuthor_relation_author_relation_author_idToauthorInput = {
-    update: XOR<authorUpdateWithoutAuthor_relation_author_relation_author_idToauthorInput, authorUncheckedUpdateWithoutAuthor_relation_author_relation_author_idToauthorInput>
-    create: XOR<authorCreateWithoutAuthor_relation_author_relation_author_idToauthorInput, authorUncheckedCreateWithoutAuthor_relation_author_relation_author_idToauthorInput>
-    where?: authorWhereInput
-  }
-
-  export type authorUpdateToOneWithWhereWithoutAuthor_relation_author_relation_author_idToauthorInput = {
-    where?: authorWhereInput
-    data: XOR<authorUpdateWithoutAuthor_relation_author_relation_author_idToauthorInput, authorUncheckedUpdateWithoutAuthor_relation_author_relation_author_idToauthorInput>
-  }
-
-  export type authorUpdateWithoutAuthor_relation_author_relation_author_idToauthorInput = {
-    name?: StringFieldUpdateOperationsInput | string
-    last_name?: NullableStringFieldUpdateOperationsInput | string | null
-    description?: NullableStringFieldUpdateOperationsInput | string | null
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    author_relation_author_relation_author_relationed_idToauthor?: author_relationUpdateManyWithoutAuthor_author_relation_author_relationed_idToauthorNestedInput
-    phrase?: phraseUpdateManyWithoutAuthorNestedInput
-  }
-
-  export type authorUncheckedUpdateWithoutAuthor_relation_author_relation_author_idToauthorInput = {
-    id?: IntFieldUpdateOperationsInput | number
-    name?: StringFieldUpdateOperationsInput | string
-    last_name?: NullableStringFieldUpdateOperationsInput | string | null
-    description?: NullableStringFieldUpdateOperationsInput | string | null
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    author_relation_author_relation_author_relationed_idToauthor?: author_relationUncheckedUpdateManyWithoutAuthor_author_relation_author_relationed_idToauthorNestedInput
-    phrase?: phraseUncheckedUpdateManyWithoutAuthorNestedInput
-  }
-
-  export type authorUpsertWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput = {
-    update: XOR<authorUpdateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput, authorUncheckedUpdateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput>
-    create: XOR<authorCreateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput, authorUncheckedCreateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput>
-    where?: authorWhereInput
-  }
-
-  export type authorUpdateToOneWithWhereWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput = {
-    where?: authorWhereInput
-    data: XOR<authorUpdateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput, authorUncheckedUpdateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput>
-  }
-
-  export type authorUpdateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput = {
-    name?: StringFieldUpdateOperationsInput | string
-    last_name?: NullableStringFieldUpdateOperationsInput | string | null
-    description?: NullableStringFieldUpdateOperationsInput | string | null
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    author_relation_author_relation_author_idToauthor?: author_relationUpdateManyWithoutAuthor_author_relation_author_idToauthorNestedInput
-    phrase?: phraseUpdateManyWithoutAuthorNestedInput
-  }
-
-  export type authorUncheckedUpdateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput = {
-    id?: IntFieldUpdateOperationsInput | number
-    name?: StringFieldUpdateOperationsInput | string
-    last_name?: NullableStringFieldUpdateOperationsInput | string | null
-    description?: NullableStringFieldUpdateOperationsInput | string | null
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    author_relation_author_relation_author_idToauthor?: author_relationUncheckedUpdateManyWithoutAuthor_author_relation_author_idToauthorNestedInput
-    phrase?: phraseUncheckedUpdateManyWithoutAuthorNestedInput
-  }
-
-  export type history_typeUpsertWithoutAuthor_relationInput = {
-    update: XOR<history_typeUpdateWithoutAuthor_relationInput, history_typeUncheckedUpdateWithoutAuthor_relationInput>
-    create: XOR<history_typeCreateWithoutAuthor_relationInput, history_typeUncheckedCreateWithoutAuthor_relationInput>
-    where?: history_typeWhereInput
-  }
-
-  export type history_typeUpdateToOneWithWhereWithoutAuthor_relationInput = {
-    where?: history_typeWhereInput
-    data: XOR<history_typeUpdateWithoutAuthor_relationInput, history_typeUncheckedUpdateWithoutAuthor_relationInput>
-  }
-
-  export type history_typeUpdateWithoutAuthor_relationInput = {
-    name?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  }
-
-  export type history_typeUncheckedUpdateWithoutAuthor_relationInput = {
-    id?: IntFieldUpdateOperationsInput | number
-    name?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  }
-
-  export type author_relationCreateWithoutHistory_typeInput = {
-    name_relation: string
-    type_relation: string
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
-    author_author_relation_author_idToauthor: authorCreateNestedOneWithoutAuthor_relation_author_relation_author_idToauthorInput
-    author_author_relation_author_relationed_idToauthor: authorCreateNestedOneWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput
-  }
-
-  export type author_relationUncheckedCreateWithoutHistory_typeInput = {
-    id?: number
-    name_relation: string
-    type_relation: string
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
-    author_id: number
-    author_relationed_id: number
-  }
-
-  export type author_relationCreateOrConnectWithoutHistory_typeInput = {
-    where: author_relationWhereUniqueInput
-    create: XOR<author_relationCreateWithoutHistory_typeInput, author_relationUncheckedCreateWithoutHistory_typeInput>
-  }
-
-  export type author_relationCreateManyHistory_typeInputEnvelope = {
-    data: author_relationCreateManyHistory_typeInput | author_relationCreateManyHistory_typeInput[]
-    skipDuplicates?: boolean
-  }
-
-  export type author_relationUpsertWithWhereUniqueWithoutHistory_typeInput = {
-    where: author_relationWhereUniqueInput
-    update: XOR<author_relationUpdateWithoutHistory_typeInput, author_relationUncheckedUpdateWithoutHistory_typeInput>
-    create: XOR<author_relationCreateWithoutHistory_typeInput, author_relationUncheckedCreateWithoutHistory_typeInput>
-  }
-
-  export type author_relationUpdateWithWhereUniqueWithoutHistory_typeInput = {
-    where: author_relationWhereUniqueInput
-    data: XOR<author_relationUpdateWithoutHistory_typeInput, author_relationUncheckedUpdateWithoutHistory_typeInput>
-  }
-
-  export type author_relationUpdateManyWithWhereWithoutHistory_typeInput = {
-    where: author_relationScalarWhereInput
-    data: XOR<author_relationUpdateManyMutationInput, author_relationUncheckedUpdateManyWithoutHistory_typeInput>
-  }
-
-  export type authorCreateWithoutPhraseInput = {
-    name: string
-    last_name?: string | null
-    description?: string | null
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
-    author_relation_author_relation_author_idToauthor?: author_relationCreateNestedManyWithoutAuthor_author_relation_author_idToauthorInput
-    author_relation_author_relation_author_relationed_idToauthor?: author_relationCreateNestedManyWithoutAuthor_author_relation_author_relationed_idToauthorInput
-  }
-
-  export type authorUncheckedCreateWithoutPhraseInput = {
-    id?: number
-    name: string
-    last_name?: string | null
-    description?: string | null
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
-    author_relation_author_relation_author_idToauthor?: author_relationUncheckedCreateNestedManyWithoutAuthor_author_relation_author_idToauthorInput
-    author_relation_author_relation_author_relationed_idToauthor?: author_relationUncheckedCreateNestedManyWithoutAuthor_author_relation_author_relationed_idToauthorInput
-  }
-
-  export type authorCreateOrConnectWithoutPhraseInput = {
-    where: authorWhereUniqueInput
-    create: XOR<authorCreateWithoutPhraseInput, authorUncheckedCreateWithoutPhraseInput>
-  }
-
-  export type authorUpsertWithoutPhraseInput = {
-    update: XOR<authorUpdateWithoutPhraseInput, authorUncheckedUpdateWithoutPhraseInput>
-    create: XOR<authorCreateWithoutPhraseInput, authorUncheckedCreateWithoutPhraseInput>
-    where?: authorWhereInput
-  }
-
-  export type authorUpdateToOneWithWhereWithoutPhraseInput = {
-    where?: authorWhereInput
-    data: XOR<authorUpdateWithoutPhraseInput, authorUncheckedUpdateWithoutPhraseInput>
-  }
-
-  export type authorUpdateWithoutPhraseInput = {
-    name?: StringFieldUpdateOperationsInput | string
-    last_name?: NullableStringFieldUpdateOperationsInput | string | null
-    description?: NullableStringFieldUpdateOperationsInput | string | null
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    author_relation_author_relation_author_idToauthor?: author_relationUpdateManyWithoutAuthor_author_relation_author_idToauthorNestedInput
-    author_relation_author_relation_author_relationed_idToauthor?: author_relationUpdateManyWithoutAuthor_author_relation_author_relationed_idToauthorNestedInput
-  }
-
-  export type authorUncheckedUpdateWithoutPhraseInput = {
-    id?: IntFieldUpdateOperationsInput | number
-    name?: StringFieldUpdateOperationsInput | string
-    last_name?: NullableStringFieldUpdateOperationsInput | string | null
-    description?: NullableStringFieldUpdateOperationsInput | string | null
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    author_relation_author_relation_author_idToauthor?: author_relationUncheckedUpdateManyWithoutAuthor_author_relation_author_idToauthorNestedInput
-    author_relation_author_relation_author_relationed_idToauthor?: author_relationUncheckedUpdateManyWithoutAuthor_author_relation_author_relationed_idToauthorNestedInput
-  }
-
-  export type author_relationCreateManyAuthor_author_relation_author_idToauthorInput = {
+  export type AuthorRelationUncheckedCreateWithoutAuthor_author_relation_author_idToauthorInput = {
     id?: number
     name_relation: string
     type_relation: string
@@ -6937,7 +6524,26 @@ export namespace Prisma {
     history_type_id: number
   }
 
-  export type author_relationCreateManyAuthor_author_relation_author_relationed_idToauthorInput = {
+  export type AuthorRelationCreateOrConnectWithoutAuthor_author_relation_author_idToauthorInput = {
+    where: AuthorRelationWhereUniqueInput
+    create: XOR<AuthorRelationCreateWithoutAuthor_author_relation_author_idToauthorInput, AuthorRelationUncheckedCreateWithoutAuthor_author_relation_author_idToauthorInput>
+  }
+
+  export type AuthorRelationCreateManyAuthor_author_relation_author_idToauthorInputEnvelope = {
+    data: AuthorRelationCreateManyAuthor_author_relation_author_idToauthorInput | AuthorRelationCreateManyAuthor_author_relation_author_idToauthorInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type AuthorRelationCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput = {
+    name_relation: string
+    type_relation: string
+    created_at?: Date | string | null
+    updated_at?: Date | string | null
+    author_author_relation_author_idToauthor: AuthorCreateNestedOneWithoutAuthor_relation_author_relation_author_idToauthorInput
+    history_type: HistoryTypeCreateNestedOneWithoutAuthor_relationInput
+  }
+
+  export type AuthorRelationUncheckedCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput = {
     id?: number
     name_relation: string
     type_relation: string
@@ -6947,7 +6553,24 @@ export namespace Prisma {
     history_type_id: number
   }
 
-  export type phraseCreateManyAuthorInput = {
+  export type AuthorRelationCreateOrConnectWithoutAuthor_author_relation_author_relationed_idToauthorInput = {
+    where: AuthorRelationWhereUniqueInput
+    create: XOR<AuthorRelationCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput, AuthorRelationUncheckedCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput>
+  }
+
+  export type AuthorRelationCreateManyAuthor_author_relation_author_relationed_idToauthorInputEnvelope = {
+    data: AuthorRelationCreateManyAuthor_author_relation_author_relationed_idToauthorInput | AuthorRelationCreateManyAuthor_author_relation_author_relationed_idToauthorInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type PhraseCreateWithoutAuthorInput = {
+    phrase: string
+    date?: Date | string | null
+    created_at?: Date | string | null
+    updated_at?: Date | string | null
+  }
+
+  export type PhraseUncheckedCreateWithoutAuthorInput = {
     id?: number
     phrase: string
     date?: Date | string | null
@@ -6955,16 +6578,393 @@ export namespace Prisma {
     updated_at?: Date | string | null
   }
 
-  export type author_relationUpdateWithoutAuthor_author_relation_author_idToauthorInput = {
+  export type PhraseCreateOrConnectWithoutAuthorInput = {
+    where: PhraseWhereUniqueInput
+    create: XOR<PhraseCreateWithoutAuthorInput, PhraseUncheckedCreateWithoutAuthorInput>
+  }
+
+  export type PhraseCreateManyAuthorInputEnvelope = {
+    data: PhraseCreateManyAuthorInput | PhraseCreateManyAuthorInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type AuthorRelationUpsertWithWhereUniqueWithoutAuthor_author_relation_author_idToauthorInput = {
+    where: AuthorRelationWhereUniqueInput
+    update: XOR<AuthorRelationUpdateWithoutAuthor_author_relation_author_idToauthorInput, AuthorRelationUncheckedUpdateWithoutAuthor_author_relation_author_idToauthorInput>
+    create: XOR<AuthorRelationCreateWithoutAuthor_author_relation_author_idToauthorInput, AuthorRelationUncheckedCreateWithoutAuthor_author_relation_author_idToauthorInput>
+  }
+
+  export type AuthorRelationUpdateWithWhereUniqueWithoutAuthor_author_relation_author_idToauthorInput = {
+    where: AuthorRelationWhereUniqueInput
+    data: XOR<AuthorRelationUpdateWithoutAuthor_author_relation_author_idToauthorInput, AuthorRelationUncheckedUpdateWithoutAuthor_author_relation_author_idToauthorInput>
+  }
+
+  export type AuthorRelationUpdateManyWithWhereWithoutAuthor_author_relation_author_idToauthorInput = {
+    where: AuthorRelationScalarWhereInput
+    data: XOR<AuthorRelationUpdateManyMutationInput, AuthorRelationUncheckedUpdateManyWithoutAuthor_author_relation_author_idToauthorInput>
+  }
+
+  export type AuthorRelationScalarWhereInput = {
+    AND?: AuthorRelationScalarWhereInput | AuthorRelationScalarWhereInput[]
+    OR?: AuthorRelationScalarWhereInput[]
+    NOT?: AuthorRelationScalarWhereInput | AuthorRelationScalarWhereInput[]
+    id?: IntFilter<"AuthorRelation"> | number
+    name_relation?: StringFilter<"AuthorRelation"> | string
+    type_relation?: StringFilter<"AuthorRelation"> | string
+    created_at?: DateTimeNullableFilter<"AuthorRelation"> | Date | string | null
+    updated_at?: DateTimeNullableFilter<"AuthorRelation"> | Date | string | null
+    author_id?: IntFilter<"AuthorRelation"> | number
+    author_relationed_id?: IntFilter<"AuthorRelation"> | number
+    history_type_id?: IntFilter<"AuthorRelation"> | number
+  }
+
+  export type AuthorRelationUpsertWithWhereUniqueWithoutAuthor_author_relation_author_relationed_idToauthorInput = {
+    where: AuthorRelationWhereUniqueInput
+    update: XOR<AuthorRelationUpdateWithoutAuthor_author_relation_author_relationed_idToauthorInput, AuthorRelationUncheckedUpdateWithoutAuthor_author_relation_author_relationed_idToauthorInput>
+    create: XOR<AuthorRelationCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput, AuthorRelationUncheckedCreateWithoutAuthor_author_relation_author_relationed_idToauthorInput>
+  }
+
+  export type AuthorRelationUpdateWithWhereUniqueWithoutAuthor_author_relation_author_relationed_idToauthorInput = {
+    where: AuthorRelationWhereUniqueInput
+    data: XOR<AuthorRelationUpdateWithoutAuthor_author_relation_author_relationed_idToauthorInput, AuthorRelationUncheckedUpdateWithoutAuthor_author_relation_author_relationed_idToauthorInput>
+  }
+
+  export type AuthorRelationUpdateManyWithWhereWithoutAuthor_author_relation_author_relationed_idToauthorInput = {
+    where: AuthorRelationScalarWhereInput
+    data: XOR<AuthorRelationUpdateManyMutationInput, AuthorRelationUncheckedUpdateManyWithoutAuthor_author_relation_author_relationed_idToauthorInput>
+  }
+
+  export type PhraseUpsertWithWhereUniqueWithoutAuthorInput = {
+    where: PhraseWhereUniqueInput
+    update: XOR<PhraseUpdateWithoutAuthorInput, PhraseUncheckedUpdateWithoutAuthorInput>
+    create: XOR<PhraseCreateWithoutAuthorInput, PhraseUncheckedCreateWithoutAuthorInput>
+  }
+
+  export type PhraseUpdateWithWhereUniqueWithoutAuthorInput = {
+    where: PhraseWhereUniqueInput
+    data: XOR<PhraseUpdateWithoutAuthorInput, PhraseUncheckedUpdateWithoutAuthorInput>
+  }
+
+  export type PhraseUpdateManyWithWhereWithoutAuthorInput = {
+    where: PhraseScalarWhereInput
+    data: XOR<PhraseUpdateManyMutationInput, PhraseUncheckedUpdateManyWithoutAuthorInput>
+  }
+
+  export type PhraseScalarWhereInput = {
+    AND?: PhraseScalarWhereInput | PhraseScalarWhereInput[]
+    OR?: PhraseScalarWhereInput[]
+    NOT?: PhraseScalarWhereInput | PhraseScalarWhereInput[]
+    id?: IntFilter<"Phrase"> | number
+    phrase?: StringFilter<"Phrase"> | string
+    date?: DateTimeNullableFilter<"Phrase"> | Date | string | null
+    created_at?: DateTimeNullableFilter<"Phrase"> | Date | string | null
+    updated_at?: DateTimeNullableFilter<"Phrase"> | Date | string | null
+    author_id?: IntFilter<"Phrase"> | number
+  }
+
+  export type AuthorCreateWithoutAuthor_relation_author_relation_author_idToauthorInput = {
+    name: string
+    last_name?: string | null
+    description?: string | null
+    created_at?: Date | string | null
+    updated_at?: Date | string | null
+    author_relation_author_relation_author_relationed_idToauthor?: AuthorRelationCreateNestedManyWithoutAuthor_author_relation_author_relationed_idToauthorInput
+    phrase?: PhraseCreateNestedManyWithoutAuthorInput
+  }
+
+  export type AuthorUncheckedCreateWithoutAuthor_relation_author_relation_author_idToauthorInput = {
+    id?: number
+    name: string
+    last_name?: string | null
+    description?: string | null
+    created_at?: Date | string | null
+    updated_at?: Date | string | null
+    author_relation_author_relation_author_relationed_idToauthor?: AuthorRelationUncheckedCreateNestedManyWithoutAuthor_author_relation_author_relationed_idToauthorInput
+    phrase?: PhraseUncheckedCreateNestedManyWithoutAuthorInput
+  }
+
+  export type AuthorCreateOrConnectWithoutAuthor_relation_author_relation_author_idToauthorInput = {
+    where: AuthorWhereUniqueInput
+    create: XOR<AuthorCreateWithoutAuthor_relation_author_relation_author_idToauthorInput, AuthorUncheckedCreateWithoutAuthor_relation_author_relation_author_idToauthorInput>
+  }
+
+  export type AuthorCreateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput = {
+    name: string
+    last_name?: string | null
+    description?: string | null
+    created_at?: Date | string | null
+    updated_at?: Date | string | null
+    author_relation_author_relation_author_idToauthor?: AuthorRelationCreateNestedManyWithoutAuthor_author_relation_author_idToauthorInput
+    phrase?: PhraseCreateNestedManyWithoutAuthorInput
+  }
+
+  export type AuthorUncheckedCreateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput = {
+    id?: number
+    name: string
+    last_name?: string | null
+    description?: string | null
+    created_at?: Date | string | null
+    updated_at?: Date | string | null
+    author_relation_author_relation_author_idToauthor?: AuthorRelationUncheckedCreateNestedManyWithoutAuthor_author_relation_author_idToauthorInput
+    phrase?: PhraseUncheckedCreateNestedManyWithoutAuthorInput
+  }
+
+  export type AuthorCreateOrConnectWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput = {
+    where: AuthorWhereUniqueInput
+    create: XOR<AuthorCreateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput, AuthorUncheckedCreateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput>
+  }
+
+  export type HistoryTypeCreateWithoutAuthor_relationInput = {
+    name: string
+    description?: string | null
+    created_at?: Date | string | null
+    updated_at?: Date | string | null
+  }
+
+  export type HistoryTypeUncheckedCreateWithoutAuthor_relationInput = {
+    id?: number
+    name: string
+    description?: string | null
+    created_at?: Date | string | null
+    updated_at?: Date | string | null
+  }
+
+  export type HistoryTypeCreateOrConnectWithoutAuthor_relationInput = {
+    where: HistoryTypeWhereUniqueInput
+    create: XOR<HistoryTypeCreateWithoutAuthor_relationInput, HistoryTypeUncheckedCreateWithoutAuthor_relationInput>
+  }
+
+  export type AuthorUpsertWithoutAuthor_relation_author_relation_author_idToauthorInput = {
+    update: XOR<AuthorUpdateWithoutAuthor_relation_author_relation_author_idToauthorInput, AuthorUncheckedUpdateWithoutAuthor_relation_author_relation_author_idToauthorInput>
+    create: XOR<AuthorCreateWithoutAuthor_relation_author_relation_author_idToauthorInput, AuthorUncheckedCreateWithoutAuthor_relation_author_relation_author_idToauthorInput>
+    where?: AuthorWhereInput
+  }
+
+  export type AuthorUpdateToOneWithWhereWithoutAuthor_relation_author_relation_author_idToauthorInput = {
+    where?: AuthorWhereInput
+    data: XOR<AuthorUpdateWithoutAuthor_relation_author_relation_author_idToauthorInput, AuthorUncheckedUpdateWithoutAuthor_relation_author_relation_author_idToauthorInput>
+  }
+
+  export type AuthorUpdateWithoutAuthor_relation_author_relation_author_idToauthorInput = {
+    name?: StringFieldUpdateOperationsInput | string
+    last_name?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    author_relation_author_relation_author_relationed_idToauthor?: AuthorRelationUpdateManyWithoutAuthor_author_relation_author_relationed_idToauthorNestedInput
+    phrase?: PhraseUpdateManyWithoutAuthorNestedInput
+  }
+
+  export type AuthorUncheckedUpdateWithoutAuthor_relation_author_relation_author_idToauthorInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    name?: StringFieldUpdateOperationsInput | string
+    last_name?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    author_relation_author_relation_author_relationed_idToauthor?: AuthorRelationUncheckedUpdateManyWithoutAuthor_author_relation_author_relationed_idToauthorNestedInput
+    phrase?: PhraseUncheckedUpdateManyWithoutAuthorNestedInput
+  }
+
+  export type AuthorUpsertWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput = {
+    update: XOR<AuthorUpdateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput, AuthorUncheckedUpdateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput>
+    create: XOR<AuthorCreateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput, AuthorUncheckedCreateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput>
+    where?: AuthorWhereInput
+  }
+
+  export type AuthorUpdateToOneWithWhereWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput = {
+    where?: AuthorWhereInput
+    data: XOR<AuthorUpdateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput, AuthorUncheckedUpdateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput>
+  }
+
+  export type AuthorUpdateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput = {
+    name?: StringFieldUpdateOperationsInput | string
+    last_name?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    author_relation_author_relation_author_idToauthor?: AuthorRelationUpdateManyWithoutAuthor_author_relation_author_idToauthorNestedInput
+    phrase?: PhraseUpdateManyWithoutAuthorNestedInput
+  }
+
+  export type AuthorUncheckedUpdateWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    name?: StringFieldUpdateOperationsInput | string
+    last_name?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    author_relation_author_relation_author_idToauthor?: AuthorRelationUncheckedUpdateManyWithoutAuthor_author_relation_author_idToauthorNestedInput
+    phrase?: PhraseUncheckedUpdateManyWithoutAuthorNestedInput
+  }
+
+  export type HistoryTypeUpsertWithoutAuthor_relationInput = {
+    update: XOR<HistoryTypeUpdateWithoutAuthor_relationInput, HistoryTypeUncheckedUpdateWithoutAuthor_relationInput>
+    create: XOR<HistoryTypeCreateWithoutAuthor_relationInput, HistoryTypeUncheckedCreateWithoutAuthor_relationInput>
+    where?: HistoryTypeWhereInput
+  }
+
+  export type HistoryTypeUpdateToOneWithWhereWithoutAuthor_relationInput = {
+    where?: HistoryTypeWhereInput
+    data: XOR<HistoryTypeUpdateWithoutAuthor_relationInput, HistoryTypeUncheckedUpdateWithoutAuthor_relationInput>
+  }
+
+  export type HistoryTypeUpdateWithoutAuthor_relationInput = {
+    name?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type HistoryTypeUncheckedUpdateWithoutAuthor_relationInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    name?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type AuthorRelationCreateWithoutHistory_typeInput = {
+    name_relation: string
+    type_relation: string
+    created_at?: Date | string | null
+    updated_at?: Date | string | null
+    author_author_relation_author_idToauthor: AuthorCreateNestedOneWithoutAuthor_relation_author_relation_author_idToauthorInput
+    author_author_relation_author_relationed_idToauthor: AuthorCreateNestedOneWithoutAuthor_relation_author_relation_author_relationed_idToauthorInput
+  }
+
+  export type AuthorRelationUncheckedCreateWithoutHistory_typeInput = {
+    id?: number
+    name_relation: string
+    type_relation: string
+    created_at?: Date | string | null
+    updated_at?: Date | string | null
+    author_id: number
+    author_relationed_id: number
+  }
+
+  export type AuthorRelationCreateOrConnectWithoutHistory_typeInput = {
+    where: AuthorRelationWhereUniqueInput
+    create: XOR<AuthorRelationCreateWithoutHistory_typeInput, AuthorRelationUncheckedCreateWithoutHistory_typeInput>
+  }
+
+  export type AuthorRelationCreateManyHistory_typeInputEnvelope = {
+    data: AuthorRelationCreateManyHistory_typeInput | AuthorRelationCreateManyHistory_typeInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type AuthorRelationUpsertWithWhereUniqueWithoutHistory_typeInput = {
+    where: AuthorRelationWhereUniqueInput
+    update: XOR<AuthorRelationUpdateWithoutHistory_typeInput, AuthorRelationUncheckedUpdateWithoutHistory_typeInput>
+    create: XOR<AuthorRelationCreateWithoutHistory_typeInput, AuthorRelationUncheckedCreateWithoutHistory_typeInput>
+  }
+
+  export type AuthorRelationUpdateWithWhereUniqueWithoutHistory_typeInput = {
+    where: AuthorRelationWhereUniqueInput
+    data: XOR<AuthorRelationUpdateWithoutHistory_typeInput, AuthorRelationUncheckedUpdateWithoutHistory_typeInput>
+  }
+
+  export type AuthorRelationUpdateManyWithWhereWithoutHistory_typeInput = {
+    where: AuthorRelationScalarWhereInput
+    data: XOR<AuthorRelationUpdateManyMutationInput, AuthorRelationUncheckedUpdateManyWithoutHistory_typeInput>
+  }
+
+  export type AuthorCreateWithoutPhraseInput = {
+    name: string
+    last_name?: string | null
+    description?: string | null
+    created_at?: Date | string | null
+    updated_at?: Date | string | null
+    author_relation_author_relation_author_idToauthor?: AuthorRelationCreateNestedManyWithoutAuthor_author_relation_author_idToauthorInput
+    author_relation_author_relation_author_relationed_idToauthor?: AuthorRelationCreateNestedManyWithoutAuthor_author_relation_author_relationed_idToauthorInput
+  }
+
+  export type AuthorUncheckedCreateWithoutPhraseInput = {
+    id?: number
+    name: string
+    last_name?: string | null
+    description?: string | null
+    created_at?: Date | string | null
+    updated_at?: Date | string | null
+    author_relation_author_relation_author_idToauthor?: AuthorRelationUncheckedCreateNestedManyWithoutAuthor_author_relation_author_idToauthorInput
+    author_relation_author_relation_author_relationed_idToauthor?: AuthorRelationUncheckedCreateNestedManyWithoutAuthor_author_relation_author_relationed_idToauthorInput
+  }
+
+  export type AuthorCreateOrConnectWithoutPhraseInput = {
+    where: AuthorWhereUniqueInput
+    create: XOR<AuthorCreateWithoutPhraseInput, AuthorUncheckedCreateWithoutPhraseInput>
+  }
+
+  export type AuthorUpsertWithoutPhraseInput = {
+    update: XOR<AuthorUpdateWithoutPhraseInput, AuthorUncheckedUpdateWithoutPhraseInput>
+    create: XOR<AuthorCreateWithoutPhraseInput, AuthorUncheckedCreateWithoutPhraseInput>
+    where?: AuthorWhereInput
+  }
+
+  export type AuthorUpdateToOneWithWhereWithoutPhraseInput = {
+    where?: AuthorWhereInput
+    data: XOR<AuthorUpdateWithoutPhraseInput, AuthorUncheckedUpdateWithoutPhraseInput>
+  }
+
+  export type AuthorUpdateWithoutPhraseInput = {
+    name?: StringFieldUpdateOperationsInput | string
+    last_name?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    author_relation_author_relation_author_idToauthor?: AuthorRelationUpdateManyWithoutAuthor_author_relation_author_idToauthorNestedInput
+    author_relation_author_relation_author_relationed_idToauthor?: AuthorRelationUpdateManyWithoutAuthor_author_relation_author_relationed_idToauthorNestedInput
+  }
+
+  export type AuthorUncheckedUpdateWithoutPhraseInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    name?: StringFieldUpdateOperationsInput | string
+    last_name?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    author_relation_author_relation_author_idToauthor?: AuthorRelationUncheckedUpdateManyWithoutAuthor_author_relation_author_idToauthorNestedInput
+    author_relation_author_relation_author_relationed_idToauthor?: AuthorRelationUncheckedUpdateManyWithoutAuthor_author_relation_author_relationed_idToauthorNestedInput
+  }
+
+  export type AuthorRelationCreateManyAuthor_author_relation_author_idToauthorInput = {
+    id?: number
+    name_relation: string
+    type_relation: string
+    created_at?: Date | string | null
+    updated_at?: Date | string | null
+    author_relationed_id: number
+    history_type_id: number
+  }
+
+  export type AuthorRelationCreateManyAuthor_author_relation_author_relationed_idToauthorInput = {
+    id?: number
+    name_relation: string
+    type_relation: string
+    created_at?: Date | string | null
+    updated_at?: Date | string | null
+    author_id: number
+    history_type_id: number
+  }
+
+  export type PhraseCreateManyAuthorInput = {
+    id?: number
+    phrase: string
+    date?: Date | string | null
+    created_at?: Date | string | null
+    updated_at?: Date | string | null
+  }
+
+  export type AuthorRelationUpdateWithoutAuthor_author_relation_author_idToauthorInput = {
     name_relation?: StringFieldUpdateOperationsInput | string
     type_relation?: StringFieldUpdateOperationsInput | string
     created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    author_author_relation_author_relationed_idToauthor?: authorUpdateOneRequiredWithoutAuthor_relation_author_relation_author_relationed_idToauthorNestedInput
-    history_type?: history_typeUpdateOneRequiredWithoutAuthor_relationNestedInput
+    author_author_relation_author_relationed_idToauthor?: AuthorUpdateOneRequiredWithoutAuthor_relation_author_relation_author_relationed_idToauthorNestedInput
+    history_type?: HistoryTypeUpdateOneRequiredWithoutAuthor_relationNestedInput
   }
 
-  export type author_relationUncheckedUpdateWithoutAuthor_author_relation_author_idToauthorInput = {
+  export type AuthorRelationUncheckedUpdateWithoutAuthor_author_relation_author_idToauthorInput = {
     id?: IntFieldUpdateOperationsInput | number
     name_relation?: StringFieldUpdateOperationsInput | string
     type_relation?: StringFieldUpdateOperationsInput | string
@@ -6974,7 +6974,7 @@ export namespace Prisma {
     history_type_id?: IntFieldUpdateOperationsInput | number
   }
 
-  export type author_relationUncheckedUpdateManyWithoutAuthor_author_relation_author_idToauthorInput = {
+  export type AuthorRelationUncheckedUpdateManyWithoutAuthor_author_relation_author_idToauthorInput = {
     id?: IntFieldUpdateOperationsInput | number
     name_relation?: StringFieldUpdateOperationsInput | string
     type_relation?: StringFieldUpdateOperationsInput | string
@@ -6984,26 +6984,16 @@ export namespace Prisma {
     history_type_id?: IntFieldUpdateOperationsInput | number
   }
 
-  export type author_relationUpdateWithoutAuthor_author_relation_author_relationed_idToauthorInput = {
+  export type AuthorRelationUpdateWithoutAuthor_author_relation_author_relationed_idToauthorInput = {
     name_relation?: StringFieldUpdateOperationsInput | string
     type_relation?: StringFieldUpdateOperationsInput | string
     created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    author_author_relation_author_idToauthor?: authorUpdateOneRequiredWithoutAuthor_relation_author_relation_author_idToauthorNestedInput
-    history_type?: history_typeUpdateOneRequiredWithoutAuthor_relationNestedInput
+    author_author_relation_author_idToauthor?: AuthorUpdateOneRequiredWithoutAuthor_relation_author_relation_author_idToauthorNestedInput
+    history_type?: HistoryTypeUpdateOneRequiredWithoutAuthor_relationNestedInput
   }
 
-  export type author_relationUncheckedUpdateWithoutAuthor_author_relation_author_relationed_idToauthorInput = {
-    id?: IntFieldUpdateOperationsInput | number
-    name_relation?: StringFieldUpdateOperationsInput | string
-    type_relation?: StringFieldUpdateOperationsInput | string
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    author_id?: IntFieldUpdateOperationsInput | number
-    history_type_id?: IntFieldUpdateOperationsInput | number
-  }
-
-  export type author_relationUncheckedUpdateManyWithoutAuthor_author_relation_author_relationed_idToauthorInput = {
+  export type AuthorRelationUncheckedUpdateWithoutAuthor_author_relation_author_relationed_idToauthorInput = {
     id?: IntFieldUpdateOperationsInput | number
     name_relation?: StringFieldUpdateOperationsInput | string
     type_relation?: StringFieldUpdateOperationsInput | string
@@ -7013,14 +7003,24 @@ export namespace Prisma {
     history_type_id?: IntFieldUpdateOperationsInput | number
   }
 
-  export type phraseUpdateWithoutAuthorInput = {
+  export type AuthorRelationUncheckedUpdateManyWithoutAuthor_author_relation_author_relationed_idToauthorInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    name_relation?: StringFieldUpdateOperationsInput | string
+    type_relation?: StringFieldUpdateOperationsInput | string
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    author_id?: IntFieldUpdateOperationsInput | number
+    history_type_id?: IntFieldUpdateOperationsInput | number
+  }
+
+  export type PhraseUpdateWithoutAuthorInput = {
     phrase?: StringFieldUpdateOperationsInput | string
     date?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
-  export type phraseUncheckedUpdateWithoutAuthorInput = {
+  export type PhraseUncheckedUpdateWithoutAuthorInput = {
     id?: IntFieldUpdateOperationsInput | number
     phrase?: StringFieldUpdateOperationsInput | string
     date?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -7028,7 +7028,7 @@ export namespace Prisma {
     updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
-  export type phraseUncheckedUpdateManyWithoutAuthorInput = {
+  export type PhraseUncheckedUpdateManyWithoutAuthorInput = {
     id?: IntFieldUpdateOperationsInput | number
     phrase?: StringFieldUpdateOperationsInput | string
     date?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -7036,7 +7036,7 @@ export namespace Prisma {
     updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
-  export type author_relationCreateManyHistory_typeInput = {
+  export type AuthorRelationCreateManyHistory_typeInput = {
     id?: number
     name_relation: string
     type_relation: string
@@ -7046,16 +7046,16 @@ export namespace Prisma {
     author_relationed_id: number
   }
 
-  export type author_relationUpdateWithoutHistory_typeInput = {
+  export type AuthorRelationUpdateWithoutHistory_typeInput = {
     name_relation?: StringFieldUpdateOperationsInput | string
     type_relation?: StringFieldUpdateOperationsInput | string
     created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    author_author_relation_author_idToauthor?: authorUpdateOneRequiredWithoutAuthor_relation_author_relation_author_idToauthorNestedInput
-    author_author_relation_author_relationed_idToauthor?: authorUpdateOneRequiredWithoutAuthor_relation_author_relation_author_relationed_idToauthorNestedInput
+    author_author_relation_author_idToauthor?: AuthorUpdateOneRequiredWithoutAuthor_relation_author_relation_author_idToauthorNestedInput
+    author_author_relation_author_relationed_idToauthor?: AuthorUpdateOneRequiredWithoutAuthor_relation_author_relation_author_relationed_idToauthorNestedInput
   }
 
-  export type author_relationUncheckedUpdateWithoutHistory_typeInput = {
+  export type AuthorRelationUncheckedUpdateWithoutHistory_typeInput = {
     id?: IntFieldUpdateOperationsInput | number
     name_relation?: StringFieldUpdateOperationsInput | string
     type_relation?: StringFieldUpdateOperationsInput | string
@@ -7065,7 +7065,7 @@ export namespace Prisma {
     author_relationed_id?: IntFieldUpdateOperationsInput | number
   }
 
-  export type author_relationUncheckedUpdateManyWithoutHistory_typeInput = {
+  export type AuthorRelationUncheckedUpdateManyWithoutHistory_typeInput = {
     id?: IntFieldUpdateOperationsInput | number
     name_relation?: StringFieldUpdateOperationsInput | string
     type_relation?: StringFieldUpdateOperationsInput | string
@@ -7085,25 +7085,25 @@ export namespace Prisma {
      */
     export type AuthorCountOutputTypeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = AuthorCountOutputTypeDefaultArgs<ExtArgs>
     /**
-     * @deprecated Use History_typeCountOutputTypeDefaultArgs instead
+     * @deprecated Use HistoryTypeCountOutputTypeDefaultArgs instead
      */
-    export type History_typeCountOutputTypeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = History_typeCountOutputTypeDefaultArgs<ExtArgs>
+    export type HistoryTypeCountOutputTypeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = HistoryTypeCountOutputTypeDefaultArgs<ExtArgs>
     /**
-     * @deprecated Use authorDefaultArgs instead
+     * @deprecated Use AuthorDefaultArgs instead
      */
-    export type authorArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = authorDefaultArgs<ExtArgs>
+    export type AuthorArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = AuthorDefaultArgs<ExtArgs>
     /**
-     * @deprecated Use author_relationDefaultArgs instead
+     * @deprecated Use AuthorRelationDefaultArgs instead
      */
-    export type author_relationArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = author_relationDefaultArgs<ExtArgs>
+    export type AuthorRelationArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = AuthorRelationDefaultArgs<ExtArgs>
     /**
-     * @deprecated Use history_typeDefaultArgs instead
+     * @deprecated Use HistoryTypeDefaultArgs instead
      */
-    export type history_typeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = history_typeDefaultArgs<ExtArgs>
+    export type HistoryTypeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = HistoryTypeDefaultArgs<ExtArgs>
     /**
-     * @deprecated Use phraseDefaultArgs instead
+     * @deprecated Use PhraseDefaultArgs instead
      */
-    export type phraseArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = phraseDefaultArgs<ExtArgs>
+    export type PhraseArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = PhraseDefaultArgs<ExtArgs>
 
   /**
    * Batch Payload for updateMany & deleteMany & createMany

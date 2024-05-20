@@ -38,13 +38,13 @@ Insira os tópicos do README em links para facilitar a navegação do leitor
 
 ## Funcionalidades
 
-:heavy_check_mark: Funcionalidade 1  
+:heavy_check_mark: Registar/trazer dados de figuras historicas  
 
-:heavy_check_mark: Funcionalidade 2  
+:heavy_check_mark: Mostrar no front-end em linha do tempo e lista as figuras históricas
 
-:heavy_check_mark: Funcionalidade 3  
+:heavy_check_mark: Fazer wescraping de figuras da internet por sites
 
-:heavy_check_mark: Funcionalidade 4  
+:heavy_check_mark: Formulário para registrar manualmente
 
 ## Layout ou Deploy da Aplicação :dash:
 
@@ -69,7 +69,7 @@ Insira os tópicos do README em links para facilitar a navegação do leitor
 No terminal, clone o projeto: 
 
 ```
-git clone https://github.com/RafaelGCampi/
+git clone https://github.com/rafael-campi/history-world
 ```
 
 ... 
@@ -78,7 +78,7 @@ Coloque um passo a passo para rodar a sua aplicação. **Dica: clone o próprio 
 
 ## Como rodar os testes
 
-Coloque um passo a passo para executar os testes
+<!-- Coloque um passo a passo para executar os testes -->
 
 ```
 $ docker composer up
@@ -121,17 +121,16 @@ Em [issues]() foram abertos alguns problemas gerados durante o desenvolvimento d
 
 ## Tarefas em aberto
 
-Se for o caso, liste tarefas/funcionalidades que ainda precisam ser implementadas na sua aplicação
 
-:memo: Tarefa 1 
+:memo: **<font size='2px' color='#8c8b94'>Fazer back-end para guardar toda a lógica de registro e amostra de figuras historicas utilizando o frameowrk nestjs**</font>
 
-:memo: Tarefa 2 
+:memo: **<font size='2px' color='#8c8b94'>Fazer front-end com linha do tempo com as principais figuras historicas de cada época em vuejs</font>**
 
-:memo: Tarefa 3 
+:memo: **<font size='2px' color='#8c8b94'>Fazer webscraping de um site para extrair informações de figuras históricas (utilizar python)</font>** 
 
-## Desenvolvedores/Contribuintes  :gem:
+<!-- ## Desenvolvedores/Contribuintes  :gem:
 
-Liste o time responsável pelo desenvolvimento do projeto
+Liste o time responsável pelo desenvolvimento do projeto -->
 
 
 
@@ -139,4 +138,4 @@ Liste o time responsável pelo desenvolvimento do projeto
 
 The [MIT License]() (MIT)
 
-Copyright :copyright: Ano - Titulo do Projeto
+Copyright :copyright: 2024 - History World

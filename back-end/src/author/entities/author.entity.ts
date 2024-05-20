@@ -1,6 +1,6 @@
-import { author } from "@prisma/client";
+import { Author } from "@prisma/client";
 
-export class AuthorEntity implements author {
+export class AuthorEntity implements Author {
     id: number
     name: string
     last_name: string | null

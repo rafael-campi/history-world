@@ -1,5 +1,4 @@
-import { Phrase } from '.prisma/client'
-
+import { Phrase } from "@prisma/client";
 export class PhraseEntity implements Phrase { 
     id: number
     phrase: string
