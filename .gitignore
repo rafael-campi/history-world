@@ -84,3 +84,6 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+*vendor
+*__pycache__
+*.venv

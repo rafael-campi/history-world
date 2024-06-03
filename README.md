@@ -132,6 +132,36 @@ Em [issues]() foram abertos alguns problemas gerados durante o desenvolvimento d
 
 Liste o time responsável pelo desenvolvimento do projeto -->
 
+# Python project
+
+### Environment
+
+1. Create a virtualenv:
+~~~bash
+virtualenv --python=python3.10 venv
+or
+python -m venv venv	
+~~~
+
+2. Install requirements:
+~~~bash
+source venv/bin/activate/bash
+or 
+.\venv\Scripts\activate	
+~~~
+
+3. Install requirements:
+~~~py
+pip install -r requirements.txt
+pip freeze > requirements.txt
+~~~
+
+4. Run
+~~~py
+python init.py
+~~~
+
+
 
 
 ## Licença 
