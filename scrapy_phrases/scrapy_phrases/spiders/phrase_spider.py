@@ -21,10 +21,6 @@ class PhraseSpider(scrapy.Spider):
             yield scrapy.Request(url=url, callback=self.parse)
 
     def parse(self, response):
-        """ page = response.url.split("/")[-2]
-        filename = f"blog-{page}.html"
-        Path(filename).write_bytes(response.body)
-        self.log(f"Saved file {filename}") """
         for phrase in response.css("div.quote"):
             yield {
                 "text": phrase.css("span.text::text").get(),
