@@ -156,11 +156,16 @@ pip install -r requirements.txt
 pip freeze > requirements.txt
 ~~~
 
-4. Run
+4. Inside path
 ~~~py
-python init.py
+cd my_scrapy/phrases
 ~~~
 
+5. Run
+~~~py
+scrapy crawl pensador 
+scrapy crawl phrase
+~~~
 
 
 
