@@ -87,3 +87,4 @@ coverage
 *vendor
 *__pycache__
 *.venv
+*venv
