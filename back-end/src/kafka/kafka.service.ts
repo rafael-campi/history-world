@@ -1,9 +1,8 @@
-// kafka.service.ts
-import { Injectable } from '@nestjs/common';
+import { Injectable, OnModuleInit, OnModuleDestroy } from '@nestjs/common';
 import { Kafka, Producer, Consumer } from 'kafkajs';
 
 @Injectable()
-export class KafkaService {
+export class KafkaService implements OnModuleInit, OnModuleDestroy {
   private kafka: Kafka;
   private producer: Producer;
   private consumer: Consumer;
@@ -17,6 +16,12 @@ export class KafkaService {
     this.consumer = this.kafka.consumer({ groupId: 'my-group' });
   }
 
+  async onModuleInit() {
+    await this.producer.connect();
+    await this.consumer.connect();
+    await this.subscribe('my-topic', this.processMessage.bind(this));
+  }
+
   async sendMessage(topic: string, message: string) {
     await this.producer.send({
       topic,
@@ -25,16 +30,20 @@ export class KafkaService {
   }
 
   async subscribe(topic: string, callback: (message: any) => void) {
-    await this.consumer.connect();
-    await this.consumer.subscribe({ topic });
+    await this.consumer.subscribe({ topic, fromBeginning: true });
     await this.consumer.run({
       eachMessage: async ({ topic, partition, message }) => {
-        callback(JSON.parse(message.value.toString()));
+        //callback(JSON.parse(message.value.toString()));
+        callback(message.value.toString());
       },
     });
   }
 
-  async disconnect() {
+  private async processMessage(data: any) {
+    console.log("Messagem:",data);
+}
+
+  async onModuleDestroy() {
     await this.producer.disconnect();
     await this.consumer.disconnect();
   }

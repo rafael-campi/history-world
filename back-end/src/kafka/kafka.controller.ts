@@ -1,10 +1,13 @@
-// kafka.controller.ts
-import { Controller, Post, Body, OnModuleDestroy } from '@nestjs/common';
+import { Controller, Post, Body, OnModuleDestroy, OnModuleInit } from '@nestjs/common';
 import { KafkaService } from './kafka.service';
 
 @Controller('kafka')
-export class KafkaController implements OnModuleDestroy {
+export class KafkaController implements OnModuleInit, OnModuleDestroy {
   constructor(private readonly kafkaService: KafkaService) {}
+
+  async onModuleInit() {
+    await this.kafkaService.onModuleInit();
+  }
 
   @Post('send')
   async sendMessage(@Body() data: any) {
@@ -13,6 +16,6 @@ export class KafkaController implements OnModuleDestroy {
   }
 
   async onModuleDestroy() {
-    await this.kafkaService.disconnect();
+    await this.kafkaService.onModuleDestroy();
   }
 }
