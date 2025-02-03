@@ -1,16 +1,6 @@
-<h1>Projeto fins estudo para </h1> 
+<h1>Projeto fins estudo</h1> 
 
-<p align="center">
-  <img src="https://img.shields.io/static/v1?label=vuejs&message=framework&color=blue&style=for-the-badge&logo=Vue.js"/>
-  <img src="https://img.shields.io/static/v1?label=Vercel&message=deploy&color=blue&style=for-the-badge&logo=vercel"/>
-  <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
-  <img src="https://img.shields.io/static/v1?label=Docker&message=2.6.3&color=red&style=for-the-badge&logo=docker"/>
-  <img src="http://img.shields.io/static/v1?label=Nestjs&message=6.0.2.2&color=red&style=for-the-badge&logo=nestjs"/>
-  <img src="http://img.shields.io/static/v1?label=python&message=6.0.2.2&color=red&style=for-the-badge&logo=python"/>
-  <img src="http://img.shields.io/static/v1?label=TESTES&message=%3E100&color=GREEN&style=for-the-badge"/>
-   <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge"/>
-   <!--<img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=GREEN&style=for-the-badge"/> -->
-</p>
+
 
 > Status do Projeto: :hourglass: em desenvolvimento
 
