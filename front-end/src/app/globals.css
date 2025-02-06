@@ -1,0 +1,305 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+  background: #eeeeee;
+  min-height: 100vh;
+}
+
+.vertical-timeline-custom-line {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.vertical-timeline-custom-line::before {
+  background: #CBD5E1;
+}
+
+.vertical-timeline-element-content {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline-element-content {
+    margin-left: 0;
+    padding: 2rem;
+    width: 44%;
+  }
+}
+
+.timeline-card-3d {
+  max-width: 380px;
+  min-height: 280px;
+  padding: 24px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateY(-3deg);
+  box-shadow: 
+    rgba(0, 0, 0, 0.06) 0px 8px 12px -3px,
+    rgba(0, 0, 0, 0.03) 0px 4px 6px -2px,
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Ajuste do fundo dos botões de categoria */
+.timeline-card-3d:not(.has-active) {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Efeito de destaque para card ativo */
+.timeline-card-3d.has-active:not(:hover) {
+  opacity: 0.7;
+  transform: perspective(1000px) rotateY(-5deg) scale(0.95);
+}
+
+.timeline-card-3d.has-active:hover {
+  opacity: 1;
+  transform: perspective(1000px) rotateY(0deg) translateZ(30px) scale(1.05);
+}
+
+/* Gradiente no topo do card */
+.timeline-card-3d::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--card-color, #CBD5E1), transparent);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.timeline-card-3d:hover::before {
+  opacity: 1;
+}
+
+/* Melhorias na tipografia e espaçamento */
+.timeline-card-title-3d {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+  transform: translateZ(25px);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1.2;
+}
+
+.timeline-card-subtitle-3d {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4b5563;
+  transform: translateZ(15px);
+  margin-top: 0.75rem;
+  position: relative;
+  padding-left: 1rem;
+  border-left: 2px solid var(--card-color, #CBD5E1);
+  letter-spacing: 0.01em;
+}
+
+/* Estilização das datas */
+.timeline-title-3d {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  transform: translateZ(20px);
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+  letter-spacing: 0.01em;
+}
+
+/* Animação suave para os cards */
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.timeline-card-3d {
+  animation: cardEntrance 0.5s ease-out;
+  animation-fill-mode: both;
+}
+
+/* Estilo para os ícones nos cards */
+.timeline-card-media {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  transform: translateZ(30px);
+}
+
+/* Melhorias na responsividade */
+@media (max-width: 768px) {
+  .timeline-card-3d {
+    padding: 20px;
+    min-height: 240px;
+    max-width: 320px;
+  }
+
+  .timeline-card-title-3d {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .timeline-card-subtitle-3d {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding-left: 0.75rem;
+  }
+
+  .timeline-title-3d {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+.timeline-container {
+  width: 95vw !important;
+  margin: 2rem auto !important;
+  max-width: 1600px !important;
+  perspective: 1000px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 1.5rem 0;
+  border-radius: 16px;
+}
+
+/* Scrollbar personalizada */
+.timeline-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.timeline-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.timeline-container::-webkit-scrollbar-thumb {
+  background: rgba(203, 213, 225, 0.5);
+}
+
+.timeline-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.7);
+}
+
+/* Ajuste das cores dos botões de categoria */
+button {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease !important;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Ajuste dos botões de categoria */
+.category-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.category-button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.category-button:hover::after {
+  transform: scaleX(1);
+}
+
+/* Ajuste dos pontos da timeline */
+.timeline-circle {
+  border: 2px solid var(--primary-color, #CBD5E1);
+  background: white;
+}
+
+.timeline-circle.active {
+  background: var(--primary-color, #CBD5E1);
+}
+
+.timeline-wrapper {
+  width: 100%;
+  min-height: 400px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 2rem;
+}
+
+/* Ajuste para garantir que os cards sejam visíveis */
+.timeline-card-3d {
+  background: rgba(255, 255, 255, 0.95) !important;
+  min-width: 300px !important;
+  margin: 0 1rem !important;
+}
+
+/* Ajuste para a linha da timeline */
+.timeline-horizontal-container {
+  margin-top: 2rem !important;
+}
+
+/* Estilização dos botões do Chrono */
+.timeline-wrapper .css-1jm83v8,  /* Botão Next */
+.timeline-wrapper .css-1yl6p1m,  /* Botão Previous */
+.timeline-wrapper .css-1jxp9s9,  /* Botão First */
+.timeline-wrapper .css-1y8v0e9 { /* Botão Last */
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  color: #4b5563 !important;
+  border: none !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.timeline-wrapper .css-1jm83v8:hover,
+.timeline-wrapper .css-1yl6p1m:hover,
+.timeline-wrapper .css-1jxp9s9:hover,
+.timeline-wrapper .css-1y8v0e9:hover {
+  background-color: white !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Cor do ícone dentro dos botões */
+.timeline-wrapper button svg {
+  fill: currentColor !important;
+}
