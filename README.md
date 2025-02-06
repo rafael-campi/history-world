@@ -40,7 +40,8 @@ Insira os tópicos do README em links para facilitar a navegação do leitor
 
 > Link do deploy da aplicação. Exemplo com vercel: 
 
-(Colocar gif do projeto)
+![image](https://github.com/user-attachments/assets/94182400-d6f7-4456-be57-cf7fb679a034)
+
 
 
 
