@@ -23,7 +23,7 @@ Insira os tópicos do README em links para facilitar a navegação do leitor
 ## Descrição do projeto 
 
 <p align="justify">
-  Esse projeto foi feito para tentar representar em arvores e listagem figuras históricas famosas em todo o mundo
+  Esse projeto foi feito para tentar representar em uma linha do tempo de figuras históricas famosas em todo o mundo
 </p>
 
 ## Funcionalidades
@@ -32,7 +32,7 @@ Insira os tópicos do README em links para facilitar a navegação do leitor
 
 :heavy_check_mark: Mostrar no front-end em linha do tempo e lista as figuras históricas
 
-:heavy_check_mark: Fazer wescraping de figuras da internet por sites
+:heavy_check_mark: Fazer wescraping de figuras
 
 :heavy_check_mark: Formulário para registrar manualmente
 
