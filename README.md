@@ -5,14 +5,13 @@
 > Status do Projeto: :hourglass: em desenvolvimento
 
 
-... 
 
 Insira os tópicos do README em links para facilitar a navegação do leitor
 
 ## Descrição do projeto 
 
 <p align="justify">
-  Esse projeto foi feito para tentar representar em uma linha do tempo de figuras históricas famosas em todo o mundo
+  Esse projeto foi feito para tentar representar em uma linha do tempo as história de todo o mundo
 </p>
 
 ## Funcionalidades
